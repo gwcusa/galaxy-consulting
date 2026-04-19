@@ -175,36 +175,36 @@ export default function ProgramManagementPage() {
       </section>
 
       {/* ── SERVICE OFFERINGS ── */}
-      <section className="py-20 bg-off-white">
+      <section className="py-20 bg-section-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-2xl font-bold text-navy section-heading mb-10"
+            className="text-2xl font-bold text-white section-heading mb-10"
             style={{ fontFamily: 'var(--font-barlow)' }}
           >
             PM Service Offerings
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {offerings.map((o) => (
-              <div key={o.title} className="card-hover bg-white rounded-xl p-6 border border-silver-light flex flex-col">
-                <div className="inline-flex p-2.5 rounded-lg bg-purple-500/10 text-purple-500 mb-4 w-fit">
+              <div key={o.title} className="card-hover card-surface rounded-xl p-6 flex flex-col">
+                <div className="inline-flex p-2.5 rounded-lg bg-purple-500/10 text-purple-400 mb-4 w-fit">
                   <o.icon size={20} />
                 </div>
                 <h3
-                  className="text-base font-semibold text-navy mb-2.5"
+                  className="text-base font-semibold text-white mb-2.5"
                   style={{ fontFamily: 'var(--font-barlow)' }}
                 >
                   {o.title}
                 </h3>
                 <p
-                  className="text-sm text-silver leading-relaxed mb-4 flex-1"
+                  className="text-sm text-silver/70 leading-relaxed mb-4 flex-1"
                   style={{ fontFamily: 'var(--font-inter)' }}
                 >
                   {o.desc}
                 </p>
                 <ul className="space-y-1.5">
                   {o.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-xs text-silver/70" style={{ fontFamily: 'var(--font-inter)' }}>
-                      <CheckCircle2 size={13} className="text-purple-500 flex-shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-2 text-xs text-silver/60" style={{ fontFamily: 'var(--font-inter)' }}>
+                      <CheckCircle2 size={13} className="text-purple-400 flex-shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}

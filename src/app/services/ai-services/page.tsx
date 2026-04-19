@@ -116,36 +116,36 @@ export default function AIServicesPage() {
       </section>
 
       {/* ── VALUE PROPOSITIONS ── */}
-      <section className="py-20 bg-off-white">
+      <section className="py-20 bg-section-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-2xl font-bold text-navy section-heading mb-10"
+            className="text-2xl font-bold text-white section-heading mb-10"
             style={{ fontFamily: 'var(--font-barlow)' }}
           >
             Why AI — And Why Now?
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {valueProps.map((v) => (
-              <div key={v.title} className="card-hover bg-white rounded-xl p-6 border border-silver-light flex flex-col">
-                <div className="inline-flex p-2.5 rounded-lg bg-purple-500/10 text-purple-500 mb-4 w-fit">
+              <div key={v.title} className="card-hover card-surface rounded-xl p-6 flex flex-col">
+                <div className="inline-flex p-2.5 rounded-lg bg-purple-500/10 text-purple-400 mb-4 w-fit">
                   <v.icon size={20} />
                 </div>
                 <h3
-                  className="text-base font-semibold text-navy mb-2.5"
+                  className="text-base font-semibold text-white mb-2.5"
                   style={{ fontFamily: 'var(--font-barlow)' }}
                 >
                   {v.title}
                 </h3>
                 <p
-                  className="text-sm text-silver leading-relaxed mb-4 flex-1"
+                  className="text-sm text-silver/70 leading-relaxed mb-4 flex-1"
                   style={{ fontFamily: 'var(--font-inter)' }}
                 >
                   {v.desc}
                 </p>
                 <ul className="space-y-1.5">
                   {v.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-xs text-silver/70" style={{ fontFamily: 'var(--font-inter)' }}>
-                      <CheckCircle2 size={13} className="text-purple-500 flex-shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-2 text-xs text-silver/60" style={{ fontFamily: 'var(--font-inter)' }}>
+                      <CheckCircle2 size={13} className="text-purple-400 flex-shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
@@ -154,7 +154,7 @@ export default function AIServicesPage() {
             ))}
 
             {/* Sixth card: Our Approach teaser */}
-            <div className="card-hover bg-navy rounded-xl p-6 flex flex-col justify-between">
+            <div className="card-hover rounded-xl p-6 flex flex-col justify-between bg-blue-accent/10 border border-blue-accent/30">
               <div>
                 <div className="inline-flex p-2.5 rounded-lg bg-white/10 text-white mb-4 w-fit">
                   <ArrowRight size={20} />
@@ -221,25 +221,25 @@ export default function AIServicesPage() {
       </section>
 
       {/* ── USE CASES ── */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-section-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-2xl font-bold text-navy section-heading mb-10"
+            className="text-2xl font-bold text-white section-heading mb-10"
             style={{ fontFamily: 'var(--font-barlow)' }}
           >
             AI Use Cases by Sector
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {useCases.map((u) => (
-              <div key={u.agency} className="bg-off-white rounded-xl p-5 border border-silver-light">
+              <div key={u.agency} className="card-surface rounded-xl p-5 border border-blue-accent/20">
                 <div
-                  className="text-navy font-semibold text-sm mb-2"
+                  className="text-white font-semibold text-sm mb-2"
                   style={{ fontFamily: 'var(--font-barlow)' }}
                 >
                   {u.agency}
                 </div>
                 <p
-                  className="text-silver text-sm leading-relaxed"
+                  className="text-silver/70 text-sm leading-relaxed"
                   style={{ fontFamily: 'var(--font-inter)' }}
                 >
                   {u.example}
