@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Award, Shield, Star, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Award, Shield, Star, CheckCircle2, ArrowRight, GraduationCap } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Certifications & Partners',
@@ -262,8 +262,123 @@ export default function CertificationsPage() {
         </div>
       </section>
 
-      {/* ── TECHNOLOGY PARTNERS ── */}
+      {/* ── TEAM PROFESSIONAL CERTIFICATIONS ── */}
       <section className="py-20 bg-off-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-3">
+            <GraduationCap size={22} className="text-blue-accent" />
+            <h2
+              className="text-2xl font-bold text-navy section-heading"
+              style={{ fontFamily: 'var(--font-barlow)' }}
+            >
+              Team Professional Certifications
+            </h2>
+          </div>
+          <p
+            className="text-silver text-sm mb-10 max-w-2xl"
+            style={{ fontFamily: 'var(--font-inter)' }}
+          >
+            Galaxy Consulting team members hold a wide range of industry-recognized professional certifications
+            across cybersecurity, project management, networking, and vendor technologies.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                category: 'Project & Program Management',
+                color: 'border-blue-accent/40 bg-blue-accent/5',
+                tagColor: 'bg-blue-accent/10 text-blue-bright',
+                certs: [
+                  'Certified Project Management Professional (PMP)',
+                  'Certified Six Sigma Green Belt Professional',
+                  'ITIL Version 3 Professional',
+                  'FAC-P/PM Level 3 Certified',
+                  'FAI COR Level 3 Certified',
+                ],
+              },
+              {
+                category: 'Cybersecurity',
+                color: 'border-emerald-500/40 bg-emerald-500/5',
+                tagColor: 'bg-emerald-500/10 text-emerald-500',
+                certs: [
+                  'Certified Information Systems Security Professional (CISSP)',
+                  'Certified CompTIA Security+ Professional',
+                  'EC-Council Certified Ethical Hacker (CEH)',
+                  'EC-Council Certified Network Defense Architect (CNDA)',
+                  'Cisco Certified Information Security Specialist',
+                  'Cisco IOS Security Specialist',
+                ],
+              },
+              {
+                category: 'Networking',
+                color: 'border-teal-500/40 bg-teal-500/5',
+                tagColor: 'bg-teal-500/10 text-teal-400',
+                certs: [
+                  'Cisco Certified Network Associate (CCNA)',
+                ],
+              },
+              {
+                category: 'Microsoft',
+                color: 'border-sky-500/40 bg-sky-500/5',
+                tagColor: 'bg-sky-500/10 text-sky-400',
+                certs: [
+                  'Microsoft Certified Technology Specialist (MCTS)',
+                  'Microsoft Certified Systems Engineer (MCSE)',
+                  'Microsoft Certified Systems Administrator (MCSA)',
+                  'Microsoft Certified Professional (MCP)',
+                ],
+              },
+              {
+                category: 'Hardware & Vendor',
+                color: 'border-amber-500/40 bg-amber-500/5',
+                tagColor: 'bg-amber-500/10 text-amber-500',
+                certs: [
+                  'Certified CompTIA A+ Professional',
+                  'Dell Certified Systems Expert (DCSE)',
+                  'HP Certified Professional',
+                  'Fujitsu Certified Primergy Engineer',
+                  'Fujitsu Certified Eternus Engineer',
+                ],
+              },
+              {
+                category: 'Mobile & Legacy Platforms',
+                color: 'border-rose-500/40 bg-rose-500/5',
+                tagColor: 'bg-rose-500/10 text-rose-400',
+                certs: [
+                  'BlackBerry Certified Technical Associate v4.0',
+                  'BlackBerry Certified Technical Associate v3.7',
+                ],
+              },
+            ].map((group) => (
+              <div
+                key={group.category}
+                className={`card-hover bg-white rounded-xl border ${group.color} p-6`}
+              >
+                <span
+                  className={`inline-block text-xs font-bold px-2.5 py-1 rounded-full mb-4 ${group.tagColor}`}
+                  style={{ fontFamily: 'var(--font-inter)' }}
+                >
+                  {group.category}
+                </span>
+                <ul className="space-y-2.5">
+                  {group.certs.map((cert) => (
+                    <li
+                      key={cert}
+                      className="flex items-start gap-2.5 text-sm text-silver"
+                      style={{ fontFamily: 'var(--font-inter)' }}
+                    >
+                      <CheckCircle2 size={14} className="text-blue-accent flex-shrink-0 mt-0.5" />
+                      {cert}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TECHNOLOGY PARTNERS ── */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
             className="text-2xl font-bold text-navy section-heading mb-10"
