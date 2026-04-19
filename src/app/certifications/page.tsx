@@ -199,7 +199,7 @@ export default function CertificationsPage() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-white mb-4" style={{ fontFamily:'var(--font-barlow)' }}>Leverage Our Set-Aside Certifications</h2>
           <p className="text-silver/70 text-sm mb-8" style={{ fontFamily:'var(--font-inter)' }}>Our SDVOSB, SDB, and MBE certifications help your agency meet socioeconomic goals while receiving premium IT services.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5" style={{ fontFamily:'var(--font-inter)' }}>
+          <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5" style={{ fontFamily:'var(--font-inter)' }}>
             Start a Conversation <ArrowRight size={16} />
           </Link>
         </div>

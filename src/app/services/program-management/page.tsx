@@ -303,7 +303,7 @@ export default function ProgramManagementPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5"
             style={{ fontFamily: 'var(--font-inter)' }}
           >
             Start a Conversation <ArrowRight size={16} />

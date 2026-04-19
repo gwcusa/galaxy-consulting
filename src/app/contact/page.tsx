@@ -124,7 +124,7 @@ export default function ContactPage() {
               <div className="bg-blue-accent/10 rounded-xl border border-blue-accent/30 p-6 text-center">
                 <Mail size={24} className="text-blue-accent mx-auto mb-3" />
                 <p className="text-sm text-silver mb-3" style={{ fontFamily:'var(--font-inter)' }}>Prefer email? Reach us directly.</p>
-                <a href="mailto:ccooks@galaxyconsultingllc.com" className="inline-block px-4 py-2 bg-blue-accent hover:bg-blue-bright text-white text-xs font-semibold rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
+                <a href="mailto:ccooks@galaxyconsultingllc.com" className="inline-block px-4 py-2 bg-blue-accent hover:bg-blue-bright text-navy text-xs font-semibold rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
                   Send Email
                 </a>
               </div>

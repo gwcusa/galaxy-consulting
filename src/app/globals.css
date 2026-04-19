@@ -1,18 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #0A1628;
-  --color-navy-mid: #1E3A5F;
-  --color-navy-light: #2A4A72;
-  --color-blue-accent: #2E6DB4;
-  --color-blue-bright: #4A90D9;
-  --color-silver: #C0C8D8;
-  --color-silver-light: #E8ECF2;
-  --color-off-white: #F4F6F9;
-  --color-text-dark: #0D1117;
+  /* ── Base surfaces ── */
+  --color-navy:         #060810;
+  --color-navy-mid:     #0B0E1F;
+  --color-navy-light:   #131829;
+  --color-section-alt:  #09091A;
+  --color-section-b:    #060810;
+  --color-card-surface: #0E1228;
+  --color-card-alt:     #121629;
+  --color-off-white:    #060810;
+
+  /* ── Accent colors ── */
+  --color-blue-accent:  #22D3EE;
+  --color-blue-bright:  #67E8F9;
+  --color-silver:       #94A3B8;
+  --color-silver-dim:   #64748B;
+  --color-silver-light: #1C2038;
+  --color-card-border:  rgba(34, 211, 238, 0.15);
 
   --font-barlow: 'Barlow', sans-serif;
-  --font-inter: 'Inter', sans-serif;
+  --font-inter:  'Inter', sans-serif;
 }
 
 html {
@@ -20,14 +28,16 @@ html {
 }
 
 body {
-  background-color: #F4F6F9;
-  color: #0D1117;
+  background-color: #060810;
+  color: #94A3B8;
 }
 
-/* ── Star field ── */
+/* ─────────────────────────────────────────
+   Star field
+───────────────────────────────────────── */
 @keyframes twinkle {
   0%, 100% { opacity: 0; }
-  50% { opacity: var(--star-opacity, 0.6); }
+  50%       { opacity: var(--star-opacity, 0.6); }
 }
 .star {
   position: absolute;
@@ -40,15 +50,29 @@ body {
   opacity: 0;
 }
 
-/* ── Gradient text ── */
+/* ─────────────────────────────────────────
+   Dot grid (hero texture)
+───────────────────────────────────────── */
+.hero-dots {
+  background-image: radial-gradient(rgba(34, 211, 238, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
+/* ─────────────────────────────────────────
+   Gradient text  (headline)
+───────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #FFFFFF 0%, #C0C8D8 60%, #4A90D9 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 45%, #22D3EE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ── Section headings ── */
+/* ─────────────────────────────────────────
+   Section headings
+───────────────────────────────────────── */
 .section-heading {
   position: relative;
   display: inline-block;
@@ -58,7 +82,7 @@ body {
   display: block;
   width: 48px;
   height: 3px;
-  background: #2E6DB4;
+  background: linear-gradient(90deg, #22D3EE 0%, #818CF8 100%);
   margin-top: 10px;
   border-radius: 2px;
 }
@@ -67,58 +91,79 @@ body {
   margin-right: auto;
 }
 
-/* ── Card hover ── */
+/* ─────────────────────────────────────────
+   Card hover
+───────────────────────────────────────── */
 .card-hover {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .card-hover:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(10, 22, 40, 0.14);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.7),
+    0 0 40px rgba(34, 211, 238, 0.08);
 }
 
-/* ── Galaxy gradient background ── */
+/* ─────────────────────────────────────────
+   Galaxy background  (hero sections)
+───────────────────────────────────────── */
 .bg-galaxy {
-  background: linear-gradient(160deg, #0A1628 0%, #1E3A5F 50%, #0A1628 100%);
+  background:
+    radial-gradient(ellipse 90% 70% at 15% 40%, rgba(34, 211, 238, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 85% 65%, rgba(129, 140, 248, 0.06) 0%, transparent 50%),
+    linear-gradient(160deg, #060810 0%, #0B0E1F 50%, #060810 100%);
 }
 
-/* ── Divider ── */
+/* ─────────────────────────────────────────
+   Card surface  (glassmorphism-lite)
+───────────────────────────────────────── */
+.card-surface {
+  background: linear-gradient(145deg, #0E1228 0%, #111630 100%);
+  border: 1px solid rgba(34, 211, 238, 0.12);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.card-surface:hover {
+  border-color: rgba(34, 211, 238, 0.3);
+  box-shadow: inset 0 0 30px rgba(34, 211, 238, 0.03);
+}
+
+/* ─────────────────────────────────────────
+   Divider
+───────────────────────────────────────── */
 .divider {
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(46, 109, 180, 0.35), transparent);
+  background: linear-gradient(to right, transparent, rgba(34, 211, 238, 0.35), transparent);
 }
 
-/* ── Cert badge ── */
+/* ─────────────────────────────────────────
+   Cert badge
+───────────────────────────────────────── */
 .cert-badge {
-  border: 1px solid rgba(46, 109, 180, 0.35);
-  background: rgba(46, 109, 180, 0.07);
-  transition: border-color 0.2s, background 0.2s;
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  background: rgba(34, 211, 238, 0.04);
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 .cert-badge:hover {
-  border-color: rgba(46, 109, 180, 0.7);
-  background: rgba(46, 109, 180, 0.14);
+  border-color: rgba(34, 211, 238, 0.45);
+  background: rgba(34, 211, 238, 0.08);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.08);
 }
 
-/* ── Fade-up on scroll (JS-triggered) ── */
-.fade-up {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── Orbit ring decoration ── */
+/* ─────────────────────────────────────────
+   Orbit ring animation
+───────────────────────────────────────── */
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to   { transform: rotate(360deg); }
 }
 .orbit-ring {
   animation: spin-slow var(--orbit-speed, 20s) linear infinite;
 }
 
-/* ── Scrollbar ── */
+/* ─────────────────────────────────────────
+   Scrollbar
+───────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #F4F6F9; }
-::-webkit-scrollbar-thumb { background: #2E6DB4; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #060810; }
+::-webkit-scrollbar-thumb { background: #22D3EE; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #67E8F9; }

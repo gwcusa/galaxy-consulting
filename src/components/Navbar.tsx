@@ -123,7 +123,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className="px-5 py-2 bg-blue-accent hover:bg-blue-bright text-white text-sm font-semibold rounded-lg transition-colors duration-200"
+              className="px-5 py-2 bg-blue-accent hover:bg-blue-bright text-navy text-sm font-semibold rounded-lg transition-colors duration-200"
               style={{ fontFamily: 'var(--font-inter)' }}
             >
               Contact Us

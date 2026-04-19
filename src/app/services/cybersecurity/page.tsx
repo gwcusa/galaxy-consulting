@@ -267,7 +267,7 @@ export default function CybersecurityPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="px-6 py-3 bg-blue-accent hover:bg-blue-bright text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5 flex items-center gap-2"
+              className="px-6 py-3 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 flex items-center gap-2"
               style={{ fontFamily: 'var(--font-inter)' }}
             >
               Request Assessment <ArrowRight size={15} />

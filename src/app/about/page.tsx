@@ -176,7 +176,7 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Partner With Us?</h2>
           <p className="text-silver/70 text-sm mb-8" style={{ fontFamily:'var(--font-inter)' }}>Explore our capabilities or reach out to start a conversation about your mission requirements.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/services" className="px-6 py-3 bg-blue-accent hover:bg-blue-bright text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5 flex items-center gap-2" style={{ fontFamily:'var(--font-inter)' }}>Our Services <ArrowRight size={15} /></Link>
+            <Link href="/services" className="px-6 py-3 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 flex items-center gap-2" style={{ fontFamily:'var(--font-inter)' }}>Our Services <ArrowRight size={15} /></Link>
             <Link href="/contact" className="px-6 py-3 border border-silver/30 text-silver hover:text-white hover:border-silver/60 rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>Contact Us</Link>
           </div>
         </div>

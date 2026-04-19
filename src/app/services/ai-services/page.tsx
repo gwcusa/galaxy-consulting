@@ -174,7 +174,7 @@ export default function AIServicesPage() {
               </div>
               <Link
                 href="/contact"
-                className="mt-6 w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-accent hover:bg-blue-bright text-white text-sm font-semibold rounded-lg transition-colors"
+                className="mt-6 w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-accent hover:bg-blue-bright text-navy text-sm font-semibold rounded-lg transition-colors"
                 style={{ fontFamily: 'var(--font-inter)' }}
               >
                 Schedule a Consultation <ArrowRight size={14} />
@@ -287,7 +287,7 @@ export default function AIServicesPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5 flex items-center gap-2"
+              className="px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 flex items-center gap-2"
               style={{ fontFamily: 'var(--font-inter)' }}
             >
               Schedule a Consultation <ArrowRight size={16} />

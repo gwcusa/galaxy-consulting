@@ -54,6 +54,9 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-galaxy">
+        {/* Dot grid texture */}
+        <div className="absolute inset-0 hero-dots pointer-events-none select-none opacity-60" />
+        {/* Star field */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
           {[
             [8,12],[15,45],[22,78],[30,25],[38,60],[45,88],[52,15],[60,52],[68,33],[75,70],
@@ -66,9 +69,12 @@ export default function HomePage() {
             <div key={i} className="star absolute w-px h-px bg-white rounded-full" style={{ left:`${left}%`, top:`${top}%`, '--star-dur':`${2+(i%5)}s`, '--star-delay':`${(i*0.13)%4}s`, '--star-opacity':`${0.3+(i%7)*0.1}` } as React.CSSProperties} />
           ))}
         </div>
+        {/* Cyan glow behind headline */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[700px] h-[700px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(34,211,238,0.09) 0%, transparent 65%)' }} />
+        {/* Orbit rings */}
         <div className="absolute right-[-100px] top-1/2 -translate-y-1/2 pointer-events-none hidden lg:block">
           {[600,450,300].map((size,i) => (
-            <div key={i} className="orbit-ring absolute rounded-full" style={{ width:size, height:size, top:'50%', left:'50%', marginTop:-size/2, marginLeft:-size/2, border:`1px solid rgba(46,109,180,${0.08+i*0.04})`, '--orbit-speed':`${35-i*7}s`, animationDirection:i%2===0?'normal':'reverse' } as React.CSSProperties} />
+            <div key={i} className="orbit-ring absolute rounded-full" style={{ width:size, height:size, top:'50%', left:'50%', marginTop:-size/2, marginLeft:-size/2, border:`1px solid rgba(34,211,238,${0.07+i*0.05})`, '--orbit-speed':`${35-i*7}s`, animationDirection:i%2===0?'normal':'reverse' } as React.CSSProperties} />
           ))}
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -83,10 +89,10 @@ export default function HomePage() {
               Galaxy Consulting delivers mission-critical IT infrastructure, cybersecurity, AI-driven automation, and professional services to federal and state government agencies — backed by 50+ years of combined military and technology expertise.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/services" className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-white font-semibold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-blue-accent/30" style={{ fontFamily:'var(--font-inter)' }}>
+              <Link href="/services" className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-blue-accent/25" style={{ fontFamily:'var(--font-inter)' }}>
                 Explore Capabilities <ArrowRight size={17} />
               </Link>
-              <Link href="/past-performance" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/30 text-silver hover:text-white hover:border-silver/60 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
+              <Link href="/past-performance" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-blue-accent/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
                 Past Performance
               </Link>
             </div>
@@ -183,7 +189,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <div className="mt-10">
-                <Link href="/about" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-accent hover:bg-blue-bright text-white font-semibold rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
+                <Link href="/about" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
                   Learn About Us <ArrowRight size={16} />
                 </Link>
               </div>
@@ -236,7 +242,7 @@ export default function HomePage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Work With Us?</h2>
           <p className="text-silver/70 text-base mb-10 max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>Let&apos;s discuss how Galaxy Consulting can support your agency&apos;s IT mission.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="px-8 py-3.5 bg-blue-accent hover:bg-blue-bright text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5 duration-200 shadow-lg shadow-blue-accent/30" style={{ fontFamily:'var(--font-inter)' }}>Get In Touch</Link>
+            <Link href="/contact" className="px-8 py-3.5 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 duration-200 shadow-lg shadow-blue-accent/30" style={{ fontFamily:'var(--font-inter)' }}>Get In Touch</Link>
             <Link href="/past-performance" className="px-8 py-3.5 border border-silver/30 text-silver hover:text-white hover:border-silver/60 rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>View Past Performance</Link>
           </div>
         </div>
