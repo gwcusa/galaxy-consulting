@@ -268,6 +268,26 @@ export default function ProgramManagementPage() {
         </div>
       </section>
 
+      {/* ── TEAM CREDENTIALS ── */}
+      <section className="py-16 bg-section-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+            <div>
+              <h2 className="text-2xl font-bold text-white section-heading" style={{ fontFamily: 'var(--font-barlow)' }}>Certified Program Management Team</h2>
+              <p className="text-silver/60 text-sm mt-2" style={{ fontFamily: 'var(--font-inter)' }}>Credentials that validate our ability to lead complex government programs at every level.</p>
+            </div>
+            <Link href="/certifications" className="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 border border-blue-accent/40 text-blue-bright text-sm rounded-lg hover:bg-blue-accent/10 transition-colors" style={{ fontFamily: 'var(--font-inter)' }}>
+              All Certifications <ArrowRight size={14} />
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-2.5">
+            {['PMP — Project Management Professional','Six Sigma Green Belt','ITIL Version 3 Professional','FAC-P/PM Level 3 Certified','FAI COR Level 3 Certified'].map((cert) => (
+              <span key={cert} className="px-3.5 py-1.5 rounded-full text-xs font-semibold border border-purple-500/30 bg-purple-500/8 text-purple-400" style={{ fontFamily: 'var(--font-inter)' }}>{cert}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-16 bg-galaxy">
         <div className="max-w-3xl mx-auto px-4 text-center">
