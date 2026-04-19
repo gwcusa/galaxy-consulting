@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {
-  Shield, Server, BarChart3, Code2, Building2, Award,
+  Shield, Server, BarChart3, Code2, Building2, Award, Brain,
   ArrowRight, CheckCircle2, Star, Users, Clock, Briefcase,
 } from 'lucide-react';
 
@@ -53,6 +53,13 @@ const services = [
     desc: 'ISO-9000 quality assurance, identity management, and contract administration for federal agencies.',
     href: '/services',
     color: 'bg-teal-500/10 text-teal-500',
+  },
+  {
+    icon: Brain,
+    title: 'AI Services',
+    desc: 'Stay competitive, cut costs, and make smarter decisions with practical AI solutions built for your mission.',
+    href: '/services/ai-services',
+    color: 'bg-violet-500/10 text-violet-500',
   },
 ];
 

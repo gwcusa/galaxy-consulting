@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  Server, Shield, BarChart3, Code2, Building2, Award, ArrowRight,
+  Server, Shield, BarChart3, Code2, Building2, Award, Brain, ArrowRight,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -51,6 +51,20 @@ const featuredServices = [
       'Project team staffing support',
       'Quality assurance & performance monitoring',
       'Stakeholder coordination',
+    ],
+  },
+  {
+    icon: Brain,
+    title: 'Artificial Intelligence (AI) Services',
+    href: '/services/ai-services',
+    color: 'bg-violet-500/10 text-violet-500',
+    tag: 'Core Service',
+    highlights: [
+      'Stay competitive with AI-driven solutions',
+      'Automate tasks & reduce operational costs',
+      'Predictive analytics & smarter decisions',
+      'Intelligent chatbots & virtual assistants',
+      'End-to-end AI strategy & implementation',
     ],
   },
 ];
