@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A1628;
+  --color-navy-mid: #1E3A5F;
+  --color-navy-light: #2A4A72;
+  --color-blue-accent: #2E6DB4;
+  --color-blue-bright: #4A90D9;
+  --color-silver: #C0C8D8;
+  --color-silver-light: #E8ECF2;
+  --color-off-white: #F4F6F9;
+  --color-text-dark: #0D1117;
+
+  --font-barlow: 'Barlow', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F4F6F9;
+  color: #0D1117;
+}
+
+/* ── Star field ── */
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: var(--star-opacity, 0.6); }
+}
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--star-dur, 3s) ease-in-out infinite;
+  animation-delay: var(--star-delay, 0s);
+  opacity: 0;
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #C0C8D8 60%, #4A90D9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section headings ── */
+.section-heading {
+  position: relative;
+  display: inline-block;
+}
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #2E6DB4;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+.section-heading-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Card hover ── */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(10, 22, 40, 0.14);
+}
+
+/* ── Galaxy gradient background ── */
+.bg-galaxy {
+  background: linear-gradient(160deg, #0A1628 0%, #1E3A5F 50%, #0A1628 100%);
+}
+
+/* ── Divider ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(46, 109, 180, 0.35), transparent);
+}
+
+/* ── Cert badge ── */
+.cert-badge {
+  border: 1px solid rgba(46, 109, 180, 0.35);
+  background: rgba(46, 109, 180, 0.07);
+  transition: border-color 0.2s, background 0.2s;
+}
+.cert-badge:hover {
+  border-color: rgba(46, 109, 180, 0.7);
+  background: rgba(46, 109, 180, 0.14);
+}
+
+/* ── Fade-up on scroll (JS-triggered) ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Orbit ring decoration ── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.orbit-ring {
+  animation: spin-slow var(--orbit-speed, 20s) linear infinite;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F4F6F9; }
+::-webkit-scrollbar-thumb { background: #2E6DB4; border-radius: 3px; }
