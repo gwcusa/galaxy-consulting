@@ -170,7 +170,12 @@ export default function CertificationsPage() {
                 <ul className="space-y-2.5 flex-1">
                   {group.certs.map((cert) => (
                     <li key={cert} className="flex items-start gap-2.5 text-sm text-silver/80" style={{ fontFamily:'var(--font-inter)' }}>
-                      <CheckCircle2 size={14} className="text-blue-accent flex-shrink-0 mt-0.5" />{cert}
+                      {cert.startsWith('CMMC Registered Practitioner') ? (
+                        <Image src="/RP.png" alt="Cyber-AB Registered Practitioner" width={18} height={18} className="flex-shrink-0 mt-0.5 rounded-sm" />
+                      ) : (
+                        <CheckCircle2 size={14} className="text-blue-accent flex-shrink-0 mt-0.5" />
+                      )}
+                      {cert}
                     </li>
                   ))}
                 </ul>
