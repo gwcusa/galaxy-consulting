@@ -91,18 +91,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Contract IDs */}
-              <div className="bg-navy rounded-xl p-6 border border-blue-accent/15">
-                <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4" style={{ fontFamily:'var(--font-barlow)' }}>Contract Identifiers</h3>
-                <div className="space-y-3">
-                  {[{label:'DUNS',value:'079255195'},{label:'CAGE Code',value:'71RT1'},{label:'UEI',value:'DT7XMKSNJ5F3'}].map((id) => (
-                    <div key={id.label}>
-                      <div className="text-xs text-silver/40 uppercase tracking-widest mb-0.5" style={{ fontFamily:'var(--font-inter)' }}>{id.label}</div>
-                      <div className="text-white font-mono text-sm font-semibold">{id.value}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
 
               {/* Email CTA */}

@@ -224,15 +224,6 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-          <div className="divider mb-8" />
-          <div className="flex flex-wrap justify-center gap-8 lg:gap-16 text-center">
-            {[{label:'DUNS',value:'079255195'},{label:'CAGE Code',value:'71RT1'},{label:'UEI',value:'DT7XMKSNJ5F3'}].map((item) => (
-              <div key={item.label}>
-                <div className="text-xs text-silver/40 uppercase tracking-widest mb-1" style={{ fontFamily:'var(--font-inter)' }}>{item.label}</div>
-                <div className="text-sm font-semibold text-silver font-mono">{item.value}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

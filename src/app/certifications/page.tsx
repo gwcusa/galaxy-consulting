@@ -145,20 +145,6 @@ export default function CertificationsPage() {
         </div>
       </section>
 
-      {/* ── SAM / CONTRACT IDs ── */}
-      <section className="py-16 bg-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-white section-heading mb-8" style={{ fontFamily:'var(--font-barlow)' }}>SAM.gov &amp; Contract Identifiers</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-            {[{label:'DUNS Number',value:'079255195',mono:true},{label:'CAGE Code',value:'71RT1',mono:true},{label:'UEI',value:'DT7XMKSNJ5F3',mono:true},{label:'Entity Type',value:'Partnership',mono:false},{label:'Business Type',value:'Small Business',mono:false},{label:'State',value:'Maryland',mono:false}].map((id) => (
-              <div key={id.label} className="cert-badge rounded-lg p-4">
-                <div className="text-xs text-silver/40 uppercase tracking-wider mb-1.5" style={{ fontFamily:'var(--font-inter)' }}>{id.label}</div>
-                <div className={`text-white font-semibold text-sm ${id.mono ? 'font-mono' : ''}`}>{id.value}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── TEAM PROFESSIONAL CERTIFICATIONS ── */}
       <section className="py-20 bg-section-b">
