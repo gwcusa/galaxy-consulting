@@ -51,7 +51,7 @@ export default function AboutPage() {
                   Galaxy Consulting, LLC is a Service-Disabled Veteran-Owned Small Business (SDVOSB) that provides information technology and professional services to Government agencies, International Organizations, and Private Industry Partners.
                 </p>
                 <p>
-                  Our management team brings over <strong className="text-white">50 years of combined</strong> government, military, and commercial industry experience. We approach each business opportunity with the goal of living up to our motto:{' '}
+                  Our management team brings over <strong className="text-white">75 years of combined</strong> government, military, and commercial industry experience. We approach each business opportunity with the goal of living up to our motto:{' '}
                   <em className="text-blue-bright font-medium">&ldquo;Our Mission Is Your Success.&rdquo;</em>
                 </p>
                 <p>

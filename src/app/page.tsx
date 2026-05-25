@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 
 const stats = [
-  { value: '50+',  label: 'Years Combined Experience' },
+  { value: '75+',  label: 'Years Combined Experience' },
   { value: '20+',  label: 'Team Certifications' },
   { value: '6',    label: 'Core Service Areas' },
   { value: '100%', label: 'Mission Commitment' },
@@ -37,7 +37,7 @@ const partners = [
 
 const whyUs = [
   'Cyber-AB authorized CMMC RPO — CMMC Level 1 & Level 2 certified ourselves',
-  'Over 50 years of combined government & military IT experience',
+  'Over 75 years of combined government & military IT experience',
   'Service-Disabled Veteran leadership — we understand your mission',
   'Proven track record with VA, DoD, and Maryland state agencies',
   'Authorized reseller for Dell, HP, Palo Alto Networks, and more',
@@ -95,7 +95,7 @@ export default function HomePage() {
               Our Mission<br />Is Your Success
             </h1>
             <p className="text-lg sm:text-xl text-silver/80 max-w-2xl leading-relaxed mb-10" style={{ fontFamily:'var(--font-inter)' }}>
-              Galaxy Consulting is a Cyber-AB authorized CMMC RPO delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies — backed by 50+ years of combined military and technology expertise.
+              Galaxy Consulting is a Cyber-AB authorized CMMC RPO delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies — backed by 75+ years of combined military and technology expertise.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/cmmc" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
@@ -261,7 +261,7 @@ export default function HomePage() {
               <div className="space-y-3">
                 {[
                   { icon: Briefcase, text: 'Federal, State & Local Government Customers' },
-                  { icon: Users,     text: 'Management team with 50+ years experience' },
+                  { icon: Users,     text: 'Management team with 75+ years experience' },
                   { icon: Clock,     text: 'Responsive support — 24/7 help desk available' },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-3 text-silver/60 text-sm" style={{ fontFamily:'var(--font-inter)' }}>

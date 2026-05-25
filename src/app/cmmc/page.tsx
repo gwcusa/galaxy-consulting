@@ -84,7 +84,7 @@ const whyGalaxy = [
   'Cyber-AB authorized CMMC RPO — officially listed in the CMMC marketplace',
   'Galaxy itself is CMMC Level 1 and Level 2 certified — we practice what we preach',
   'Registered Practitioners (RPs) on staff with hands-on compliance experience',
-  'Veteran-led firm with 50+ years of DoD and government IT experience',
+  'Veteran-led firm with 75+ years of DoD and government IT experience',
   'Plain-English guidance — we make CMMC understandable for small businesses',
   'Fixed-scope engagements so you know exactly what you are paying for',
 ];
