@@ -211,10 +211,6 @@ export default function CMMCLevel1Page() {
               </div>
             ))}
           </div>
-          <p className="text-center text-xs text-silver/40 mt-8" style={{ fontFamily:'var(--font-inter)' }}>
-            Source: CMMC Model v2.0 — Official documentation available at{' '}
-            <a href="https://cyberab.org" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">cyberab.org</a>
-          </p>
         </div>
       </section>
 
