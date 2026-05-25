@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Mail, Globe } from 'lucide-react';
 import Logo from './Logo';
 
@@ -40,8 +41,25 @@ export default function Footer() {
               Bridging complex information technology with mission-critical government operations.
               Veteran-led. Mission-focused.
             </p>
+            {/* Credential badges */}
+            <div className="flex items-center gap-4 mt-5">
+              <Image
+                src="/RPO_Registered.jpg"
+                alt="CMMC-AB Registered Provider Organization"
+                width={60}
+                height={60}
+                className="rounded-full ring-1 ring-emerald-500/40 shadow-md shadow-orange-500/10"
+              />
+              <Image
+                src="/RP.png"
+                alt="Cyber-AB Registered Practitioner"
+                width={60}
+                height={60}
+                className="rounded-full ring-1 ring-blue-accent/40 shadow-md shadow-blue-500/10"
+              />
+            </div>
             {/* Cert chips */}
-            <div className="flex flex-wrap gap-2 mt-5">
+            <div className="flex flex-wrap gap-2 mt-4">
               <span className="text-xs font-bold px-2.5 py-1 rounded border border-emerald-500/40 text-emerald-400 tracking-wider" style={{ fontFamily: 'var(--font-inter)' }}>
                 CMMC RPO
               </span>

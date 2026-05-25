@@ -109,6 +109,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── TRUST & AUTHORITY BAR ── */}
+      <section className="bg-navy border-b border-emerald-500/25">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <p className="text-center text-xs text-silver/40 uppercase tracking-widest mb-8" style={{ fontFamily:'var(--font-inter)' }}>
+            Cyber-AB Authorized Credentials
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 lg:gap-20">
+            {/* RPO Badge */}
+            <div className="flex flex-col items-center gap-4 text-center">
+              <Image
+                src="/RPO_Registered.jpg"
+                alt="CMMC-AB Registered Provider Organization"
+                width={120}
+                height={120}
+                className="rounded-full shadow-xl shadow-orange-500/20 ring-2 ring-emerald-500/30"
+              />
+              <div>
+                <div className="text-emerald-400 font-bold text-sm tracking-wide" style={{ fontFamily:'var(--font-barlow)' }}>CMMC Registered Provider Organization</div>
+                <div className="text-silver/50 text-xs mt-1" style={{ fontFamily:'var(--font-inter)' }}>Cyber-AB Authorized · Advisory &amp; Preparation Services</div>
+              </div>
+            </div>
+            {/* Divider */}
+            <div className="hidden sm:block w-px h-24 bg-emerald-500/20" />
+            {/* RP Badge */}
+            <div className="flex flex-col items-center gap-4 text-center">
+              <Image
+                src="/RP.png"
+                alt="Cyber-AB Registered Practitioner"
+                width={120}
+                height={120}
+                className="rounded-full shadow-xl shadow-blue-500/20 ring-2 ring-blue-accent/30"
+              />
+              <div>
+                <div className="text-blue-bright font-bold text-sm tracking-wide" style={{ fontFamily:'var(--font-barlow)' }}>Registered Practitioner (RP)</div>
+                <div className="text-silver/50 text-xs mt-1" style={{ fontFamily:'var(--font-inter)' }}>Cyber-AB Certified · On-Staff CMMC Practitioners</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── STATS BAR ── */}
       <section className="bg-navy-mid border-y border-blue-accent/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
