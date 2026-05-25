@@ -110,42 +110,94 @@ export default function CMMCPage() {
         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none"
           style={{ background: 'radial-gradient(ellipse, rgba(52,211,153,0.07) 0%, transparent 65%)' }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="max-w-3xl">
-            {/* RPO Official Badge + text badge row */}
-            <div className="flex items-center gap-4 mb-4">
-              <Image
-                src="/RPO_Registered.jpg"
-                alt="CMMC-AB Registered Provider Organization (RPO)"
-                width={80}
-                height={80}
-                className="rounded-full shadow-lg shadow-orange-500/20"
-              />
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-widest uppercase" style={{ fontFamily:'var(--font-inter)' }}>
-                <Shield size={11} /> CMMC Registered Provider Organization (RPO)
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Hero content */}
+            <div>
+              {/* RPO Official Badge + text badge row */}
+              <div className="flex items-center gap-4 mb-4">
+                <Image
+                  src="/RPO_Registered.jpg"
+                  alt="CMMC-AB Registered Provider Organization (RPO)"
+                  width={80}
+                  height={80}
+                  className="rounded-full shadow-lg shadow-orange-500/20"
+                />
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-widest uppercase" style={{ fontFamily:'var(--font-inter)' }}>
+                  <Shield size={11} /> CMMC Registered Provider Organization (RPO)
+                </div>
+              </div>
+              {/* Cyber-AB sub-badge */}
+              <div className="flex items-center gap-2 mb-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-blue-accent/30 bg-blue-accent/10 text-blue-bright text-xs font-medium" style={{ fontFamily:'var(--font-inter)' }}>
+                  <Award size={10} /> Cyber-AB Authorized
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-400 text-xs font-medium" style={{ fontFamily:'var(--font-inter)' }}>
+                  <Star size={10} /> CMMC L1 &amp; L2 Certified
+                </span>
+              </div>
+              <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight gradient-text mb-6" style={{ fontFamily:'var(--font-barlow)' }}>
+                Your CMMC Level 1<br />Certification<br />Starts Here
+              </h1>
+              <p className="text-lg sm:text-xl text-silver/80 leading-relaxed mb-10" style={{ fontFamily:'var(--font-inter)' }}>
+                Galaxy Consulting is a Cyber-AB authorized CMMC RPO helping small DoD contractors achieve CMMC Level 1 compliance — from gap assessment through your official self-assessment submission.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
+                  Get a Free Readiness Consultation <ArrowRight size={17} />
+                </Link>
+                <Link href="/cmmc/level-1" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-emerald-500/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
+                  What is CMMC Level 1?
+                </Link>
               </div>
             </div>
-            {/* Cyber-AB sub-badge */}
-            <div className="flex items-center gap-2 mb-6">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-blue-accent/30 bg-blue-accent/10 text-blue-bright text-xs font-medium" style={{ fontFamily:'var(--font-inter)' }}>
-                <Award size={10} /> Cyber-AB Authorized
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-400 text-xs font-medium" style={{ fontFamily:'var(--font-inter)' }}>
-                <Star size={10} /> CMMC L1 &amp; L2 Certified
-              </span>
-            </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight gradient-text mb-6" style={{ fontFamily:'var(--font-barlow)' }}>
-              Your CMMC Level 1<br />Certification<br />Starts Here
-            </h1>
-            <p className="text-lg sm:text-xl text-silver/80 max-w-2xl leading-relaxed mb-10" style={{ fontFamily:'var(--font-inter)' }}>
-              Galaxy Consulting is a Cyber-AB authorized CMMC RPO helping small DoD contractors achieve CMMC Level 1 compliance — from gap assessment through your official self-assessment submission.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
-                Get a Free Readiness Consultation <ArrowRight size={17} />
-              </Link>
-              <Link href="/cmmc/level-1" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-emerald-500/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
-                What is CMMC Level 1?
-              </Link>
+
+            {/* Right: Credentials panel (desktop only) */}
+            <div className="hidden lg:flex flex-col gap-4">
+              <div className="rounded-2xl bg-emerald-500/5 border border-emerald-500/30 p-6">
+                <div className="flex items-center gap-3 mb-5">
+                  <Image
+                    src="/RPO_Registered.jpg"
+                    alt="CMMC-AB RPO"
+                    width={52}
+                    height={52}
+                    className="rounded-full shadow-md shadow-orange-500/20 flex-shrink-0"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-base" style={{ fontFamily:'var(--font-barlow)' }}>Galaxy&apos;s CMMC Credentials</div>
+                    <div className="text-emerald-400 text-xs" style={{ fontFamily:'var(--font-inter)' }}>Cyber-AB Authorized Provider</div>
+                  </div>
+                </div>
+                <div className="space-y-2.5 mb-5">
+                  {[
+                    { label: 'CMMC RPO', sub: 'Cyber-AB Registered Provider Organization', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/30' },
+                    { label: 'CMMC L1',  sub: 'Level 1 Certified — 17 Practices',          color: 'text-cyan-400',    bg: 'bg-cyan-500/10',    border: 'border-cyan-500/30'    },
+                    { label: 'CMMC L2',  sub: 'Level 2 Certified — 110 Practices',         color: 'text-violet-400',  bg: 'bg-violet-500/10',  border: 'border-violet-500/30'  },
+                    { label: 'RP Staff', sub: 'Registered Practitioners on our team',       color: 'text-amber-400',   bg: 'bg-amber-500/10',   border: 'border-amber-500/30'   },
+                  ].map((c) => (
+                    <div key={c.label} className={`flex items-center gap-3 rounded-lg px-3 py-2.5 border ${c.bg} ${c.border}`}>
+                      <span className={`font-bold text-xs w-16 flex-shrink-0 ${c.color}`} style={{ fontFamily:'var(--font-barlow)' }}>{c.label}</span>
+                      <span className="text-xs text-silver/70" style={{ fontFamily:'var(--font-inter)' }}>{c.sub}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/contact" className="block w-full text-center px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-colors text-sm" style={{ fontFamily:'var(--font-inter)' }}>
+                  Get Free Consultation
+                </Link>
+              </div>
+              {/* Key stats */}
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { value: '17',   label: 'Level 1 Practices' },
+                  { value: 'RPO',  label: 'Cyber-AB Listed' },
+                  { value: 'L1+L2', label: 'Galaxy Certified' },
+                  { value: '$2.5K', label: 'Starting Price' },
+                ].map((s) => (
+                  <div key={s.label} className="card-surface rounded-xl p-4 text-center border border-emerald-500/20">
+                    <div className="text-2xl font-bold text-emerald-400" style={{ fontFamily:'var(--font-barlow)' }}>{s.value}</div>
+                    <div className="text-xs text-silver/60 mt-1" style={{ fontFamily:'var(--font-inter)' }}>{s.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

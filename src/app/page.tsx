@@ -8,7 +8,7 @@ import {
 const stats = [
   { value: '50+',  label: 'Years Combined Experience' },
   { value: '20+',  label: 'Team Certifications' },
-  { value: '7',    label: 'Core Service Areas' },
+  { value: '6',    label: 'Core Service Areas' },
   { value: '100%', label: 'Mission Commitment' },
 ];
 
@@ -83,7 +83,7 @@ export default function HomePage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-3xl">
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex gap-2 mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-widest uppercase" style={{ fontFamily:'var(--font-inter)' }}>
                 <Shield size={11} /> CMMC Registered Provider Organization
               </div>
@@ -95,14 +95,14 @@ export default function HomePage() {
               Our Mission<br />Is Your Success
             </h1>
             <p className="text-lg sm:text-xl text-silver/80 max-w-2xl leading-relaxed mb-10" style={{ fontFamily:'var(--font-inter)' }}>
-              Galaxy Consulting delivers mission-critical IT infrastructure, cybersecurity, AI-driven automation, and professional services to federal and state government agencies — backed by 50+ years of combined military and technology expertise.
+              Galaxy Consulting is a Cyber-AB authorized CMMC RPO delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies — backed by 50+ years of combined military and technology expertise.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/services" className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-blue-accent/25" style={{ fontFamily:'var(--font-inter)' }}>
-                Explore Capabilities <ArrowRight size={17} />
+              <Link href="/cmmc" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
+                Get CMMC Certified <ArrowRight size={17} />
               </Link>
-              <Link href="/past-performance" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-blue-accent/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
-                Past Performance
+              <Link href="/services" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-blue-accent/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
+                Explore Capabilities
               </Link>
             </div>
           </div>
@@ -123,6 +123,38 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── CMMC CTA STRIP ── */}
+      <section className="py-14 bg-navy border-y border-emerald-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="flex items-start gap-4">
+              <Image
+                src="/RPO_Registered.jpg"
+                alt="CMMC-AB Registered Provider Organization"
+                width={64}
+                height={64}
+                className="rounded-full shadow-lg shadow-orange-500/20 flex-shrink-0"
+              />
+              <div>
+                <div className="text-xs text-emerald-400 font-semibold uppercase tracking-widest mb-1" style={{ fontFamily:'var(--font-inter)' }}>CMMC RPO — Cyber-AB Authorized</div>
+                <h3 className="text-white font-bold text-xl mb-1" style={{ fontFamily:'var(--font-barlow)' }}>Is Your Company Required to Be CMMC Compliant?</h3>
+                <p className="text-silver/60 text-sm max-w-xl" style={{ fontFamily:'var(--font-inter)' }}>
+                  If you hold DoD contracts or subcontracts, CMMC Level 1 may already be required. Galaxy Consulting — an authorized CMMC RPO — helps small businesses achieve compliance quickly and affordably.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-3 flex-shrink-0">
+              <Link href="/cmmc" className="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-all text-sm hover:-translate-y-0.5 shadow-lg shadow-emerald-500/20" style={{ fontFamily:'var(--font-inter)' }}>
+                Learn About CMMC
+              </Link>
+              <Link href="/contact" className="px-6 py-3 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-colors text-sm" style={{ fontFamily:'var(--font-inter)' }}>
+                Free Consultation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── SERVICES GRID ── */}
       <section className="py-24 bg-section-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,15 +164,31 @@ export default function HomePage() {
               Comprehensive technology and professional services tailored for government missions
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {services.map((s) => (
+          {/* Featured CMMC Card */}
+          <Link href="/cmmc" className="group block mb-5">
+            <div className="card-hover rounded-2xl bg-emerald-500/10 border border-emerald-500/40 hover:border-emerald-400/60 p-8 flex flex-col lg:flex-row lg:items-center gap-6 transition-all">
+              <div className="flex-1">
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 mb-4 uppercase tracking-wider bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/30" style={{ fontFamily:'var(--font-inter)' }}>
+                  <Shield size={11} /> CMMC RPO — Cyber-AB Authorized
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors" style={{ fontFamily:'var(--font-barlow)' }}>CMMC Level 1 Compliance</h3>
+                <p className="text-silver/70 text-sm leading-relaxed max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
+                  Cyber-AB authorized RPO helping DoD contractors achieve CMMC Level 1 certification — gap assessments, remediation, documentation, and RP staffing. Fixed-scope pricing starting at $2,500.
+                </p>
+              </div>
+              <div className="flex items-center gap-4 flex-shrink-0">
+                <Image src="/RPO_Registered.jpg" alt="CMMC RPO" width={60} height={60} className="rounded-full shadow-md shadow-orange-500/20" />
+                <span className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 group-hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-colors text-sm" style={{ fontFamily:'var(--font-inter)' }}>
+                  Learn More <ArrowRight size={14} />
+                </span>
+              </div>
+            </div>
+          </Link>
+          {/* Remaining Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {services.slice(1).map((s) => (
               <Link key={s.title} href={s.href} className="group">
-                <div className={`card-hover rounded-xl p-6 h-full flex flex-col ${'highlight' in s && s.highlight ? 'bg-emerald-500/5 border border-emerald-500/30' : 'card-surface'}`}>
-                  {'highlight' in s && s.highlight && (
-                    <div className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400 mb-3 uppercase tracking-wider" style={{ fontFamily:'var(--font-inter)' }}>
-                      <Shield size={10} /> CMMC RPO
-                    </div>
-                  )}
+                <div className="card-hover card-surface rounded-xl p-6 h-full flex flex-col">
                   <div className={`inline-flex p-2.5 rounded-lg mb-4 w-fit ${s.ring}`}>
                     <s.icon size={20} className={s.accent} />
                   </div>
@@ -246,38 +294,6 @@ export default function HomePage() {
                 {p}
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CMMC CTA STRIP ── */}
-      <section className="py-14 bg-navy border-y border-emerald-500/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="flex items-start gap-4">
-              <Image
-                src="/RPO_Registered.jpg"
-                alt="CMMC-AB Registered Provider Organization"
-                width={64}
-                height={64}
-                className="rounded-full shadow-lg shadow-orange-500/20 flex-shrink-0"
-              />
-              <div>
-                <div className="text-xs text-emerald-400 font-semibold uppercase tracking-widest mb-1" style={{ fontFamily:'var(--font-inter)' }}>CMMC RPO — Cyber-AB Authorized</div>
-                <h3 className="text-white font-bold text-xl mb-1" style={{ fontFamily:'var(--font-barlow)' }}>Is Your Company Required to Be CMMC Compliant?</h3>
-                <p className="text-silver/60 text-sm max-w-xl" style={{ fontFamily:'var(--font-inter)' }}>
-                  If you hold DoD contracts or subcontracts, CMMC Level 1 may already be required. Galaxy Consulting — an authorized CMMC RPO — helps small businesses achieve compliance quickly and affordably.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-3 flex-shrink-0">
-              <Link href="/cmmc" className="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-all text-sm hover:-translate-y-0.5 shadow-lg shadow-emerald-500/20" style={{ fontFamily:'var(--font-inter)' }}>
-                Learn About CMMC
-              </Link>
-              <Link href="/contact" className="px-6 py-3 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-colors text-sm" style={{ fontFamily:'var(--font-inter)' }}>
-                Free Consultation
-              </Link>
-            </div>
           </div>
         </div>
       </section>
