@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Building2, MapPin, Tag, ArrowRight, Briefcase } from 'lucide-react';
+import { Building2, Tag, ArrowRight, Briefcase } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Past Performance',
@@ -12,7 +12,7 @@ const contracts = [
     contractNumber: 'VA7716P0083',
     customer: 'Department of Veterans Affairs (VA)',
     subCustomer: 'Veterans Health Administration — Employee Education System (EES)',
-    naics: '541611', type: 'Administrative & Technical Support', location: 'Crystal City, Virginia',
+    type: 'Administrative & Technical Support',
     accent: 'border-blue-accent/40', tag: 'bg-blue-accent/15 text-blue-bright',
     scope: ['Managed multi-conference room facility for VHA EES and National Conference Center','Provided meeting and conference scheduling assistance for VHA EES meetings','Configured and set-up conference meeting rooms, conference bridges, and audio-visual support','Assisted conference meeting participants and coordinated support services from third-party vendors'],
     relevance: 'Demonstrated ability to support VA administrative requirements, support facility operations, and work effectively with VA stakeholders.',
@@ -21,7 +21,7 @@ const contracts = [
     contractNumber: '36C24122P0855',
     customer: 'Department of Veterans Affairs (VA)',
     subCustomer: 'West Haven VA Medical Center',
-    naics: '541519', type: 'IT Hardware Procurement', location: 'West Haven, Connecticut',
+    type: 'IT Hardware Procurement',
     accent: 'border-blue-accent/40', tag: 'bg-blue-accent/15 text-blue-bright',
     scope: ['Delivered Cisco model #8841 IP phones','Delivered Cisco conference phone accessories and installation materials','Delivered Cisco wired microphone kit','Delivered Cisco wall mounting kit'],
     relevance: 'Demonstrated ability to provide the VA with a critical technology solution which was vital to its operational mission.',
@@ -30,7 +30,7 @@ const contracts = [
     contractNumber: 'M0031819P0037',
     customer: 'Department of Defense',
     subCustomer: 'US Marine Forces Pacific (MARFORPAC)',
-    naics: '334210', type: 'IT Hardware Delivery', location: 'Honolulu, Hawaii',
+    type: 'IT Hardware Delivery',
     accent: 'border-emerald-500/40', tag: 'bg-emerald-500/15 text-emerald-400',
     scope: ['Provided 250 Avaya 9408 Digital Telephones and Digital Circuit Cards','Coordinated with multiple distribution hubs to consolidate equipment from multiple sources','Prepared packaging and shipping documents to meet Department of Defense shipping requirements'],
     relevance: 'Demonstrated ability to deliver technology solutions to large federal customer and meet critical mission requirements.',
@@ -39,7 +39,7 @@ const contracts = [
     contractNumber: 'Maryland DOIT Master H/W Contract 060B5400007',
     customer: 'Maryland State and Local Government Agencies',
     subCustomer: 'Multiple State Agencies',
-    naics: '423430', type: 'Multi-Year Blanket Purchase — IT Products & Services', location: 'Various locations across Maryland',
+    type: 'Multi-Year Blanket Purchase — IT Products & Services',
     accent: 'border-purple-500/40', tag: 'bg-purple-500/15 text-purple-400',
     scope: ['Maryland Department of Health','Maryland Executive Office of the Governor','Maryland Department of Housing and Community Development (DHCD)','Maryland Public Television','Maryland Department of Human Services','Maryland Clifton T. Perkins Hospital Center','Maryland Infectious Disease Prevention and Health Services Bureau','Maryland Department of Environment'],
     relevance: 'Demonstrated ability to deliver technology and services to a wide range of government and health service organizations.',
@@ -90,21 +90,11 @@ export default function PastPerformancePage() {
             {contracts.map((c) => (
               <div key={c.contractNumber} className={`card-surface rounded-xl border ${c.accent} overflow-hidden card-hover`}>
                 <div className="p-6 border-b border-blue-accent/15">
-                  <div className="flex flex-wrap items-start gap-3 justify-between">
-                    <div>
-                      <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${c.tag}`} style={{ fontFamily:'var(--font-inter)' }}>{c.type}</span>
-                      </div>
-                      <h3 className="text-lg font-bold text-white" style={{ fontFamily:'var(--font-barlow)' }}>{c.customer}</h3>
-                      <p className="text-sm text-silver/60 mt-0.5" style={{ fontFamily:'var(--font-inter)' }}>{c.subCustomer}</p>
-                    </div>
-                    <div className="text-right flex-shrink-0">
-                      <div className="text-xs text-silver/40 font-mono mb-1" style={{ fontFamily:'var(--font-inter)' }}>{c.contractNumber}</div>
-                      <div className="flex items-center gap-1.5 text-xs text-silver/50 justify-end" style={{ fontFamily:'var(--font-inter)' }}>
-                        <MapPin size={11} />{c.location}
-                      </div>
-                    </div>
+                  <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                    <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${c.tag}`} style={{ fontFamily:'var(--font-inter)' }}>{c.type}</span>
                   </div>
+                  <h3 className="text-lg font-bold text-white" style={{ fontFamily:'var(--font-barlow)' }}>{c.customer}</h3>
+                  <p className="text-sm text-silver/60 mt-0.5" style={{ fontFamily:'var(--font-inter)' }}>{c.subCustomer}</p>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
