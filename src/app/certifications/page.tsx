@@ -157,15 +157,6 @@ export default function CertificationsPage() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-silver/40 uppercase tracking-widest mb-4" style={{ fontFamily:'var(--font-inter)' }}>NAICS Codes</p>
-          <div className="flex flex-wrap gap-2">
-            {[{code:'423420',desc:'Office Equipment Merchant Wholesalers'},{code:'423430',desc:'Computer & Peripheral Equipment'},{code:'541519',desc:'Other Computer Related Services'},{code:'541512',desc:'Computer Systems Design'},{code:'541712',desc:'R&D Physical Sciences'},{code:'541990',desc:'All Other Professional Services'}].map((n) => (
-              <div key={n.code} className="cert-badge rounded-lg px-3 py-2 text-center" title={n.desc}>
-                <div className="text-blue-bright font-mono text-sm font-semibold">{n.code}</div>
-                <div className="text-silver/40 text-xs mt-0.5 max-w-[120px]" style={{ fontFamily:'var(--font-inter)' }}>{n.desc}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

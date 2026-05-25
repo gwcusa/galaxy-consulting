@@ -104,15 +104,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* NAICS */}
-              <div className="card-surface rounded-xl border border-blue-accent/20 p-6">
-                <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4" style={{ fontFamily:'var(--font-barlow)' }}>NAICS Codes</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['423420','423430','541519','541512','541712','541990'].map((code) => (
-                    <span key={code} className="text-xs font-mono px-2.5 py-1 rounded bg-blue-accent/10 text-blue-bright font-semibold border border-blue-accent/20" style={{ fontFamily:'var(--font-inter)' }}>{code}</span>
-                  ))}
-                </div>
-              </div>
 
               {/* Email CTA */}
               <div className="bg-blue-accent/10 rounded-xl border border-blue-accent/30 p-6 text-center">

@@ -177,11 +177,6 @@ export default function Footer() {
             <span>CAGE: 71RT1</span>
             <span>UEI: DT7XMKSNJ5F3</span>
           </div>
-          <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
-            {['423420', '423430', '541519', '541512', '541712', '541990'].map((code) => (
-              <span key={code}>NAICS {code}</span>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

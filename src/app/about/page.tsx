@@ -22,14 +22,7 @@ const timeline = [
   { year: 'Today',   title: 'Certified & Expanding',                    desc: 'Operating as a verified SDVOSB, SDB, and MBE with strategic partner affiliations including Dell, HP, and Palo Alto Networks.' },
 ];
 
-const naicsCodes = [
-  { code: '423420', desc: 'Office Equipment Merchant Wholesalers' },
-  { code: '423430', desc: 'Computer & Peripheral Equipment Merchant Wholesalers' },
-  { code: '541519', desc: 'Other Computer Related Services' },
-  { code: '541512', desc: 'Computer Systems Design Services' },
-  { code: '541712', desc: 'Research and Development in the Physical Sciences' },
-  { code: '541990', desc: 'All Other Professional Services' },
-];
+
 
 export default function AboutPage() {
   return (
@@ -151,21 +144,6 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── NAICS CODES ── */}
-      <section className="py-16 bg-section-alt">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-white section-heading mb-8" style={{ fontFamily:'var(--font-barlow)' }}>NAICS Codes</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {naicsCodes.map((n) => (
-              <div key={n.code} className="card-surface rounded-lg p-4 flex items-start gap-3">
-                <div className="text-blue-accent font-bold text-sm flex-shrink-0 pt-0.5 font-mono" style={{ fontFamily:'var(--font-inter)' }}>{n.code}</div>
-                <div className="text-silver text-sm" style={{ fontFamily:'var(--font-inter)' }}>{n.desc}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

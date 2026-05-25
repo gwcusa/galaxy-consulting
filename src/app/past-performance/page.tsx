@@ -94,7 +94,6 @@ export default function PastPerformancePage() {
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-1.5">
                         <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${c.tag}`} style={{ fontFamily:'var(--font-inter)' }}>{c.type}</span>
-                        <span className="text-xs text-silver/40 font-mono" style={{ fontFamily:'var(--font-inter)' }}>NAICS {c.naics}</span>
                       </div>
                       <h3 className="text-lg font-bold text-white" style={{ fontFamily:'var(--font-barlow)' }}>{c.customer}</h3>
                       <p className="text-sm text-silver/60 mt-0.5" style={{ fontFamily:'var(--font-inter)' }}>{c.subCustomer}</p>
