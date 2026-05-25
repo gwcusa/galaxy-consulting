@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Server, Shield, BarChart3, Brain, Code2, Building2, Award, ArrowRight } from 'lucide-react';
+import { Server, Shield, BarChart3, Code2, Building2, Award, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Galaxy Consulting offers IT infrastructure, cybersecurity, program management, AI services, software development, facility management, and federal compliance services.',
+  description: 'Galaxy Consulting offers CMMC compliance support, IT infrastructure, cybersecurity, program management, software development, facility management, and federal compliance services.',
 };
 
 const featuredServices = [
@@ -23,11 +23,7 @@ const featuredServices = [
     accent: 'text-purple-400', ring: 'bg-purple-400/10',
     highlights: ['Project Management Plan development','Strategic IT roadmap creation','Project team staffing support','Quality assurance & performance monitoring','Stakeholder coordination'],
   },
-  {
-    icon: Brain, title: 'Artificial Intelligence (AI) Services', href: '/services/ai-services',
-    accent: 'text-violet-400', ring: 'bg-violet-400/10',
-    highlights: ['Stay competitive with AI-driven solutions','Automate tasks & reduce operational costs','Predictive analytics & smarter decisions','Intelligent chatbots & virtual assistants','End-to-end AI strategy & implementation'],
-  },
+
 ];
 
 const additionalServices = [

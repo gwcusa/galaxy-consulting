@@ -10,7 +10,6 @@ const servicesLinks = [
   { href: '/services/it-infrastructure', label: 'IT Infrastructure' },
   { href: '/services/cybersecurity', label: 'Cybersecurity' },
   { href: '/services/program-management', label: 'Program Management' },
-  { href: '/services/ai-services', label: 'AI Services' },
 ];
 
 const cmmcLinks = [

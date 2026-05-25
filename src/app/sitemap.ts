@@ -21,6 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/services/cybersecurity`,      lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/services/it-infrastructure`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/services/program-management`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE}/services/ai-services`,        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+
   ];
 }

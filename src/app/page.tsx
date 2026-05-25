@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import {
-  Shield, Server, BarChart3, Code2, Building2, Award, Brain,
-  ArrowRight, CheckCircle2, Star, Users, Clock, Briefcase, FileText,
+  Shield, Server, BarChart3, Code2, Building2, Award,
+  ArrowRight, CheckCircle2, Star, Users, Clock, Briefcase,
 } from 'lucide-react';
 
 const stats = [
@@ -17,7 +17,7 @@ const services = [
   { icon: Server,    title: 'IT Infrastructure',        desc: 'End-to-end hardware/software sales, installation, integration, and 24/7 help desk services.', href: '/services/it-infrastructure',  accent: 'text-blue-bright',   ring: 'bg-blue-bright/10' },
   { icon: Shield,    title: 'Cybersecurity',             desc: 'NIST 800-53 compliance, ATO packages, penetration testing, and security architecture design.',  href: '/services/cybersecurity',      accent: 'text-cyan-400',      ring: 'bg-cyan-400/10' },
   { icon: BarChart3, title: 'Program Management',        desc: 'Strategic IT roadmaps, project planning, QA monitoring, and stakeholder coordination.',           href: '/services/program-management', accent: 'text-purple-400',    ring: 'bg-purple-400/10' },
-  { icon: Brain,     title: 'AI Services',               desc: 'Stay competitive and cut costs with practical AI automation, analytics, and decision intelligence.',href: '/services/ai-services',        accent: 'text-violet-400',    ring: 'bg-violet-400/10' },
+
   { icon: Code2,     title: 'Software Development',      desc: 'Custom software and database solutions that modernize operations and improve decision-making.',     href: '/services',                    accent: 'text-amber-400',     ring: 'bg-amber-400/10' },
   { icon: Building2, title: 'Facility Management',       desc: 'Procurement coordination, SLA monitoring, access control, and credentialing support.',             href: '/services',                    accent: 'text-rose-400',      ring: 'bg-rose-400/10' },
   { icon: Award,     title: 'Federal Compliance',        desc: 'ISO-9000 QA, identity management, and contract administration for federal agencies.',              href: '/services',                    accent: 'text-teal-400',      ring: 'bg-teal-400/10' },
