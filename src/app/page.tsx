@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Shield, Server, BarChart3, Code2, Building2, Award, Brain,
   ArrowRight, CheckCircle2, Star, Users, Clock, Briefcase, FileText,
@@ -254,9 +255,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="flex items-start gap-4">
-              <div className="p-3 rounded-xl bg-emerald-500/10 flex-shrink-0">
-                <Shield size={24} className="text-emerald-400" />
-              </div>
+              <Image
+                src="/RPO_Registered.jpg"
+                alt="CMMC-AB Registered Provider Organization"
+                width={64}
+                height={64}
+                className="rounded-full shadow-lg shadow-orange-500/20 flex-shrink-0"
+              />
               <div>
                 <div className="text-xs text-emerald-400 font-semibold uppercase tracking-widest mb-1" style={{ fontFamily:'var(--font-inter)' }}>CMMC RPO — Cyber-AB Authorized</div>
                 <h3 className="text-white font-bold text-xl mb-1" style={{ fontFamily:'var(--font-barlow)' }}>Is Your Company Required to Be CMMC Compliant?</h3>

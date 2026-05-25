@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Shield, CheckCircle2, ArrowRight, Star, Award, Users,
   FileText, Wrench, Search, ClipboardCheck,
@@ -110,9 +111,18 @@ export default function CMMCPage() {
           style={{ background: 'radial-gradient(ellipse, rgba(52,211,153,0.07) 0%, transparent 65%)' }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-3xl">
-            {/* RPO Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-widest uppercase mb-4" style={{ fontFamily:'var(--font-inter)' }}>
-              <Shield size={11} /> CMMC Registered Provider Organization (RPO)
+            {/* RPO Official Badge + text badge row */}
+            <div className="flex items-center gap-4 mb-4">
+              <Image
+                src="/RPO_Registered.jpg"
+                alt="CMMC-AB Registered Provider Organization (RPO)"
+                width={80}
+                height={80}
+                className="rounded-full shadow-lg shadow-orange-500/20"
+              />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-widest uppercase" style={{ fontFamily:'var(--font-inter)' }}>
+                <Shield size={11} /> CMMC Registered Provider Organization (RPO)
+              </div>
             </div>
             {/* Cyber-AB sub-badge */}
             <div className="flex items-center gap-2 mb-6">
@@ -324,7 +334,16 @@ export default function CMMCPage() {
 
             {/* Credentials card */}
             <div className="bg-card-surface rounded-2xl p-8 border border-emerald-500/20">
-              <h3 className="text-white font-bold text-lg mb-6" style={{ fontFamily:'var(--font-barlow)' }}>Galaxy&apos;s CMMC Credentials</h3>
+              <div className="flex items-center gap-4 mb-6">
+                <Image
+                  src="/RPO_Registered.jpg"
+                  alt="CMMC-AB RPO"
+                  width={64}
+                  height={64}
+                  className="rounded-full shadow-md shadow-orange-500/20 flex-shrink-0"
+                />
+                <h3 className="text-white font-bold text-lg" style={{ fontFamily:'var(--font-barlow)' }}>Galaxy&apos;s CMMC Credentials</h3>
+              </div>
               <div className="space-y-3 mb-6">
                 {[
                   { label: 'CMMC RPO', sub: 'Cyber-AB Registered Provider Organization', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/30' },

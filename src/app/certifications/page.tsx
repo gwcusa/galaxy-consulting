@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Award, Shield, Star, CheckCircle2, ArrowRight, GraduationCap, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -116,7 +117,17 @@ export default function CertificationsPage() {
             {certifications.map((c) => (
               <div key={c.abbr} className={`card-hover card-surface rounded-xl border ${c.border} p-7`}>
                 <div className="flex items-center gap-3 mb-5">
-                  <div className={`p-2.5 rounded-lg ${c.iconBg} ${c.iconColor}`}><c.icon size={22} /></div>
+                  {c.abbr === 'CMMC RPO' ? (
+                    <Image
+                      src="/RPO_Registered.jpg"
+                      alt="CMMC-AB Registered Provider Organization"
+                      width={48}
+                      height={48}
+                      className="rounded-full shadow-md shadow-orange-500/20 flex-shrink-0"
+                    />
+                  ) : (
+                    <div className={`p-2.5 rounded-lg ${c.iconBg} ${c.iconColor}`}><c.icon size={22} /></div>
+                  )}
                   <div className="text-2xl font-bold text-white" style={{ fontFamily:'var(--font-barlow)' }}>{c.abbr}</div>
                 </div>
                 <p className={`text-xs font-medium mb-3 uppercase tracking-wider ${c.iconColor}`} style={{ fontFamily:'var(--font-inter)' }}>{c.full}</p>
