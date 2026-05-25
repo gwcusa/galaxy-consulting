@@ -12,6 +12,7 @@ const services = [
     icon: Search,
     title: 'Gap Assessment',
     tagline: 'Know Exactly Where You Stand',
+    price: 'Starting at $2,500',
     accent: 'text-emerald-400',
     border: 'border-emerald-500/40',
     bg: 'bg-emerald-500/5',
@@ -30,6 +31,7 @@ const services = [
     icon: Wrench,
     title: 'Preparation & Remediation',
     tagline: 'Fix the Gaps. Get Compliant.',
+    price: 'Included in Full Package',
     accent: 'text-cyan-400',
     border: 'border-cyan-500/40',
     bg: 'bg-cyan-500/5',
@@ -48,6 +50,7 @@ const services = [
     icon: FileText,
     title: 'Documentation',
     tagline: 'The Written Proof Auditors Need',
+    price: 'Starting at $1,500',
     accent: 'text-violet-400',
     border: 'border-violet-500/40',
     bg: 'bg-violet-500/5',
@@ -66,6 +69,7 @@ const services = [
     icon: Users,
     title: 'RP Staffing',
     tagline: 'Certified Expertise On Demand',
+    price: '$200/hr or retainer',
     accent: 'text-amber-400',
     border: 'border-amber-500/40',
     bg: 'bg-amber-500/5',
@@ -129,6 +133,7 @@ export default function CMMCServicesPage() {
                       <div>
                         <div className={`text-xs font-semibold uppercase tracking-wider ${s.accent}`} style={{ fontFamily:'var(--font-inter)' }}>Service {String(i+1).padStart(2,'0')}</div>
                         <h2 className="text-2xl font-bold text-white" style={{ fontFamily:'var(--font-barlow)' }}>{s.title}</h2>
+                        <div className={`text-sm font-bold mt-1 ${s.accent}`} style={{ fontFamily:'var(--font-inter)' }}>{s.price}</div>
                       </div>
                     </div>
                     <p className={`text-sm font-semibold mb-3 ${s.accent}`} style={{ fontFamily:'var(--font-inter)' }}>{s.tagline}</p>
@@ -158,8 +163,41 @@ export default function CMMCServicesPage() {
         </div>
       </section>
 
+      {/* ── PRICING SUMMARY ── */}
+      <section className="py-20 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Transparent Pricing</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>Simple, Affordable CMMC Pricing</h2>
+            <p className="mt-5 text-silver/70 text-sm max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
+              No surprise fees. Fixed-scope engagements so you know exactly what you are paying before work begins. Priced 25–30% below the national average to make CMMC accessible for small businesses.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+            {[
+              { label: 'Gap Assessment',          price: '$2,500',      sub: 'Starting price',        accent: 'text-emerald-400', border: 'border-emerald-500/30', bg: 'bg-emerald-500/5' },
+              { label: 'Full Level 1 Package',    price: '$5,500',      sub: 'Gap + Remediation + Docs', accent: 'text-cyan-400',    border: 'border-cyan-500/30',    bg: 'bg-cyan-500/5' },
+              { label: 'Documentation Only',      price: '$1,500',      sub: 'SSP + policies + POA&M', accent: 'text-violet-400',  border: 'border-violet-500/30',  bg: 'bg-violet-500/5' },
+              { label: 'Annual Retainer',         price: '$1,100/yr',   sub: 'Ongoing compliance support', accent: 'text-amber-400', border: 'border-amber-500/30', bg: 'bg-amber-500/5' },
+            ].map((p) => (
+              <div key={p.label} className={`rounded-xl border ${p.border} ${p.bg} p-6 text-center`}>
+                <div className={`text-3xl font-bold mb-1 ${p.accent}`} style={{ fontFamily:'var(--font-barlow)' }}>{p.price}</div>
+                <div className="text-white font-semibold text-sm mb-1" style={{ fontFamily:'var(--font-barlow)' }}>{p.label}</div>
+                <div className="text-xs text-silver/50" style={{ fontFamily:'var(--font-inter)' }}>{p.sub}</div>
+              </div>
+            ))}
+          </div>
+          <div className="max-w-2xl mx-auto bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-5 text-center">
+            <p className="text-sm text-silver/70" style={{ fontFamily:'var(--font-inter)' }}>
+              Prices are starting points for small businesses (&lt;50 employees). Final pricing is based on your organization size, IT environment complexity, and scope. RP hourly rate: <strong className="text-emerald-400">$200/hr</strong>.
+              <br />All engagements begin with a <strong className="text-white">free discovery call</strong> — no obligation.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── PROCESS ── */}
-      <section className="py-24 bg-navy">
+      <section className="py-24 bg-section-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Our Approach</p>
