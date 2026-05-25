@@ -1,21 +1,24 @@
 import type { Metadata } from 'next';
 import { MapPin, Phone, Mail, Globe, User, Clock, Building2 } from 'lucide-react';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Contact Galaxy Consulting, LLC. Reach Charles Cooks at ccooks@galaxyconsultingllc.com or call 240-324-7888. Located in Fort Washington, Maryland.',
+  description: 'Contact Galaxy Consulting, LLC — CMMC RPO serving DoD contractors. Email info@galaxyconsultingllc.com or call 240-324-7888. Located in Fort Washington, Maryland.',
 };
 
 const contactDetails = [
   { icon: User,    label: 'Primary Contact', value: 'Charles Cooks — President & CEO', sub: null,                                  href: null },
   { icon: MapPin,  label: 'Office Address',  value: '8507 Oxon Hill Road, Suite 200',   sub: 'Fort Washington, MD 20744',           href: null },
   { icon: Phone,   label: 'Office Phone',    value: '240-324-7888',                     sub: 'Mobile: 703-402-7541',               href: 'tel:2403247888' },
-  { icon: Mail,    label: 'Email',           value: 'ccooks@galaxyconsultingllc.com',   sub: null,                                  href: 'mailto:ccooks@galaxyconsultingllc.com' },
+  { icon: Mail,    label: 'Email',           value: 'info@galaxyconsultingllc.com',     sub: null,                                  href: 'mailto:info@galaxyconsultingllc.com' },
   { icon: Globe,   label: 'Website',         value: 'www.GalaxyConsultingLLC.com',      sub: null,                                  href: 'https://www.GalaxyConsultingLLC.com' },
   { icon: Clock,   label: 'Business Hours',  value: 'Monday – Friday: 8:00 AM – 6:00 PM ET', sub: '24/7 Help Desk for active contracts', href: null },
 ];
 
 const reasons = [
+  'CMMC Level 1 readiness assessment or gap analysis',
+  'CMMC documentation, policies, and system security plans',
   'Request a capabilities briefing or statement of qualifications',
   'Inquire about IT hardware procurement and pricing',
   'Discuss cybersecurity assessment or ATO support',
@@ -70,17 +73,8 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* How Can We Help */}
-              <div className="bg-card-alt rounded-xl p-7 border border-blue-accent/20 mt-6">
-                <h3 className="text-white font-bold text-base mb-5" style={{ fontFamily:'var(--font-barlow)' }}>How Can We Help?</h3>
-                <ul className="space-y-3">
-                  {reasons.map((r) => (
-                    <li key={r} className="flex items-start gap-2.5 text-silver/70 text-sm" style={{ fontFamily:'var(--font-inter)' }}>
-                      <Building2 size={13} className="text-blue-accent flex-shrink-0 mt-0.5" />{r}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {/* Inquiry Form */}
+              <ContactForm reasons={reasons} />
             </div>
 
             {/* ── Right sidebar ── */}
@@ -124,7 +118,7 @@ export default function ContactPage() {
               <div className="bg-blue-accent/10 rounded-xl border border-blue-accent/30 p-6 text-center">
                 <Mail size={24} className="text-blue-accent mx-auto mb-3" />
                 <p className="text-sm text-silver mb-3" style={{ fontFamily:'var(--font-inter)' }}>Prefer email? Reach us directly.</p>
-                <a href="mailto:ccooks@galaxyconsultingllc.com" className="inline-block px-4 py-2 bg-blue-accent hover:bg-blue-bright text-navy text-xs font-semibold rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
+                <a href="mailto:info@galaxyconsultingllc.com" className="inline-block px-4 py-2 bg-blue-accent hover:bg-blue-bright text-navy text-xs font-semibold rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
                   Send Email
                 </a>
               </div>

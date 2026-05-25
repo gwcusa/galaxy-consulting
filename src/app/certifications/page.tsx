@@ -4,10 +4,28 @@ import { Award, Shield, Star, CheckCircle2, ArrowRight, GraduationCap, ExternalL
 
 export const metadata: Metadata = {
   title: 'Certifications & Partners',
-  description: 'Galaxy Consulting holds SDVOSB, SDB, and MBE certifications and maintains strategic partnerships with Dell Technologies, HP, Palo Alto Networks, and more.',
+  description: 'Galaxy Consulting is a CMMC RPO, CMMC Level 1 & Level 2 Certified, SDVOSB, SDB, and MBE — with strategic partnerships with Dell Technologies, HP, Palo Alto Networks, and more.',
 };
 
 const certifications = [
+  {
+    abbr: 'CMMC RPO', full: 'Registered Provider Organization — Cyber-AB Authorized', icon: Shield,
+    border: 'border-cyan-500/40', iconColor: 'text-cyan-400', iconBg: 'bg-cyan-500/10',
+    desc: 'Galaxy Consulting is officially authorized by the Cyber-AB as a CMMC Registered Provider Organization (RPO), qualified to deliver non-certified advisory and consulting services to DoD contractors preparing for CMMC certification.',
+    benefits: ['Cyber-AB authorized CMMC advisory services','CMMC Level 1 & Level 2 compliance support','Gap assessments, remediation, and documentation','Staffed with Cyber-AB Registered Practitioners (RPs)'],
+  },
+  {
+    abbr: 'CMMC L1', full: 'CMMC Level 1 Certified — Foundational Cybersecurity', icon: Award,
+    border: 'border-emerald-500/40', iconColor: 'text-emerald-400', iconBg: 'bg-emerald-500/10',
+    desc: 'Galaxy Consulting has achieved CMMC Level 1 certification, demonstrating full compliance with the 17 foundational cybersecurity practices required to protect Federal Contract Information (FCI).',
+    benefits: ['All 17 CMMC Level 1 practices implemented','Federal Contract Information (FCI) protection','FAR 52.204-21 compliant','Assessed and verified by a certified C3PAO'],
+  },
+  {
+    abbr: 'CMMC L2', full: 'CMMC Level 2 Certified — Advanced Cybersecurity', icon: Award,
+    border: 'border-violet-500/40', iconColor: 'text-violet-400', iconBg: 'bg-violet-500/10',
+    desc: 'Galaxy Consulting has achieved CMMC Level 2 certification, demonstrating compliance with all 110 security practices aligned with NIST SP 800-171 r2 for protecting Controlled Unclassified Information (CUI).',
+    benefits: ['All 110 NIST SP 800-171 r2 practices implemented','Controlled Unclassified Information (CUI) protection','DFARS 252.204-7012 compliant','Assessed and verified by a certified C3PAO'],
+  },
   {
     abbr: 'SDVOSB', full: 'Service-Disabled Veteran-Owned Small Business', icon: Star,
     border: 'border-blue-accent/40', iconColor: 'text-blue-bright', iconBg: 'bg-blue-accent/10',
@@ -39,7 +57,7 @@ const teamCertGroups = [
     category: 'Cybersecurity',
     accent: 'text-emerald-400', ring: 'bg-emerald-500/10', border: 'border-emerald-500/30',
     serviceHref: '/services/cybersecurity', serviceLabel: 'Cybersecurity Services',
-    certs: ['Certified Information Systems Security Professional (CISSP)','Certified CompTIA Security+ Professional','EC-Council Certified Ethical Hacker (CEH)','EC-Council Certified Network Defense Architect (CNDA)','Cisco Certified Information Security Specialist','Cisco IOS Security Specialist'],
+    certs: ['CMMC Registered Practitioner (RP) — Cyber-AB Certified','Certified Information Systems Security Professional (CISSP)','Certified CompTIA Security+ Professional','EC-Council Certified Ethical Hacker (CEH)','EC-Council Certified Network Defense Architect (CNDA)','Cisco Certified Information Security Specialist','Cisco IOS Security Specialist'],
   },
   {
     category: 'Networking',
@@ -85,7 +103,7 @@ export default function CertificationsPage() {
           <p className="text-blue-bright text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Credentials &amp; Alliances</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Certifications &amp;<br />Strategic Partners</h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-            Galaxy Consulting holds multiple federal and state certifications that open set-aside opportunities for your agency, backed by an ecosystem of leading technology vendor partnerships.
+            Galaxy Consulting is a Cyber-AB authorized CMMC RPO, CMMC Level 1 &amp; Level 2 Certified, and holds multiple federal and state set-aside certifications — backed by an ecosystem of leading technology vendor partnerships.
           </p>
         </div>
       </section>
@@ -93,7 +111,7 @@ export default function CertificationsPage() {
       {/* ── FEDERAL CERTIFICATIONS ── */}
       <section className="py-20 bg-section-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-white section-heading mb-10" style={{ fontFamily:'var(--font-barlow)' }}>Federal &amp; State Certifications</h2>
+          <h2 className="text-2xl font-bold text-white section-heading mb-10" style={{ fontFamily:'var(--font-barlow)' }}>CMMC &amp; Federal / State Certifications</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((c) => (
               <div key={c.abbr} className={`card-hover card-surface rounded-xl border ${c.border} p-7`}>
@@ -197,8 +215,8 @@ export default function CertificationsPage() {
       {/* ── CTA ── */}
       <section className="py-16 bg-galaxy">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4" style={{ fontFamily:'var(--font-barlow)' }}>Leverage Our Set-Aside Certifications</h2>
-          <p className="text-silver/70 text-sm mb-8" style={{ fontFamily:'var(--font-inter)' }}>Our SDVOSB, SDB, and MBE certifications help your agency meet socioeconomic goals while receiving premium IT services.</p>
+          <h2 className="text-2xl font-bold text-white mb-4" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Get CMMC Certified?</h2>
+          <p className="text-silver/70 text-sm mb-8" style={{ fontFamily:'var(--font-inter)' }}>As a Cyber-AB authorized CMMC RPO, Galaxy Consulting guides DoD contractors through every step of the CMMC Level 1 certification process.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5" style={{ fontFamily:'var(--font-inter)' }}>
             Start a Conversation <ArrowRight size={16} />
           </Link>

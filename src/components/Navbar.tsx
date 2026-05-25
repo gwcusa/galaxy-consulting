@@ -13,9 +13,18 @@ const servicesLinks = [
   { href: '/services/ai-services', label: 'AI Services' },
 ];
 
+const cmmcLinks = [
+  { href: '/cmmc', label: 'CMMC Overview' },
+  { href: '/cmmc/level-1', label: 'CMMC Level 1' },
+  { href: '/cmmc/services', label: 'CMMC Services' },
+  { href: '/cmmc/faq', label: 'CMMC FAQ' },
+  { href: '/cmmc/resources', label: 'Resources' },
+];
+
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/cmmc', label: 'CMMC', children: cmmcLinks },
   { href: '/services', label: 'Services', children: servicesLinks },
   { href: '/past-performance', label: 'Past Performance' },
   { href: '/certifications', label: 'Certifications' },
@@ -65,8 +74,8 @@ export default function Navbar() {
                 <div key={link.href} className="relative group">
                   <button
                     className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded transition-colors ${
-                      isActive('/services')
-                        ? 'text-blue-bright'
+                      isActive(link.href)
+                        ? link.href === '/cmmc' ? 'text-emerald-400' : 'text-blue-bright'
                         : 'text-silver hover:text-white'
                     }`}
                     style={{ fontFamily: 'var(--font-inter)' }}

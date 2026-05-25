@@ -2,6 +2,14 @@ import Link from 'next/link';
 import { MapPin, Phone, Mail, Globe } from 'lucide-react';
 import Logo from './Logo';
 
+const cmmcLinks = [
+  { href: '/cmmc', label: 'CMMC Overview' },
+  { href: '/cmmc/level-1', label: 'CMMC Level 1' },
+  { href: '/cmmc/services', label: 'CMMC Services' },
+  { href: '/cmmc/faq', label: 'CMMC FAQ' },
+  { href: '/cmmc/resources', label: 'Resources' },
+];
+
 const serviceLinks = [
   { href: '/services/it-infrastructure', label: 'IT Infrastructure' },
   { href: '/services/cybersecurity', label: 'Cybersecurity' },
@@ -23,7 +31,7 @@ export default function Footer() {
       <div className="divider" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           {/* Brand column */}
           <div className="lg:col-span-1">
@@ -34,6 +42,9 @@ export default function Footer() {
             </p>
             {/* Cert chips */}
             <div className="flex flex-wrap gap-2 mt-5">
+              <span className="text-xs font-bold px-2.5 py-1 rounded border border-emerald-500/40 text-emerald-400 tracking-wider" style={{ fontFamily: 'var(--font-inter)' }}>
+                CMMC RPO
+              </span>
               {['SDVOSB', 'SDB', 'MBE'].map((c) => (
                 <span
                   key={c}
@@ -44,6 +55,29 @@ export default function Footer() {
                 </span>
               ))}
             </div>
+          </div>
+
+          {/* CMMC */}
+          <div>
+            <h4
+              className="text-white font-semibold text-sm uppercase tracking-widest mb-4"
+              style={{ fontFamily: 'var(--font-barlow)' }}
+            >
+              CMMC
+            </h4>
+            <ul className="space-y-2.5">
+              {cmmcLinks.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="text-sm text-silver/70 hover:text-emerald-400 transition-colors"
+                    style={{ fontFamily: 'var(--font-inter)' }}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Services */}
@@ -120,8 +154,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail size={15} className="text-blue-accent flex-shrink-0" />
-                <a href="mailto:ccooks@galaxyconsultingllc.com" className="hover:text-blue-bright transition-colors break-all">
-                  ccooks@galaxyconsultingllc.com
+                <a href="mailto:info@galaxyconsultingllc.com" className="hover:text-blue-bright transition-colors break-all">
+                  info@galaxyconsultingllc.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">

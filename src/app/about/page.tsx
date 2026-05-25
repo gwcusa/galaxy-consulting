@@ -104,7 +104,7 @@ export default function AboutPage() {
               </div>
               <div className="divider mt-6 mb-5" />
               <div className="text-xs text-silver/40" style={{ fontFamily:'var(--font-inter)' }}>
-                <p>ccooks@galaxyconsultingllc.com</p>
+                <p>info@galaxyconsultingllc.com</p>
                 <p className="mt-1">240-324-7888 &nbsp;·&nbsp; 703-402-7541</p>
               </div>
             </div>

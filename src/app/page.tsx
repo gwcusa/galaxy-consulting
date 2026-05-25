@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import {
   Shield, Server, BarChart3, Code2, Building2, Award, Brain,
-  ArrowRight, CheckCircle2, Star, Users, Clock, Briefcase,
+  ArrowRight, CheckCircle2, Star, Users, Clock, Briefcase, FileText,
 } from 'lucide-react';
 
 const stats = [
@@ -12,19 +12,21 @@ const stats = [
 ];
 
 const services = [
-  { icon: Server,    title: 'IT Infrastructure',    desc: 'End-to-end hardware/software sales, installation, integration, and 24/7 help desk services.', href: '/services/it-infrastructure',  accent: 'text-blue-bright',   ring: 'bg-blue-bright/10' },
-  { icon: Shield,    title: 'Cybersecurity',         desc: 'NIST 800-53 compliance, ATO packages, penetration testing, and security architecture design.',  href: '/services/cybersecurity',      accent: 'text-emerald-400',   ring: 'bg-emerald-400/10' },
-  { icon: BarChart3, title: 'Program Management',    desc: 'Strategic IT roadmaps, project planning, QA monitoring, and stakeholder coordination.',           href: '/services/program-management', accent: 'text-purple-400',    ring: 'bg-purple-400/10' },
-  { icon: Brain,     title: 'AI Services',           desc: 'Stay competitive and cut costs with practical AI automation, analytics, and decision intelligence.',href: '/services/ai-services',        accent: 'text-violet-400',    ring: 'bg-violet-400/10' },
-  { icon: Code2,     title: 'Software Development',  desc: 'Custom software and database solutions that modernize operations and improve decision-making.',     href: '/services',                    accent: 'text-amber-400',     ring: 'bg-amber-400/10' },
-  { icon: Building2, title: 'Facility Management',   desc: 'Procurement coordination, SLA monitoring, access control, and credentialing support.',             href: '/services',                    accent: 'text-rose-400',      ring: 'bg-rose-400/10' },
-  { icon: Award,     title: 'Federal Compliance',    desc: 'ISO-9000 QA, identity management, and contract administration for federal agencies.',              href: '/services',                    accent: 'text-teal-400',      ring: 'bg-teal-400/10' },
+  { icon: Shield,    title: 'CMMC Level 1 Compliance', desc: 'Cyber-AB authorized RPO helping DoD contractors achieve CMMC Level 1 certification — gap assessments, remediation, documentation, and staffing.', href: '/cmmc', accent: 'text-emerald-400', ring: 'bg-emerald-400/10', highlight: true },
+  { icon: Server,    title: 'IT Infrastructure',        desc: 'End-to-end hardware/software sales, installation, integration, and 24/7 help desk services.', href: '/services/it-infrastructure',  accent: 'text-blue-bright',   ring: 'bg-blue-bright/10' },
+  { icon: Shield,    title: 'Cybersecurity',             desc: 'NIST 800-53 compliance, ATO packages, penetration testing, and security architecture design.',  href: '/services/cybersecurity',      accent: 'text-cyan-400',      ring: 'bg-cyan-400/10' },
+  { icon: BarChart3, title: 'Program Management',        desc: 'Strategic IT roadmaps, project planning, QA monitoring, and stakeholder coordination.',           href: '/services/program-management', accent: 'text-purple-400',    ring: 'bg-purple-400/10' },
+  { icon: Brain,     title: 'AI Services',               desc: 'Stay competitive and cut costs with practical AI automation, analytics, and decision intelligence.',href: '/services/ai-services',        accent: 'text-violet-400',    ring: 'bg-violet-400/10' },
+  { icon: Code2,     title: 'Software Development',      desc: 'Custom software and database solutions that modernize operations and improve decision-making.',     href: '/services',                    accent: 'text-amber-400',     ring: 'bg-amber-400/10' },
+  { icon: Building2, title: 'Facility Management',       desc: 'Procurement coordination, SLA monitoring, access control, and credentialing support.',             href: '/services',                    accent: 'text-rose-400',      ring: 'bg-rose-400/10' },
+  { icon: Award,     title: 'Federal Compliance',        desc: 'ISO-9000 QA, identity management, and contract administration for federal agencies.',              href: '/services',                    accent: 'text-teal-400',      ring: 'bg-teal-400/10' },
 ];
 
 const certifications = [
-  { abbr: 'SDVOSB', full: 'Service-Disabled Veteran-Owned Small Business' },
-  { abbr: 'SDB',    full: 'Small Disadvantaged Business' },
-  { abbr: 'MBE',    full: 'Maryland Certified Minority Business Enterprise' },
+  { abbr: 'CMMC RPO', full: 'Cyber-AB Registered Provider Organization', highlight: true },
+  { abbr: 'SDVOSB',   full: 'Service-Disabled Veteran-Owned Small Business' },
+  { abbr: 'SDB',      full: 'Small Disadvantaged Business' },
+  { abbr: 'MBE',      full: 'Maryland Certified Minority Business Enterprise' },
 ];
 
 const partners = [
@@ -33,12 +35,13 @@ const partners = [
 ];
 
 const whyUs = [
+  'Cyber-AB authorized CMMC RPO — CMMC Level 1 & Level 2 certified ourselves',
   'Over 50 years of combined government & military IT experience',
   'Service-Disabled Veteran leadership — we understand your mission',
   'Proven track record with VA, DoD, and Maryland state agencies',
   'Authorized reseller for Dell, HP, Palo Alto Networks, and more',
-  'NIST 800-53 & ISO-9000 compliance expertise',
-  '20+ industry-recognized team certifications — PMP, CISSP, CEH & more',
+  'NIST 800-53, CMMC & ISO-9000 compliance expertise',
+  '20+ industry-recognized team certifications — PMP, CISSP, CEH, RP & more',
   'Flexible contracting through multiple set-aside vehicles (SDVOSB · SDB · MBE)',
 ];
 
@@ -79,8 +82,13 @@ export default function HomePage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-accent/40 bg-blue-accent/10 text-blue-bright text-xs font-semibold tracking-widest uppercase mb-6" style={{ fontFamily:'var(--font-inter)' }}>
-              <Star size={11} /> Service-Disabled Veteran-Owned Business
+            <div className="flex flex-wrap gap-2 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-widest uppercase" style={{ fontFamily:'var(--font-inter)' }}>
+                <Shield size={11} /> CMMC Registered Provider Organization
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-accent/40 bg-blue-accent/10 text-blue-bright text-xs font-semibold tracking-widest uppercase" style={{ fontFamily:'var(--font-inter)' }}>
+                <Star size={11} /> Service-Disabled Veteran-Owned Business
+              </div>
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight gradient-text mb-6" style={{ fontFamily:'var(--font-barlow)' }}>
               Our Mission<br />Is Your Success
@@ -126,7 +134,12 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {services.map((s) => (
               <Link key={s.title} href={s.href} className="group">
-                <div className="card-hover card-surface rounded-xl p-6 h-full flex flex-col">
+                <div className={`card-hover rounded-xl p-6 h-full flex flex-col ${'highlight' in s && s.highlight ? 'bg-emerald-500/5 border border-emerald-500/30' : 'card-surface'}`}>
+                  {'highlight' in s && s.highlight && (
+                    <div className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400 mb-3 uppercase tracking-wider" style={{ fontFamily:'var(--font-inter)' }}>
+                      <Shield size={10} /> CMMC RPO
+                    </div>
+                  )}
                   <div className={`inline-flex p-2.5 rounded-lg mb-4 w-fit ${s.ring}`}>
                     <s.icon size={20} className={s.accent} />
                   </div>
@@ -154,12 +167,12 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>Federal Certifications</h2>
             <p className="mt-5 text-silver/60 text-sm max-w-lg mx-auto" style={{ fontFamily:'var(--font-inter)' }}>Strategically positioned for government set-aside opportunities</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
             {certifications.map((c) => (
-              <div key={c.abbr} className="cert-badge rounded-xl p-7 text-center">
-                <div className="text-3xl font-bold text-white mb-2" style={{ fontFamily:'var(--font-barlow)' }}>{c.abbr}</div>
+              <Link key={c.abbr} href={c.abbr === 'CMMC RPO' ? '/cmmc' : '/certifications'} className={`cert-badge rounded-xl p-7 text-center transition-all hover:-translate-y-0.5 ${'highlight' in c && c.highlight ? 'border border-emerald-500/40 bg-emerald-500/5' : ''}`}>
+                <div className={`text-2xl font-bold mb-2 ${'highlight' in c && c.highlight ? 'text-emerald-400' : 'text-white'}`} style={{ fontFamily:'var(--font-barlow)' }}>{c.abbr}</div>
                 <div className="text-xs text-silver/60" style={{ fontFamily:'var(--font-inter)' }}>{c.full}</div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="divider mb-8" />
@@ -232,6 +245,34 @@ export default function HomePage() {
                 {p}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CMMC CTA STRIP ── */}
+      <section className="py-14 bg-navy border-y border-emerald-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="flex items-start gap-4">
+              <div className="p-3 rounded-xl bg-emerald-500/10 flex-shrink-0">
+                <Shield size={24} className="text-emerald-400" />
+              </div>
+              <div>
+                <div className="text-xs text-emerald-400 font-semibold uppercase tracking-widest mb-1" style={{ fontFamily:'var(--font-inter)' }}>CMMC RPO — Cyber-AB Authorized</div>
+                <h3 className="text-white font-bold text-xl mb-1" style={{ fontFamily:'var(--font-barlow)' }}>Is Your Company Required to Be CMMC Compliant?</h3>
+                <p className="text-silver/60 text-sm max-w-xl" style={{ fontFamily:'var(--font-inter)' }}>
+                  If you hold DoD contracts or subcontracts, CMMC Level 1 may already be required. Galaxy Consulting — an authorized CMMC RPO — helps small businesses achieve compliance quickly and affordably.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-3 flex-shrink-0">
+              <Link href="/cmmc" className="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-all text-sm hover:-translate-y-0.5 shadow-lg shadow-emerald-500/20" style={{ fontFamily:'var(--font-inter)' }}>
+                Learn About CMMC
+              </Link>
+              <Link href="/contact" className="px-6 py-3 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-colors text-sm" style={{ fontFamily:'var(--font-inter)' }}>
+                Free Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </section>
