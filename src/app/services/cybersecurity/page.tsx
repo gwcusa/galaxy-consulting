@@ -8,6 +8,21 @@ export const metadata: Metadata = {
     'Galaxy Consulting delivers CMMC Level 1 compliance support, NIST 800-53 security controls, ATO packages, SSP development, and cybersecurity architecture for DoD contractors and federal agencies. Cyber-AB authorized CMMC RPO.',
 };
 
+const cybersecurityServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Cybersecurity & CMMC Compliance Services',
+  serviceType: 'Cybersecurity & Federal Compliance',
+  provider: {
+    '@type': 'ProfessionalService',
+    name: 'Galaxy Consulting, LLC',
+    url: 'https://www.galaxyconsultingllc.com',
+  },
+  description: 'CMMC Level 1 compliance support, NIST 800-53 security controls, ATO package preparation, SSP development, security assessments, and cybersecurity architecture for DoD contractors and federal agencies.',
+  areaServed: 'US',
+  url: 'https://www.galaxyconsultingllc.com/services/cybersecurity',
+};
+
 const offerings = [
   {
     icon: Lock,
@@ -95,6 +110,10 @@ const frameworks = [
 export default function CybersecurityPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cybersecurityServiceSchema) }}
+      />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -323,6 +342,13 @@ export default function CybersecurityPage() {
               style={{ fontFamily: 'var(--font-inter)' }}
             >
               Request Assessment <ArrowRight size={15} />
+            </Link>
+            <Link
+              href="/cmmc"
+              className="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 flex items-center gap-2"
+              style={{ fontFamily: 'var(--font-inter)' }}
+            >
+              CMMC Compliance <ArrowRight size={15} />
             </Link>
             <Link
               href="/certifications"

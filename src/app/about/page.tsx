@@ -19,7 +19,7 @@ const timeline = [
   { year: 'Early',   title: 'First Federal Contracts',                  desc: 'Began delivering IT solutions and administrative support services to the Department of Veterans Affairs.' },
   { year: 'Growth',  title: 'Maryland State Contract',                  desc: 'Awarded the Maryland DOIT Master H/W Contract, serving agencies statewide including the Department of Health and Executive Office of the Governor.' },
   { year: 'DoD',     title: 'Department of Defense Engagements',        desc: 'Delivered technology solutions to US Marine Forces Pacific (MARFORPAC) and Naval Surface Warfare Centers.' },
-  { year: 'Today',   title: 'Certified & Expanding',                    desc: 'Operating as a verified SDVOSB, SDB, and MBE with strategic partner affiliations including Dell, HP, and Palo Alto Networks.' },
+  { year: 'Today',   title: 'CMMC RPO & Expanding',                     desc: 'Authorized by Cyber-AB as a CMMC Registered Practitioner Organization (RPO), delivering CMMC Level 1 & Level 2 compliance support to DoD contractors alongside IT infrastructure and cybersecurity services. Operating as a verified SDVOSB, SDB, and MBE.' },
 ];
 
 
@@ -55,7 +55,10 @@ export default function AboutPage() {
                   <em className="text-blue-bright font-medium">&ldquo;Our Mission Is Your Success.&rdquo;</em>
                 </p>
                 <p>
-                  From complex IT infrastructure deployments to cybersecurity compliance, program management, and AI-driven automation, we deliver solutions that are technically sound, cost-effective, and aligned with your mission.
+                  As a <strong className="text-emerald-400">Cyber-AB authorized CMMC Registered Practitioner Organization (RPO)</strong>, we are qualified to deliver CMMC compliance advisory and preparation services to DoD contractors — from gap assessments and remediation to System Security Plans and self-assessment support.
+                </p>
+                <p>
+                  From complex IT infrastructure deployments to cybersecurity compliance and program management, we deliver solutions that are technically sound, cost-effective, and aligned with your mission.
                 </p>
                 <p>
                   Our team holds <strong className="text-white">20+ industry-recognized professional certifications</strong> spanning cybersecurity (CISSP, CEH), project management (PMP, Six Sigma), networking (CCNA), and vendor technologies — ensuring every engagement is backed by proven expertise.
@@ -154,7 +157,9 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Partner With Us?</h2>
           <p className="text-silver/70 text-sm mb-8" style={{ fontFamily:'var(--font-inter)' }}>Explore our capabilities or reach out to start a conversation about your mission requirements.</p>
           <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/cmmc" className="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 flex items-center gap-2" style={{ fontFamily:'var(--font-inter)' }}>CMMC Compliance <ArrowRight size={15} /></Link>
             <Link href="/services" className="px-6 py-3 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 flex items-center gap-2" style={{ fontFamily:'var(--font-inter)' }}>Our Services <ArrowRight size={15} /></Link>
+            <Link href="/certifications" className="px-6 py-3 border border-silver/30 text-silver hover:text-white hover:border-silver/60 rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>Our Credentials</Link>
             <Link href="/contact" className="px-6 py-3 border border-silver/30 text-silver hover:text-white hover:border-silver/60 rounded-lg transition-colors" style={{ fontFamily:'var(--font-inter)' }}>Contact Us</Link>
           </div>
         </div>

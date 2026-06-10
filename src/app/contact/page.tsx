@@ -22,7 +22,7 @@ const reasons = [
   'Request a capabilities briefing or statement of qualifications',
   'Inquire about IT hardware procurement and pricing',
   'Discuss cybersecurity assessment or ATO support',
-  'Explore AI adoption, process automation, or decision intelligence opportunities',
+
   'Learn about set-aside contract opportunities (SDVOSB / SDB / MBE)',
   'Explore teaming or subcontracting arrangements',
   'Request support under the Maryland DOIT contract',

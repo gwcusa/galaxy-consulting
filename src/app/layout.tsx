@@ -82,13 +82,14 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
+  '@type': ['ProfessionalService', 'LocalBusiness'],
   name: 'Galaxy Consulting, LLC',
   url: 'https://www.galaxyconsultingllc.com',
   logo: 'https://www.galaxyconsultingllc.com/og-image.png',
+  image: 'https://www.galaxyconsultingllc.com/og-image.png',
   description:
     'Cyber-AB authorized CMMC RPO and Service-Disabled Veteran-Owned IT firm providing CMMC Level 1 certification support, cybersecurity, IT infrastructure, and professional services to DoD contractors and government agencies.',
-  telephone: '240-324-7888',
+  telephone: '+1-240-324-7888',
   email: 'info@galaxyconsultingllc.com',
   address: {
     '@type': 'PostalAddress',
@@ -98,12 +99,40 @@ const organizationSchema = {
     postalCode: '20744',
     addressCountry: 'US',
   },
-  areaServed: 'US',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 38.7434,
+    longitude: -76.9961,
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '08:00',
+    closes: '18:00',
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'State', name: 'Maryland' },
+    { '@type': 'State', name: 'Virginia' },
+    { '@type': 'State', name: 'Washington DC' },
+  ],
+  knowsAbout: [
+    'CMMC Level 1 Compliance',
+    'CMMC Level 2 Compliance',
+    'NIST SP 800-171',
+    'NIST SP 800-53',
+    'Cybersecurity Maturity Model Certification',
+    'DoD Contractor Compliance',
+    'IT Infrastructure',
+    'Federal Cybersecurity',
+  ],
   hasCredential: [
     { '@type': 'EducationalOccupationalCredential', name: 'CMMC Registered Provider Organization (RPO) — Cyber-AB Authorized' },
     { '@type': 'EducationalOccupationalCredential', name: 'CMMC Level 1 Certified' },
     { '@type': 'EducationalOccupationalCredential', name: 'CMMC Level 2 Certified' },
     { '@type': 'EducationalOccupationalCredential', name: 'Service-Disabled Veteran-Owned Small Business (SDVOSB)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'Small Disadvantaged Business (SDB)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'Maryland Certified Minority Business Enterprise (MBE)' },
   ],
   sameAs: ['https://galaxy-consulting.vercel.app'],
 };

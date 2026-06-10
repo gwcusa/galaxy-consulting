@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   description: 'Galaxy Consulting is a Cyber-AB authorized CMMC RPO helping small DoD contractors achieve CMMC Level 1 certification. Gap assessments, remediation, documentation, and staffing.',
 };
 
+const cmmcServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'CMMC Level 1 Compliance Support',
+  serviceType: 'CMMC Advisory & Compliance',
+  provider: {
+    '@type': 'ProfessionalService',
+    name: 'Galaxy Consulting, LLC',
+    url: 'https://www.galaxyconsultingllc.com',
+  },
+  description: 'Cyber-AB authorized CMMC RPO delivering CMMC Level 1 gap assessments, remediation support, System Security Plan development, and Registered Practitioner staffing for DoD contractors.',
+  areaServed: 'US',
+  url: 'https://www.galaxyconsultingllc.com/cmmc',
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      price: '2500',
+      priceCurrency: 'USD',
+      description: 'CMMC Level 1 Gap Assessment starting price',
+    },
+  },
+};
+
 const stats = [
   { value: '17',    label: 'Level 1 Security Practices' },
   { value: 'RPO',   label: 'Cyber-AB Authorized' },
@@ -92,6 +116,10 @@ const whyGalaxy = [
 export default function CMMCPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cmmcServiceSchema) }}
+      />
       {/* ── HERO ── */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-galaxy">
         <div className="absolute inset-0 hero-dots pointer-events-none select-none opacity-60" />
