@@ -94,9 +94,22 @@ export default function HomePage() {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight gradient-text mb-6" style={{ fontFamily:'var(--font-barlow)' }}>
               Our Mission<br />Is Your Success
             </h1>
-            <p className="text-lg sm:text-xl text-silver/80 max-w-2xl leading-relaxed mb-10" style={{ fontFamily:'var(--font-inter)' }}>
-              Galaxy Consulting is a Cyber-AB authorized CMMC RPO delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies — backed by 75+ years of combined military and technology expertise.
-            </p>
+            <div className="text-lg sm:text-xl text-silver/80 max-w-2xl leading-relaxed mb-10 space-y-4" style={{ fontFamily:'var(--font-inter)' }}>
+              <p>
+                Galaxy Consulting is a{' '}
+                <span className="relative group cursor-help">
+                  <span className="underline decoration-dotted decoration-emerald-500/60 underline-offset-2">Cyber-AB authorized CMMC</span>
+                  <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-72 rounded-lg bg-navy-mid border border-emerald-500/30 px-3 py-2 text-xs text-silver/90 leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 shadow-lg" style={{ fontFamily:'var(--font-inter)', fontSize:'0.72rem' }}>
+                    <span className="font-semibold text-emerald-400">Cyber-AB:</span> Cybersecurity Maturity Model Certification Accreditation Body
+                    <br /><span className="font-semibold text-emerald-400">CMMC:</span> Cybersecurity Maturity Model Certification
+                  </span>
+                </span>{' '}
+                Registered Practitioner Organization (RPO) that is focused on delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies and their industry partners — backed by 75+ years of combined military and technology expertise.
+              </p>
+              <p>
+                We deliver IT system design, implementation, integration services and CMMC Level 1 and Level 2 compliance assistance to DoD contractors seeking CMMC compliance. We specialize in supporting CMMC services from gap analysis, self-assessments, security control compliance assistance, and support in preparing for official CMMC self-assessment or third-party compliance testing.
+              </p>
+            </div>
             <div className="flex flex-wrap gap-4">
               <Link href="/cmmc" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
                 Get CMMC Certified <ArrowRight size={17} />
@@ -119,11 +132,11 @@ export default function HomePage() {
             {/* RPO Badge */}
             <div className="flex flex-col items-center gap-4 text-center">
               <Image
-                src="/RPO_Registered.jpg"
+                src="/Cyberab - RPO Badge.png"
                 alt="CMMC-AB Registered Provider Organization"
                 width={120}
                 height={120}
-                className="rounded-full shadow-xl shadow-orange-500/20 ring-2 ring-emerald-500/30"
+                className="object-contain shadow-xl shadow-orange-500/20"
               />
               <div>
                 <div className="text-emerald-400 font-bold text-sm tracking-wide" style={{ fontFamily:'var(--font-barlow)' }}>CMMC Registered Provider Organization</div>
@@ -170,11 +183,11 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="flex items-start gap-4">
               <Image
-                src="/RPO_Registered.jpg"
+                src="/Cyberab - RPO Badge.png"
                 alt="CMMC-AB Registered Provider Organization"
                 width={64}
                 height={64}
-                className="rounded-full shadow-lg shadow-orange-500/20 flex-shrink-0"
+                className="object-contain shadow-lg shadow-orange-500/20 flex-shrink-0"
               />
               <div>
                 <div className="text-xs text-emerald-400 font-semibold uppercase tracking-widest mb-1" style={{ fontFamily:'var(--font-inter)' }}>CMMC RPO — Cyber-AB Authorized</div>
@@ -218,7 +231,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex items-center gap-4 flex-shrink-0">
-                <Image src="/RPO_Registered.jpg" alt="CMMC RPO" width={60} height={60} className="rounded-full shadow-md shadow-orange-500/20" />
+                <Image src="/Cyberab - RPO Badge.png" alt="CMMC RPO" width={60} height={60} className="object-contain shadow-md shadow-orange-500/20" />
                 <span className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 group-hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-colors text-sm" style={{ fontFamily:'var(--font-inter)' }}>
                   Learn More <ArrowRight size={14} />
                 </span>

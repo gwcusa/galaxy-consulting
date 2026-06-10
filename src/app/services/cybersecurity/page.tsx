@@ -112,13 +112,19 @@ export default function CybersecurityPage() {
           >
             Cybersecurity &amp;<br />Compliance
           </h1>
-          <p
-            className="text-silver/70 text-base max-w-2xl"
-            style={{ fontFamily: 'var(--font-inter)' }}
-          >
-            Protecting your mission-critical systems with rigorous security controls, compliance frameworks, and
-            expert assessments — from initial risk analysis through ATO authorization and ongoing monitoring.
-          </p>
+          <ul className="mt-4 space-y-2 max-w-2xl">
+            {[
+              'CMMC Level 1 Compliance Support',
+              'NIST 800-53 Security Compliance Support',
+              'Cybersecurity Architecture Design Support',
+              'System Security Policy & Procedure Development',
+            ].map((item) => (
+              <li key={item} className="flex items-center gap-2.5 text-silver/70 text-base" style={{ fontFamily: 'var(--font-inter)' }}>
+                <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

@@ -44,11 +44,11 @@ export default function Footer() {
             {/* Credential badges */}
             <div className="flex items-center gap-4 mt-5">
               <Image
-                src="/RPO_Registered.jpg"
+                src="/Cyberab - RPO Badge.png"
                 alt="CMMC-AB Registered Provider Organization"
                 width={60}
                 height={60}
-                className="rounded-full ring-1 ring-emerald-500/40 shadow-md shadow-orange-500/10"
+                className="object-contain ring-1 ring-emerald-500/40 shadow-md shadow-orange-500/10"
               />
               <Image
                 src="/RP.png"

@@ -116,11 +116,11 @@ export default function CMMCPage() {
               {/* RPO Official Badge + text badge row */}
               <div className="flex items-center gap-4 mb-4">
                 <Image
-                  src="/RPO_Registered.jpg"
+                  src="/Cyberab - RPO Badge.png"
                   alt="CMMC-AB Registered Provider Organization (RPO)"
                   width={80}
                   height={80}
-                  className="rounded-full shadow-lg shadow-orange-500/20"
+                  className="object-contain shadow-lg shadow-orange-500/20"
                 />
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-widest uppercase" style={{ fontFamily:'var(--font-inter)' }}>
                   <Shield size={11} /> CMMC Registered Provider Organization (RPO)
@@ -156,11 +156,11 @@ export default function CMMCPage() {
               <div className="rounded-2xl bg-emerald-500/5 border border-emerald-500/30 p-6">
                 <div className="flex items-center gap-3 mb-5">
                   <Image
-                    src="/RPO_Registered.jpg"
+                    src="/Cyberab - RPO Badge.png"
                     alt="CMMC-AB RPO"
                     width={52}
                     height={52}
-                    className="rounded-full shadow-md shadow-orange-500/20 flex-shrink-0"
+                    className="object-contain shadow-md shadow-orange-500/20 flex-shrink-0"
                   />
                   <div>
                     <div className="text-white font-bold text-base" style={{ fontFamily:'var(--font-barlow)' }}>Galaxy&apos;s CMMC Credentials</div>
@@ -388,11 +388,11 @@ export default function CMMCPage() {
             <div className="bg-card-surface rounded-2xl p-8 border border-emerald-500/20">
               <div className="flex items-center gap-4 mb-6">
                 <Image
-                  src="/RPO_Registered.jpg"
+                  src="/Cyberab - RPO Badge.png"
                   alt="CMMC-AB RPO"
                   width={64}
                   height={64}
-                  className="rounded-full shadow-md shadow-orange-500/20 flex-shrink-0"
+                  className="object-contain shadow-md shadow-orange-500/20 flex-shrink-0"
                 />
                 <h3 className="text-white font-bold text-lg" style={{ fontFamily:'var(--font-barlow)' }}>Galaxy&apos;s CMMC Credentials</h3>
               </div>

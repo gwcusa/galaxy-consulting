@@ -119,11 +119,11 @@ export default function CertificationsPage() {
                 <div className="flex items-center gap-3 mb-5">
                   {c.abbr === 'CMMC RPO' ? (
                     <Image
-                      src="/RPO_Registered.jpg"
+                      src="/Cyberab - RPO Badge.png"
                       alt="CMMC-AB Registered Provider Organization"
                       width={48}
                       height={48}
-                      className="rounded-full shadow-md shadow-orange-500/20 flex-shrink-0"
+                      className="object-contain shadow-md shadow-orange-500/20 flex-shrink-0"
                     />
                   ) : (
                     <div className={`p-2.5 rounded-lg ${c.iconBg} ${c.iconColor}`}><c.icon size={22} /></div>
