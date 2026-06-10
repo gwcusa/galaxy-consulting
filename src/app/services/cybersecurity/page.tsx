@@ -125,6 +125,52 @@ export default function CybersecurityPage() {
               </li>
             ))}
           </ul>
+
+          {/* ── SERVICE GROUPS ── */}
+          <div className="mt-12 grid sm:grid-cols-2 gap-8 max-w-4xl">
+            {/* CMMC Readiness */}
+            <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-6">
+              <h2 className="text-base font-bold text-emerald-400 mb-4 uppercase tracking-wide" style={{ fontFamily: 'var(--font-barlow)' }}>
+                CMMC Readiness &amp; Advisory Services
+              </h2>
+              <ul className="space-y-2.5">
+                {[
+                  'CMMC Level 1 readiness assessments',
+                  'Gap analysis against NIST SP 800-171 and CMMC practices',
+                  'System Security Plan (SSP) development and enhancement',
+                  'Plan of Action & Milestones (POA&M) creation and remediation planning',
+                  'Evidence collection, documentation, and audit preparation',
+                  'Continuous compliance monitoring and advisory support',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-silver/70 text-sm" style={{ fontFamily: 'var(--font-inter)' }}>
+                    <CheckCircle2 size={14} className="text-emerald-500 flex-shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Cybersecurity Program Development */}
+            <div className="rounded-xl border border-blue-accent/20 bg-blue-accent/5 p-6">
+              <h2 className="text-base font-bold text-blue-bright mb-4 uppercase tracking-wide" style={{ fontFamily: 'var(--font-barlow)' }}>
+                Cybersecurity Program Development
+              </h2>
+              <ul className="space-y-2.5">
+                {[
+                  'Security policy and procedure development',
+                  'Risk assessment and risk management program design',
+                  'Security Testing & Evaluation (ST&E)',
+                  'Security control implementation guidance',
+                  'Continuous Monitoring & Assessment',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-silver/70 text-sm" style={{ fontFamily: 'var(--font-inter)' }}>
+                    <CheckCircle2 size={14} className="text-blue-bright flex-shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
