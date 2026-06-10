@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Server, Shield, BarChart3, Code2, Building2, Award, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Services',
-  description: 'Galaxy Consulting offers CMMC compliance support, IT infrastructure, cybersecurity, program management, software development, facility management, and federal compliance services.',
+  title: 'CMMC Compliance & IT Services | Galaxy Consulting RPO',
+  description: 'Galaxy Consulting — a Cyber-AB authorized CMMC RPO — offers CMMC Level 1 & Level 2 compliance support, IT infrastructure, cybersecurity, program management, software development, and federal compliance services for DoD contractors and government agencies.',
 };
 
 const featuredServices = [

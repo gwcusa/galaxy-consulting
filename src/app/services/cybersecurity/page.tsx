@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Shield, Lock, FileText, Search, Network, AlertTriangle, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity & Compliance',
+  title: 'Cybersecurity & CMMC Compliance Services | Galaxy Consulting RPO',
   description:
-    'Galaxy Consulting delivers NIST 800-53 cybersecurity, ATO packages, penetration testing, and security architecture design for federal government agencies.',
+    'Galaxy Consulting delivers CMMC Level 1 compliance support, NIST 800-53 security controls, ATO packages, SSP development, and cybersecurity architecture for DoD contractors and federal agencies. Cyber-AB authorized CMMC RPO.',
 };
 
 const offerings = [

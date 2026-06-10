@@ -5,9 +5,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Artificial Intelligence (AI) Services',
+  title: 'AI Services for Government & DoD Contractors | Galaxy Consulting',
   description:
-    'Galaxy Consulting helps government agencies and organizations adopt AI to cut costs, automate operations, make smarter decisions, and deliver better outcomes.',
+    'Galaxy Consulting helps federal agencies and DoD contractors adopt AI and intelligent automation to cut costs, streamline operations, and improve mission outcomes — delivered by a Cyber-AB authorized CMMC RPO with proven government IT experience.',
 };
 
 const valueProps = [

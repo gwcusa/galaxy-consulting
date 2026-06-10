@@ -3,8 +3,8 @@ import { MapPin, Phone, Mail, Globe, User, Clock, Building2 } from 'lucide-react
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Contact Galaxy Consulting, LLC — CMMC RPO serving DoD contractors. Email info@galaxyconsultingllc.com or call 240-324-7888. Located in Fort Washington, Maryland.',
+  title: 'Contact Our CMMC RPO Team | Galaxy Consulting, LLC',
+  description: 'Contact Galaxy Consulting — a Cyber-AB authorized CMMC RPO serving DoD contractors and federal agencies. Schedule a free CMMC readiness consultation, call 240-324-7888, or email info@galaxyconsultingllc.com. Located in Fort Washington, Maryland.',
 };
 
 const contactDetails = [
