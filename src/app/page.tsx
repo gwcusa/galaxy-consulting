@@ -8,7 +8,7 @@ import {
 const stats = [
   { value: '75+',  label: 'Years Combined Experience' },
   { value: '20+',  label: 'Team Certifications' },
-  { value: '6',    label: 'Core Service Areas' },
+  { value: '7',    label: 'Core Service Areas' },
   { value: '100%', label: 'Mission Commitment' },
 ];
 
@@ -27,7 +27,6 @@ const certifications = [
   { abbr: 'CMMC RPO', full: 'Cyber-AB Registered Provider Organization', highlight: true },
   { abbr: 'SDVOSB',   full: 'Service-Disabled Veteran-Owned Small Business' },
   { abbr: 'SDB',      full: 'Small Disadvantaged Business' },
-  { abbr: 'MBE',      full: 'Maryland Certified Minority Business Enterprise' },
 ];
 
 const partners = [
@@ -43,7 +42,7 @@ const whyUs = [
   'Authorized reseller for Dell, HP, Palo Alto Networks, and more',
   'NIST 800-53, CMMC & ISO-9000 compliance expertise',
   '20+ industry-recognized team certifications — PMP, CISSP, CEH, RP & more',
-  'Flexible contracting through multiple set-aside vehicles (SDVOSB · SDB · MBE)',
+  'Flexible contracting through multiple set-aside vehicles (SDVOSB · SDB)',
 ];
 
 const customers = [
@@ -107,15 +106,15 @@ export default function HomePage() {
                 Registered Practitioner Organization (RPO) that is focused on delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies and their industry partners — backed by 75+ years of combined military and technology expertise.
               </p>
               <p>
-                We deliver IT system design, implementation, integration services and CMMC Level 1 and Level 2 compliance assistance to DoD contractors seeking CMMC compliance. We specialize in supporting CMMC services from gap analysis, self-assessments, security control compliance assistance, and support in preparing for official CMMC self-assessment or third-party compliance testing.
+                We deliver IT system design, implementation, integration services, and CMMC Level 1 and Level 2 compliance assistance to DoD contractors seeking CMMC compliance. We specialize in supporting CMMC services from gap analysis, self-assessments, security control compliance assistance, and support in preparing for official CMMC self-assessment or third-party compliance testing.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
               <Link href="/cmmc" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
-                Get CMMC Certified <ArrowRight size={17} />
+                CMMC Certification Support <ArrowRight size={17} />
               </Link>
               <Link href="/services" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-blue-accent/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
-                Explore Capabilities
+                IT Technical Services
               </Link>
             </div>
           </div>
@@ -227,7 +226,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors" style={{ fontFamily:'var(--font-barlow)' }}>CMMC Level 1 Compliance</h3>
                 <p className="text-silver/70 text-sm leading-relaxed max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-                  Cyber-AB authorized RPO helping DoD contractors achieve CMMC Level 1 certification — gap assessments, remediation, documentation, and RP staffing. Fixed-scope pricing starting at $2,500.
+                  Cyber-AB authorized RPO helping DoD contractors achieve CMMC Level 1 certification — gap assessments, remediation, documentation, and RP staffing.
                 </p>
               </div>
               <div className="flex items-center gap-4 flex-shrink-0">

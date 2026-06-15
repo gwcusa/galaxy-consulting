@@ -4,7 +4,7 @@ import { Shield, ArrowRight, ExternalLink, FileText, CheckCircle2, BookOpen } fr
 
 export const metadata: Metadata = {
   title: 'CMMC Resources — Official DoD & Cyber-AB Links for DoD Contractors',
-  description: 'Official CMMC resources for DoD contractors: Cyber-AB, DoD CMMC program site, NIST SP 800-171, FAR 52.204-21, SPRS guidance, and the CMMC Level 1 practice checklist.',
+  description: 'Official CMMC resources for DoD contractors: Cyber-AB, DoD CMMC program site, NIST SP 800-171, DFARS 252.204-7012, FAR 52.204-21, SPRS guidance, and CMMC Level 1 and Level 2 reference checklists.',
 };
 
 const officialLinks = [
@@ -52,6 +52,15 @@ const officialLinks = [
     color: 'text-blue-bright',
     border: 'border-blue-accent/30',
     bg: 'bg-blue-accent/5',
+  },
+  {
+    name: 'DFARS 252.204-7012',
+    url: 'https://www.acquisition.gov/dfars/252.204-7012',
+    desc: 'Defense Federal Acquisition Regulation Supplement clause 252.204-7012 — Safeguarding Covered Defense Information. The legal basis for CMMC Level 2. If this clause is in your contract, you handle CUI and need Level 2.',
+    badge: 'Legal Basis for Level 2',
+    color: 'text-violet-400',
+    border: 'border-violet-500/30',
+    bg: 'bg-violet-500/5',
   },
   {
     name: 'SPRS (Supplier Performance Risk System)',
@@ -111,7 +120,7 @@ export default function CMMCResourcesPage() {
             CMMC Resources &amp;<br />Reference Materials
           </h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-            Official links, reference documents, and a quick-reference checklist of all 17 CMMC Level 1 practices. All content sourced from the Cyber-AB and DoD CMMC program office.
+            Official links, reference documents, and quick-reference checklists for CMMC Level 1 (17 practices) and Level 2 (110 practices across 14 domains). All content sourced from the Cyber-AB and DoD CMMC program office.
           </p>
         </div>
       </section>
@@ -178,6 +187,53 @@ export default function CMMCResourcesPage() {
             or visit{' '}
             <a href="https://cyberab.org" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">cyberab.org</a>.
           </p>
+        </div>
+      </section>
+
+      {/* ── LEVEL 2 DOMAINS ── */}
+      <section className="py-20 bg-section-alt">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-violet-500/30 bg-violet-500/5 text-violet-400 text-xs font-semibold uppercase tracking-wider mb-4" style={{ fontFamily:'var(--font-inter)' }}>
+              <FileText size={10} /> Quick Reference
+            </div>
+            <h2 className="text-2xl font-bold text-white section-heading mb-2" style={{ fontFamily:'var(--font-barlow)' }}>CMMC Level 2 — 14 Domains at a Glance</h2>
+            <p className="text-silver/60 text-sm" style={{ fontFamily:'var(--font-inter)' }}>
+              All 110 Level 2 practices from NIST SP 800-171 r2 are organized into 14 security domains. Every organization seeking Level 2 must demonstrate compliance across all domains.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { id: 'AC',  name: 'Access Control',                      count: 22, color: 'text-emerald-400', border: 'border-emerald-500/30', bg: 'bg-emerald-500/5' },
+              { id: 'AT',  name: 'Awareness & Training',                count: 3,  color: 'text-sky-400',     border: 'border-sky-500/30',     bg: 'bg-sky-500/5' },
+              { id: 'AU',  name: 'Audit & Accountability',              count: 9,  color: 'text-cyan-400',    border: 'border-cyan-500/30',    bg: 'bg-cyan-500/5' },
+              { id: 'CM',  name: 'Configuration Management',            count: 9,  color: 'text-teal-400',    border: 'border-teal-500/30',    bg: 'bg-teal-500/5' },
+              { id: 'IA',  name: 'Identification & Authentication',     count: 11, color: 'text-violet-400',  border: 'border-violet-500/30',  bg: 'bg-violet-500/5' },
+              { id: 'IR',  name: 'Incident Response',                   count: 3,  color: 'text-rose-400',    border: 'border-rose-500/30',    bg: 'bg-rose-500/5' },
+              { id: 'MA',  name: 'Maintenance',                         count: 6,  color: 'text-amber-400',   border: 'border-amber-500/30',   bg: 'bg-amber-500/5' },
+              { id: 'MP',  name: 'Media Protection',                    count: 9,  color: 'text-purple-400',  border: 'border-purple-500/30',  bg: 'bg-purple-500/5' },
+              { id: 'PE',  name: 'Physical Protection',                 count: 6,  color: 'text-orange-400',  border: 'border-orange-500/30',  bg: 'bg-orange-500/5' },
+              { id: 'PS',  name: 'Personnel Security',                  count: 2,  color: 'text-indigo-400',  border: 'border-indigo-500/30',  bg: 'bg-indigo-500/5' },
+              { id: 'RA',  name: 'Risk Assessment',                     count: 3,  color: 'text-lime-400',    border: 'border-lime-500/30',    bg: 'bg-lime-500/5' },
+              { id: 'CA',  name: 'Security Assessment',                 count: 4,  color: 'text-blue-bright', border: 'border-blue-accent/30', bg: 'bg-blue-accent/5' },
+              { id: 'SC',  name: 'System & Communications Protection',  count: 16, color: 'text-fuchsia-400', border: 'border-fuchsia-500/30', bg: 'bg-fuchsia-500/5' },
+              { id: 'SI',  name: 'System & Information Integrity',      count: 7,  color: 'text-red-400',     border: 'border-red-500/30',     bg: 'bg-red-500/5' },
+            ].map((d) => (
+              <div key={d.id} className={`card-surface rounded-lg px-5 py-3.5 border ${d.border} ${d.bg} flex items-center gap-4`}>
+                <span className={`font-bold text-xs w-8 flex-shrink-0 font-mono ${d.color}`} style={{ fontFamily:'var(--font-inter)' }}>{d.id}</span>
+                <span className="text-sm text-silver/80 flex-1" style={{ fontFamily:'var(--font-inter)' }}>{d.name}</span>
+                <span className={`text-xs flex-shrink-0 font-semibold ${d.color}`} style={{ fontFamily:'var(--font-inter)' }}>{d.count} practices</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 flex items-center justify-between">
+            <p className="text-xs text-silver/40" style={{ fontFamily:'var(--font-inter)' }}>
+              Total: 110 practices across 14 domains — sourced from NIST SP 800-171 r2.
+            </p>
+            <Link href="/cmmc/level-2" className="text-xs text-violet-400 hover:text-violet-300 font-medium transition-colors flex items-center gap-1" style={{ fontFamily:'var(--font-inter)' }}>
+              Full Level 2 Details <ArrowRight size={11} />
+            </Link>
+          </div>
         </div>
       </section>
 

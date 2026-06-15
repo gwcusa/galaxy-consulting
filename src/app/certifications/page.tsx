@@ -5,7 +5,7 @@ import { Award, Shield, Star, CheckCircle2, ArrowRight, GraduationCap, ExternalL
 
 export const metadata: Metadata = {
   title: 'CMMC RPO Certifications & Credentials | Galaxy Consulting',
-  description: 'Galaxy Consulting holds Cyber-AB authorized CMMC RPO status, CMMC Level 1 & Level 2 certification, SDVOSB, SDB, and MBE designations — backed by 20+ professional certifications and strategic partnerships with Dell, HP, and Palo Alto Networks.',
+  description: 'Galaxy Consulting holds Cyber-AB authorized CMMC RPO status, CMMC Level 1 and Level 2 certification, and SDVOSB and SDB designations — backed by 20+ professional certifications and strategic partnerships with Dell, HP, and Palo Alto Networks.',
 };
 
 const certifications = [
@@ -24,7 +24,7 @@ const certifications = [
   {
     abbr: 'CMMC L2', full: 'CMMC Level 2 Certified — Advanced Cybersecurity', icon: Award,
     border: 'border-violet-500/40', iconColor: 'text-violet-400', iconBg: 'bg-violet-500/10',
-    desc: 'Galaxy Consulting has achieved CMMC Level 2 certification, demonstrating compliance with all 110 security practices aligned with NIST SP 800-171 r2 for protecting Controlled Unclassified Information (CUI).',
+    desc: 'Galaxy Consulting has implemented NIST SP 800-171 r2 security practices and is registered with the US Department of War as a CMMC Level 2 certified firm. We employ CMMC Level 2 practices and procedures when handling and processing sensitive customer data. We will leverage our CMMC Level 2 policy and procedures development experience to assist clients with establishing system processing boundaries and operational policies & procedures that are required to achieve CMMC Level 2 compliance.',
     benefits: ['All 110 NIST SP 800-171 r2 practices implemented','Controlled Unclassified Information (CUI) protection','DFARS 252.204-7012 compliant','Assessed and verified by a certified C3PAO'],
   },
   {
@@ -38,12 +38,6 @@ const certifications = [
     border: 'border-emerald-500/40', iconColor: 'text-emerald-400', iconBg: 'bg-emerald-500/10',
     desc: 'Certified Small Disadvantaged Business eligible for SDB price evaluation preferences, mentorship programs, and subcontracting opportunities under federal FAR regulations.',
     benefits: ['SDB price evaluation preferences','8(a) Business Development Program eligible','Mentor-Protégé Program opportunities','Federal subcontracting plan credits'],
-  },
-  {
-    abbr: 'MBE', full: 'Maryland Certified Minority Business Enterprise', icon: Award,
-    border: 'border-purple-500/40', iconColor: 'text-purple-400', iconBg: 'bg-purple-500/10',
-    desc: 'Certified by the Maryland Department of Transportation. Eligible for Maryland state and local government procurement set-asides and subcontracting goals.',
-    benefits: ['Maryland state agency procurement goals','Maryland local government set-asides','MBE subcontracting goal participation','Priority listing in Maryland MBE directory'],
   },
 ];
 
@@ -104,7 +98,7 @@ export default function CertificationsPage() {
           <p className="text-blue-bright text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Credentials &amp; Alliances</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Certifications &amp;<br />Strategic Partners</h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-            Galaxy Consulting is a Cyber-AB authorized CMMC RPO, CMMC Level 1 &amp; Level 2 Certified, and holds multiple federal and state set-aside certifications — backed by an ecosystem of leading technology vendor partnerships.
+            Galaxy Consulting is a Cyber-AB authorized CMMC RPO, CMMC Level 1 and Level 2 Certified — backed by SDVOSB and SDB federal set-aside designations and an ecosystem of leading technology vendor partnerships.
           </p>
         </div>
       </section>

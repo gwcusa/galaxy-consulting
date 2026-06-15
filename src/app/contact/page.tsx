@@ -23,7 +23,7 @@ const reasons = [
   'Inquire about IT hardware procurement and pricing',
   'Discuss cybersecurity assessment or ATO support',
 
-  'Learn about set-aside contract opportunities (SDVOSB / SDB / MBE)',
+  'Learn about set-aside contract opportunities (SDVOSB / SDB)',
   'Explore teaming or subcontracting arrangements',
   'Request support under the Maryland DOIT contract',
 ];
@@ -83,7 +83,7 @@ export default function ContactPage() {
               <div className="card-surface rounded-xl border border-blue-accent/20 p-6">
                 <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4" style={{ fontFamily:'var(--font-barlow)' }}>Certifications</h3>
                 <div className="space-y-2">
-                  {['SDVOSB','SDB','MBE'].map((c) => (
+                  {['SDVOSB','SDB'].map((c) => (
                     <div key={c} className="cert-badge rounded-lg px-4 py-2.5 text-center">
                       <span className="text-blue-bright font-bold text-sm" style={{ fontFamily:'var(--font-inter)' }}>{c}</span>
                     </div>

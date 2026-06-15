@@ -132,7 +132,6 @@ const organizationSchema = {
     { '@type': 'EducationalOccupationalCredential', name: 'CMMC Level 2 Certified' },
     { '@type': 'EducationalOccupationalCredential', name: 'Service-Disabled Veteran-Owned Small Business (SDVOSB)' },
     { '@type': 'EducationalOccupationalCredential', name: 'Small Disadvantaged Business (SDB)' },
-    { '@type': 'EducationalOccupationalCredential', name: 'Maryland Certified Minority Business Enterprise (MBE)' },
   ],
   sameAs: ['https://galaxy-consulting.vercel.app'],
 };

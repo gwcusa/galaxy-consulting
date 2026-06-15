@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Shield, ArrowRight, HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'CMMC Level 1 FAQ — Frequently Asked Questions for DoD Contractors',
-  description: 'Answers to the most common CMMC Level 1 questions: who needs it, the 17 practices, self-assessment process, RPO vs C3PAO, costs, timelines, and more.',
+  title: 'CMMC FAQ — Level 1 & Level 2 Frequently Asked Questions for DoD Contractors',
+  description: 'Answers to the most common CMMC Level 1 and Level 2 questions: who needs each level, the 17 and 110 practices, self-assessment vs C3PAO, CUI, SSP, POA&M, timelines, and more.',
 };
 
 const faqs = [
@@ -65,6 +65,62 @@ const faqs = [
       {
         q: 'What is the SPRS score and how does it work?',
         a: 'The Supplier Performance Risk System (SPRS) is the DoD database where contractors submit their CMMC self-assessment scores. For CMMC Level 1, the maximum score is 110. Each practice that is not fully implemented reduces your score. A score of 110 means all practices are met. Your SPRS score is visible to DoD contracting officers and can influence contract award decisions. Submitting a score you cannot support with documentation is a federal compliance risk.',
+      },
+    ],
+  },
+  {
+    category: 'CMMC Level 2 Specifics',
+    color: 'text-violet-400',
+    border: 'border-violet-500/30',
+    bg: 'bg-violet-500/5',
+    items: [
+      {
+        q: 'What is CMMC Level 2?',
+        a: 'CMMC Level 2 is the Advanced tier of the CMMC framework. It requires organizations to implement all 110 security practices from NIST SP 800-171 r2 across 14 domains to protect Controlled Unclassified Information (CUI). Unlike Level 1, Level 2 requires a formal third-party assessment conducted by a Cyber-AB accredited C3PAO (CMMC Third-Party Assessment Organization) — you cannot self-assess your way to Level 2 certification.',
+      },
+      {
+        q: 'What is Controlled Unclassified Information (CUI)?',
+        a: 'CUI is information the U.S. Government creates or possesses that requires safeguarding under law, regulation, or government-wide policy — but is not classified. In defense contracting, CUI commonly includes export-controlled technical data (EAR/ITAR), engineering drawings, defense acquisition-sensitive information, personally identifiable information (PII) of DoD personnel, and other categories defined by the National Archives CUI Registry. If your DoD contract includes a DFARS 252.204-7012 clause, you almost certainly handle CUI.',
+      },
+      {
+        q: 'Who needs CMMC Level 2?',
+        a: 'Any DoD contractor or subcontractor that receives, processes, stores, or transmits Controlled Unclassified Information (CUI) needs CMMC Level 2. This includes manufacturers producing defense-related components, engineering firms developing technical specifications, IT service providers processing CUI on behalf of prime contractors, and any company with a DFARS 252.204-7012 clause in their contract. Subcontractors are not exempt — if the prime flows CUI down to you, you need Level 2.',
+      },
+      {
+        q: 'What is a C3PAO and why is one required for Level 2?',
+        a: 'A C3PAO (CMMC Third-Party Assessment Organization) is a firm accredited by the Cyber-AB to conduct official CMMC Level 2 and Level 3 certification assessments. C3PAOs are independent from RPOs — they do not provide consulting services; they assess. Level 2 requires a C3PAO because the DoD determined that self-attestation is insufficient for protecting CUI. The C3PAO evaluates your environment, documentation, and implemented controls against all 110 NIST SP 800-171 r2 practices before issuing a certification recommendation.',
+      },
+      {
+        q: 'Can I self-assess for CMMC Level 2?',
+        a: 'For most DoD programs, no. CMMC Level 2 requires a formal C3PAO assessment. The one exception is a narrow set of programs where the DoD has designated Level 2 as allowable via self-assessment — but these are uncommon and explicitly identified in the contract. If your contract requires CMMC Level 2, assume you need a C3PAO unless the contract language explicitly states otherwise. An RPO like Galaxy Consulting can help you interpret your contract requirements.',
+      },
+      {
+        q: 'How many practices does CMMC Level 2 require?',
+        a: 'CMMC Level 2 requires 110 security practices, derived from NIST SP 800-171 r2, across 14 domains: Access Control (22), Awareness & Training (3), Audit & Accountability (9), Configuration Management (9), Identification & Authentication (11), Incident Response (3), Maintenance (6), Media Protection (9), Physical Protection (6), Personnel Security (2), Risk Assessment (3), Security Assessment (4), System & Communications Protection (16), and System & Information Integrity (7). All 17 CMMC Level 1 practices are included within these 110.',
+      },
+      {
+        q: 'What is a System Security Plan (SSP) and is it required for Level 2?',
+        a: 'Yes — a System Security Plan (SSP) is a mandatory artifact for CMMC Level 2. The SSP documents your system boundaries, operating environments, the personnel responsible for security, and precisely how your organization implements each of the 110 security practices. The C3PAO will review your SSP as a core part of the assessment. A well-written SSP can significantly reduce the time and cost of your assessment by clearly demonstrating compliance upfront.',
+      },
+      {
+        q: 'What is a Plan of Action & Milestones (POA&M) for Level 2?',
+        a: 'A POA&M documents security deficiencies that have not yet been fully remediated and the corrective actions planned to address them, including responsible parties and target completion dates. At Level 2, a limited number of POA&M items may be accepted by a C3PAO depending on severity — critical or high-severity practices must be remediated before certification can be issued. Galaxy Consulting helps you assess which gaps can be carried as POA&M items and which must be fixed first.',
+      },
+      {
+        q: 'How long does CMMC Level 2 certification take?',
+        a: 'Organizations with a strong baseline (existing NIST SP 800-171 compliance, a current SSP, and a low SPRS score gap) may be ready for a C3PAO assessment in 3–6 months. Organizations with significant gaps across the 110 practices may require 9–18 months of remediation before they are assessment-ready. Galaxy Consulting\'s Level 2 gap assessment will give you an honest readiness timeline based on your specific environment.',
+      },
+      {
+        q: 'How long is CMMC Level 2 certification valid?',
+        a: 'CMMC Level 2 certification is valid for three years from the date of the C3PAO assessment. In years 2 and 3, a senior company official must submit an annual affirmation through the CMMC portal confirming continued compliance with all 110 practices. At the end of the three-year period, a full C3PAO re-assessment is required to renew certification.',
+      },
+      {
+        q: 'What does a CMMC Level 2 C3PAO assessment cost?',
+        a: 'C3PAO assessment costs vary widely depending on your organization\'s size, system complexity, and the number of CUI assets in scope. Assessments for small-to-mid sized contractors typically range from $30,000 to $100,000 or more. Preparation costs through an RPO are separate and depend on how many gaps need to be remediated. Investing in proper preparation with an RPO before the C3PAO assessment typically reduces total cost by minimizing re-assessment cycles.',
+      },
+      {
+        q: 'Does CMMC Level 2 include all of Level 1?',
+        a: 'Yes. CMMC Level 2 is a superset of Level 1. All 17 Level 1 practices are included within the 110 Level 2 practices. If your organization achieves CMMC Level 2 certification, you are also compliant with Level 1.',
       },
     ],
   },
@@ -136,6 +192,12 @@ const faqSchema = {
     { '@type': 'Question', name: 'How long does it take to achieve CMMC Level 1 compliance?', acceptedAnswer: { '@type': 'Answer', text: 'Organizations with basic security controls in place may achieve compliance in 4–8 weeks. Organizations starting from scratch may take 2–4 months. A gap assessment provides a precise timeline for your situation.' } },
     { '@type': 'Question', name: 'What is the SPRS score?', acceptedAnswer: { '@type': 'Answer', text: 'The Supplier Performance Risk System (SPRS) is where DoD contractors submit their CMMC self-assessment scores. The maximum score is 110. Each unimplemented practice reduces your score.' } },
     { '@type': 'Question', name: 'What documentation do I need for CMMC Level 1?', acceptedAnswer: { '@type': 'Answer', text: 'At minimum you need a System Security Plan (SSP), Acceptable Use Policy, Incident Response Plan, Media Sanitization Policy, and a Plan of Action & Milestones (POA&M) for any gaps.' } },
+    { '@type': 'Question', name: 'What is CMMC Level 2?', acceptedAnswer: { '@type': 'Answer', text: 'CMMC Level 2 is the Advanced tier requiring all 110 security practices from NIST SP 800-171 r2 across 14 domains to protect Controlled Unclassified Information (CUI). It requires a formal third-party assessment by a Cyber-AB accredited C3PAO.' } },
+    { '@type': 'Question', name: 'What is Controlled Unclassified Information (CUI)?', acceptedAnswer: { '@type': 'Answer', text: 'CUI is information the U.S. Government creates or possesses that requires safeguarding under law or regulation — but is not classified. It includes export-controlled technical data, engineering drawings, defense acquisition information, and PII of DoD personnel.' } },
+    { '@type': 'Question', name: 'Who needs CMMC Level 2?', acceptedAnswer: { '@type': 'Answer', text: 'Any DoD contractor or subcontractor that receives, processes, stores, or transmits Controlled Unclassified Information (CUI) needs CMMC Level 2. This includes companies with a DFARS 252.204-7012 clause in their contracts.' } },
+    { '@type': 'Question', name: 'What is a C3PAO?', acceptedAnswer: { '@type': 'Answer', text: 'A C3PAO (CMMC Third-Party Assessment Organization) is a firm accredited by the Cyber-AB to conduct official CMMC Level 2 and Level 3 certification assessments. Level 2 cannot be self-assessed — a C3PAO must evaluate your compliance.' } },
+    { '@type': 'Question', name: 'How long does CMMC Level 2 certification take?', acceptedAnswer: { '@type': 'Answer', text: 'Organizations with strong baselines may be assessment-ready in 3–6 months. Those with significant gaps may require 9–18 months of remediation. A gap assessment provides a precise readiness timeline.' } },
+    { '@type': 'Question', name: 'How long is CMMC Level 2 certification valid?', acceptedAnswer: { '@type': 'Answer', text: 'CMMC Level 2 certification is valid for three years, with annual affirmations required in years 2 and 3. A full C3PAO re-assessment is required at the end of each three-year cycle.' } },
   ],
 };
 
@@ -159,10 +221,10 @@ export default function CMMCFAQPage() {
             <HelpCircle size={11} /> Frequently Asked Questions
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>
-            CMMC Level 1 FAQ
+            CMMC FAQ:<br />Level 1 &amp; Level 2
           </h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-            Answers to the most common questions from DoD contractors and subcontractors navigating CMMC Level 1 compliance. Content sourced from official Cyber-AB and DoD CMMC program guidance.
+            Answers to the most common questions from DoD contractors and subcontractors navigating CMMC Level 1 and Level 2 compliance. Content sourced from official Cyber-AB and DoD CMMC program guidance.
           </p>
         </div>
       </section>

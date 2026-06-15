@@ -4,7 +4,7 @@ import { Shield, ArrowRight, Search, Wrench, FileText, Users, CheckCircle2, Clip
 
 export const metadata: Metadata = {
   title: 'CMMC Advisory Services — Gap Assessment, Remediation, Documentation & Staffing',
-  description: 'Galaxy Consulting (CMMC RPO) offers CMMC Level 1 gap assessments, remediation support, SSP documentation, and Registered Practitioner staffing for DoD contractors.',
+  description: 'Galaxy Consulting (CMMC RPO) offers CMMC Level 1 and Level 2 gap assessments, remediation support, SSP documentation, C3PAO preparation, and Registered Practitioner staffing for DoD contractors.',
 };
 
 const services = [
@@ -12,56 +12,53 @@ const services = [
     icon: Search,
     title: 'Gap Assessment',
     tagline: 'Know Exactly Where You Stand',
-    price: 'Starting at $2,500',
     accent: 'text-emerald-400',
     border: 'border-emerald-500/40',
     bg: 'bg-emerald-500/5',
     ring: 'bg-emerald-500/10',
-    desc: 'Before you can fix anything, you need to know what is broken. Our CMMC Level 1 Gap Assessment gives you a complete, practice-by-practice picture of your current cybersecurity posture versus all 17 CMMC Level 1 requirements.',
+    desc: 'Before you can fix anything, you need to know what is broken. Our CMMC Gap Assessment gives you a complete, practice-by-practice picture of your current cybersecurity posture — whether you are pursuing Level 1 (17 practices) or Level 2 (110 practices).',
     deliverables: [
-      'Review of all 17 CMMC Level 1 practices against your current environment',
-      'Written gap report identifying every deficiency',
+      'Review of all applicable CMMC practices against your current environment',
+      'Written gap report identifying every deficiency by domain',
       'Risk-prioritized remediation roadmap with clear action items',
-      'Estimated effort and cost to close each gap',
       'SPRS score estimate based on current compliance status',
+      'Recommended path forward — Level 1 self-assessment or Level 2 C3PAO track',
     ],
-    ideal: 'Companies that are new to CMMC and need a clear starting point.',
+    ideal: 'Companies that are new to CMMC or unsure which level applies to their contracts.',
   },
   {
     icon: Wrench,
     title: 'Preparation & Remediation',
     tagline: 'Fix the Gaps. Get Compliant.',
-    price: 'Included in Full Package',
     accent: 'text-cyan-400',
     border: 'border-cyan-500/40',
     bg: 'bg-cyan-500/5',
     ring: 'bg-cyan-500/10',
-    desc: 'Once gaps are identified, we work alongside your team to implement the required security controls, configure tools, and verify that every practice is properly satisfied before your self-assessment.',
+    desc: 'Once gaps are identified, we work alongside your team to implement the required security controls, configure tools, and verify that every practice is properly satisfied — whether preparing for a Level 1 self-assessment or a Level 2 C3PAO assessment.',
     deliverables: [
-      'Hands-on implementation support for technical controls',
-      'Guidance on deploying required cybersecurity tools (antivirus, firewalls, MFA)',
+      'Hands-on implementation support for technical and administrative controls',
+      'Guidance on deploying required cybersecurity tools (antivirus, firewalls, MFA, encryption)',
       'Network segmentation and access control configuration support',
       'Patch management and vulnerability remediation guidance',
-      'Verification testing to confirm each practice is satisfied',
+      'Verification testing to confirm each practice is satisfied before assessment',
     ],
-    ideal: 'Companies that have completed a gap assessment and are ready to remediate.',
+    ideal: 'Companies that have completed a gap assessment and are ready to remediate toward Level 1 or Level 2.',
   },
   {
     icon: FileText,
     title: 'Documentation',
     tagline: 'The Written Proof Auditors Need',
-    price: 'Starting at $1,500',
     accent: 'text-violet-400',
     border: 'border-violet-500/40',
     bg: 'bg-violet-500/5',
     ring: 'bg-violet-500/10',
-    desc: 'CMMC compliance is not just about having the right tools — you must document how your organization implements each security practice. Our team drafts all required documentation to support your CMMC Level 1 self-assessment.',
+    desc: 'CMMC compliance is not just about having the right tools — you must document how your organization implements each security practice. Our team drafts all required documentation for both Level 1 self-assessments and Level 2 C3PAO assessments.',
     deliverables: [
-      'System Security Plan (SSP) covering all 17 Level 1 practices',
-      'Acceptable Use Policy and supporting cybersecurity policies',
-      'Incident response procedures',
-      'Media sanitization and disposal procedures',
+      'System Security Plan (SSP) covering all applicable CMMC practices',
+      'Acceptable Use Policy and supporting cybersecurity policies and procedures',
+      'Incident response and media sanitization procedures',
       'Plan of Action & Milestones (POA&M) for any remaining gaps',
+      'Level 2: CUI boundary documentation and data flow diagrams',
     ],
     ideal: 'Companies that have implemented controls but lack the written documentation to prove it.',
   },
@@ -69,30 +66,29 @@ const services = [
     icon: Users,
     title: 'RP Staffing',
     tagline: 'Certified Expertise On Demand',
-    price: '$200/hr or retainer',
     accent: 'text-amber-400',
     border: 'border-amber-500/40',
     bg: 'bg-amber-500/5',
     ring: 'bg-amber-500/10',
-    desc: 'Access Galaxy Consulting\'s Cyber-AB Registered Practitioners (RPs) on a project or ongoing basis. Our RPs are vetted professionals trained specifically in CMMC requirements and can integrate directly with your team.',
+    desc: 'Access Galaxy Consulting\'s Cyber-AB Registered Practitioners (RPs) on a project or ongoing basis. Our RPs guide you through both Level 1 self-assessments and Level 2 C3PAO assessment preparation — embedded directly in your team.',
     deliverables: [
       'Dedicated RP assigned to your CMMC engagement',
       'On-call advisory support for CMMC questions and decisions',
-      'Staff training on CMMC requirements and their responsibilities',
-      'Annual self-assessment preparation and walkthrough',
-      'Ongoing compliance monitoring and annual affirmation support',
+      'Staff training on CMMC requirements and team responsibilities',
+      'Level 1: Self-assessment preparation and SPRS submission walkthrough',
+      'Level 2: C3PAO coordination, evidence packaging, and assessment readiness support',
     ],
-    ideal: 'Companies that want expert CMMC support embedded in their team for ongoing compliance.',
+    ideal: 'Companies that want expert CMMC support embedded in their team for Level 1 or Level 2 compliance.',
   },
 ];
 
 const processSteps = [
   { number: '01', title: 'Discovery Call', desc: 'We learn about your business, contracts, and IT environment — free, no obligation.' },
-  { number: '02', title: 'Scope Definition', desc: 'We define exactly what systems and data are in scope for your CMMC Level 1 assessment.' },
-  { number: '03', title: 'Gap Assessment', desc: 'Our RPs assess your environment against all 17 practices and deliver a written report.' },
-  { number: '04', title: 'Remediation', desc: 'We help you implement controls and fix every gap identified in the assessment.' },
-  { number: '05', title: 'Documentation', desc: 'We draft your SSP and all supporting policies required for your self-assessment.' },
-  { number: '06', title: 'Self-Assessment & SPRS', desc: 'We prepare you for the self-assessment and SPRS submission — you affirm, you own it.' },
+  { number: '02', title: 'Scope & Level Determination', desc: 'We identify which CMMC level applies to your contracts, define your system boundary, and determine which data types (FCI vs. CUI) are in scope.' },
+  { number: '03', title: 'Gap Assessment', desc: 'Our RPs assess your environment against all applicable practices — 17 for Level 1, 110 for Level 2 — and deliver a prioritized written remediation report.' },
+  { number: '04', title: 'Remediation', desc: 'We help you implement required controls and close every gap identified in the assessment, with hands-on technical and policy support.' },
+  { number: '05', title: 'Documentation', desc: 'We draft your SSP, policies, procedures, and POA&M — the written evidence required for both self-assessments and C3PAO assessments.' },
+  { number: '06', title: 'Assessment & Submission', desc: 'Level 1: We prepare you for self-assessment and SPRS submission. Level 2: We coordinate your C3PAO assessment and support you through to certification.' },
 ];
 
 export default function CMMCServicesPage() {
@@ -113,7 +109,7 @@ export default function CMMCServicesPage() {
             CMMC Advisory Services<br />for Organizations Seeking Certification
           </h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-            Galaxy Consulting provides end-to-end CMMC Level 1 preparation services — from your first gap assessment to your final self-assessment and SPRS submission. As a Cyber-AB authorized RPO, we guide you every step of the way.
+            Galaxy Consulting provides end-to-end CMMC Level 1 and Level 2 preparation services — from your first gap assessment through remediation, documentation, and C3PAO assessment coordination. As a Cyber-AB authorized RPO, we guide you every step of the way.
           </p>
         </div>
       </section>
@@ -133,7 +129,6 @@ export default function CMMCServicesPage() {
                       <div>
                         <div className={`text-xs font-semibold uppercase tracking-wider ${s.accent}`} style={{ fontFamily:'var(--font-inter)' }}>Service {String(i+1).padStart(2,'0')}</div>
                         <h2 className="text-2xl font-bold text-white" style={{ fontFamily:'var(--font-barlow)' }}>{s.title}</h2>
-                        <div className={`text-sm font-bold mt-1 ${s.accent}`} style={{ fontFamily:'var(--font-inter)' }}>{s.price}</div>
                       </div>
                     </div>
                     <p className={`text-sm font-semibold mb-3 ${s.accent}`} style={{ fontFamily:'var(--font-inter)' }}>{s.tagline}</p>
@@ -163,39 +158,6 @@ export default function CMMCServicesPage() {
         </div>
       </section>
 
-      {/* ── PRICING SUMMARY ── */}
-      <section className="py-20 bg-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Transparent Pricing</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>Simple, Affordable CMMC Pricing</h2>
-            <p className="mt-5 text-silver/70 text-sm max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
-              No surprise fees. Fixed-scope engagements so you know exactly what you are paying before work begins. Priced 25–30% below the national average to make CMMC accessible for small businesses.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-            {[
-              { label: 'Gap Assessment',          price: '$2,500',      sub: 'Starting price',        accent: 'text-emerald-400', border: 'border-emerald-500/30', bg: 'bg-emerald-500/5' },
-              { label: 'Full Level 1 Package',    price: '$5,500',      sub: 'Gap + Remediation + Docs', accent: 'text-cyan-400',    border: 'border-cyan-500/30',    bg: 'bg-cyan-500/5' },
-              { label: 'Documentation Only',      price: '$1,500',      sub: 'SSP + policies + POA&M', accent: 'text-violet-400',  border: 'border-violet-500/30',  bg: 'bg-violet-500/5' },
-              { label: 'Annual Retainer',         price: '$1,100/yr',   sub: 'Ongoing compliance support', accent: 'text-amber-400', border: 'border-amber-500/30', bg: 'bg-amber-500/5' },
-            ].map((p) => (
-              <div key={p.label} className={`rounded-xl border ${p.border} ${p.bg} p-6 text-center`}>
-                <div className={`text-3xl font-bold mb-1 ${p.accent}`} style={{ fontFamily:'var(--font-barlow)' }}>{p.price}</div>
-                <div className="text-white font-semibold text-sm mb-1" style={{ fontFamily:'var(--font-barlow)' }}>{p.label}</div>
-                <div className="text-xs text-silver/50" style={{ fontFamily:'var(--font-inter)' }}>{p.sub}</div>
-              </div>
-            ))}
-          </div>
-          <div className="max-w-2xl mx-auto bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-5 text-center">
-            <p className="text-sm text-silver/70" style={{ fontFamily:'var(--font-inter)' }}>
-              Prices are starting points for small businesses (&lt;50 employees). Final pricing is based on your organization size, IT environment complexity, and scope. RP hourly rate: <strong className="text-emerald-400">$200/hr</strong>.
-              <br />All engagements begin with a <strong className="text-white">free discovery call</strong> — no obligation.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ── PROCESS ── */}
       <section className="py-24 bg-section-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,19 +165,92 @@ export default function CMMCServicesPage() {
             <p className="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Our Approach</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>From First Call to Certified</h2>
             <p className="mt-5 text-silver/70 text-sm max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
-              Our structured engagement model ensures nothing falls through the cracks on your path to CMMC Level 1 compliance.
+              The path to CMMC certification depends on which level applies to your contracts. Both tracks start the same way — with a free discovery call.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {processSteps.map((step) => (
-              <div key={step.number} className="card-surface rounded-xl p-6 border border-emerald-500/20">
-                <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-4">
-                  <span className="text-emerald-400 font-bold text-xs" style={{ fontFamily:'var(--font-barlow)' }}>{step.number}</span>
+
+          {/* Shared first steps */}
+          <div className="max-w-3xl mx-auto mb-8">
+            {processSteps.slice(0, 2).map((step) => (
+              <div key={step.number} className="card-surface rounded-xl p-6 border border-blue-accent/20 mb-4 flex items-start gap-5">
+                <div className="w-10 h-10 rounded-full bg-blue-accent/10 border border-blue-accent/30 flex items-center justify-center flex-shrink-0">
+                  <span className="text-blue-bright font-bold text-xs" style={{ fontFamily:'var(--font-barlow)' }}>{step.number}</span>
                 </div>
-                <h3 className="text-white font-semibold text-base mb-2" style={{ fontFamily:'var(--font-barlow)' }}>{step.title}</h3>
-                <p className="text-sm text-silver/60 leading-relaxed" style={{ fontFamily:'var(--font-inter)' }}>{step.desc}</p>
+                <div>
+                  <h3 className="text-white font-semibold text-base mb-1" style={{ fontFamily:'var(--font-barlow)' }}>{step.title}</h3>
+                  <p className="text-sm text-silver/60 leading-relaxed" style={{ fontFamily:'var(--font-inter)' }}>{step.desc}</p>
+                </div>
               </div>
             ))}
+            {/* Divergence label */}
+            <div className="flex items-center gap-3 my-6">
+              <div className="flex-1 h-px bg-blue-accent/20" />
+              <span className="text-xs text-silver/40 uppercase tracking-widest font-semibold px-3" style={{ fontFamily:'var(--font-inter)' }}>Paths diverge by level</span>
+              <div className="flex-1 h-px bg-blue-accent/20" />
+            </div>
+          </div>
+
+          {/* Side-by-side paths */}
+          <div className="grid lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {/* Level 1 path */}
+            <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-6" style={{ fontFamily:'var(--font-inter)' }}>
+                <Shield size={10} /> Level 1 — FCI Path
+              </div>
+              <div className="space-y-4">
+                {[
+                  { n: '03', title: 'Gap Assessment',     desc: 'Our RPs assess your environment against all 17 Level 1 practices and deliver a written remediation report with your estimated SPRS score.' },
+                  { n: '04', title: 'Remediation',        desc: 'We help you implement required controls, deploy security tools, and close every gap before your self-assessment.' },
+                  { n: '05', title: 'Documentation',      desc: 'We draft your SSP, policies, and POA&M covering all 17 practices.' },
+                  { n: '06', title: 'Self-Assessment & SPRS Submission', desc: 'You complete the annual self-assessment, a senior official affirms the results, and your score is submitted to SPRS.' },
+                ].map((step) => (
+                  <div key={step.n} className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                      <span className="text-emerald-400 font-bold text-xs" style={{ fontFamily:'var(--font-barlow)' }}>{step.n}</span>
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold text-sm mb-0.5" style={{ fontFamily:'var(--font-barlow)' }}>{step.title}</h3>
+                      <p className="text-xs text-silver/60 leading-relaxed" style={{ fontFamily:'var(--font-inter)' }}>{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 pt-5 border-t border-emerald-500/20">
+                <Link href="/cmmc/level-1" className="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 font-medium transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
+                  Learn about Level 1 <ArrowRight size={12} />
+                </Link>
+              </div>
+            </div>
+
+            {/* Level 2 path */}
+            <div className="rounded-2xl border border-violet-500/30 bg-violet-500/5 p-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-400 text-xs font-semibold uppercase tracking-wider mb-6" style={{ fontFamily:'var(--font-inter)' }}>
+                <Shield size={10} /> Level 2 — CUI Path
+              </div>
+              <div className="space-y-4">
+                {[
+                  { n: '03', title: 'Gap Assessment',     desc: 'Our RPs assess your environment against all 110 NIST SP 800-171 r2 practices, calculate your SPRS score, and deliver a prioritized remediation roadmap.' },
+                  { n: '04', title: 'Remediation',        desc: 'We help you implement controls across all 14 domains, from MFA and encryption to incident response and risk assessments.' },
+                  { n: '05', title: 'Documentation',      desc: 'We develop your SSP, all required policies and procedures, CUI boundary documentation, and your POA&M.' },
+                  { n: '06', title: 'C3PAO Assessment & Certification', desc: 'We coordinate with your selected C3PAO, package evidence, support the on-site assessment, and guide you through to eMASS certification entry.' },
+                ].map((step) => (
+                  <div key={step.n} className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-violet-500/10 border border-violet-500/30 flex items-center justify-center flex-shrink-0">
+                      <span className="text-violet-400 font-bold text-xs" style={{ fontFamily:'var(--font-barlow)' }}>{step.n}</span>
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold text-sm mb-0.5" style={{ fontFamily:'var(--font-barlow)' }}>{step.title}</h3>
+                      <p className="text-xs text-silver/60 leading-relaxed" style={{ fontFamily:'var(--font-inter)' }}>{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 pt-5 border-t border-violet-500/20">
+                <Link href="/cmmc/level-2" className="inline-flex items-center gap-1.5 text-xs text-violet-400 hover:text-violet-300 font-medium transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
+                  Learn about Level 2 <ArrowRight size={12} />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -225,7 +260,7 @@ export default function CMMCServicesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Get Started?</h2>
           <p className="text-silver/70 text-base mb-10 max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
-            Contact Galaxy Consulting today. We will schedule a free discovery call, scope your engagement, and give you a clear path to CMMC Level 1 compliance.
+            Contact Galaxy Consulting today. We will schedule a free discovery call, determine which CMMC level applies to your contracts, and give you a clear path to certification.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="px-8 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>

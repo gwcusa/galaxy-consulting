@@ -63,7 +63,7 @@ export default function Footer() {
               <span className="text-xs font-bold px-2.5 py-1 rounded border border-emerald-500/40 text-emerald-400 tracking-wider" style={{ fontFamily: 'var(--font-inter)' }}>
                 CMMC RPO
               </span>
-              {['SDVOSB', 'SDB', 'MBE'].map((c) => (
+              {['SDVOSB', 'SDB'].map((c) => (
                 <span
                   key={c}
                   className="text-xs font-bold px-2.5 py-1 rounded border border-blue-accent/40 text-blue-bright tracking-wider"

@@ -15,6 +15,7 @@ const servicesLinks = [
 const cmmcLinks = [
   { href: '/cmmc', label: 'CMMC Overview' },
   { href: '/cmmc/level-1', label: 'CMMC Level 1' },
+  { href: '/cmmc/level-2', label: 'CMMC Level 2' },
   { href: '/cmmc/services', label: 'CMMC Services' },
   { href: '/cmmc/faq', label: 'CMMC FAQ' },
   { href: '/cmmc/resources', label: 'Resources' },

@@ -19,7 +19,7 @@ const timeline = [
   { year: 'Early',   title: 'First Federal Contracts',                  desc: 'Began delivering IT solutions and administrative support services to the Department of Veterans Affairs.' },
   { year: 'Growth',  title: 'Maryland State Contract',                  desc: 'Awarded the Maryland DOIT Master H/W Contract, serving agencies statewide including the Department of Health and Executive Office of the Governor.' },
   { year: 'DoD',     title: 'Department of Defense Engagements',        desc: 'Delivered technology solutions to US Marine Forces Pacific (MARFORPAC) and Naval Surface Warfare Centers.' },
-  { year: 'Today',   title: 'CMMC RPO & Expanding',                     desc: 'Authorized by Cyber-AB as a CMMC Registered Practitioner Organization (RPO), delivering CMMC Level 1 & Level 2 compliance support to DoD contractors alongside IT infrastructure and cybersecurity services. Operating as a verified SDVOSB, SDB, and MBE.' },
+  { year: 'Today',   title: 'CMMC RPO & Expanding',                     desc: 'Authorized by Cyber-AB as a CMMC Registered Practitioner Organization (RPO), delivering CMMC Level 1 & Level 2 compliance support to DoD contractors alongside IT infrastructure and cybersecurity services. Operating as a verified SDVOSB and SDB.' },
 ];
 
 
@@ -65,7 +65,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="mt-8 grid grid-cols-3 gap-3">
-                {['SDVOSB','SDB','MBE'].map((c) => (
+                {['SDVOSB','SDB'].map((c) => (
                   <div key={c} className="cert-badge rounded-lg py-3 text-center">
                     <div className="text-lg font-bold text-white" style={{ fontFamily:'var(--font-barlow)' }}>{c}</div>
                   </div>

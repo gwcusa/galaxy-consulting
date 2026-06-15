@@ -133,7 +133,7 @@ export default function CybersecurityPage() {
           </h1>
           <ul className="mt-4 space-y-2 max-w-2xl">
             {[
-              'CMMC Level 1 Compliance Support',
+              'CMMC Level 1 & Level 2 Compliance Support',
               'NIST 800-53 Security Compliance Support',
               'Cybersecurity Architecture Design Support',
               'System Security Policy & Procedure Development',
@@ -154,7 +154,7 @@ export default function CybersecurityPage() {
               </h2>
               <ul className="space-y-2.5">
                 {[
-                  'CMMC Level 1 readiness assessments',
+                  'CMMC Level 1 and Level 2 readiness assessments',
                   'Gap analysis against NIST SP 800-171 and CMMC practices',
                   'System Security Plan (SSP) development and enhancement',
                   'Plan of Action & Milestones (POA&M) creation and remediation planning',
