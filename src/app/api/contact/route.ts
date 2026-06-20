@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { error } = await resend.emails.send({
-      from: 'Galaxy Consulting Website <onboarding@resend.dev>',
+      from: 'Galaxy Consulting Website <noreply@galaxyconsultingllc.com>',
       to: 'info@galaxyconsultingllc.com',
       replyTo: email,
       subject: `Website Inquiry — ${topic}`,
