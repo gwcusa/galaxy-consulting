@@ -251,6 +251,9 @@ export default function CMMCPage() {
                   If your company handles <strong className="text-white">Federal Contract Information (FCI)</strong> — any information provided by or generated for the government under a contract — you are required to meet <strong className="text-white">CMMC Level 1</strong>.
                 </p>
                 <p>
+                  If your company handles <strong className="text-white">Controlled Unclassified Information (CUI)</strong> — any information provided by or generated for the government under a contract — you are required to meet <strong className="text-white">CMMC Level 2</strong>.
+                </p>
+                <p>
                   CMMC is not optional. As the DoD phases CMMC into contract requirements, companies that cannot demonstrate compliance will be ineligible to bid on or perform DoD contracts.
                 </p>
               </div>
