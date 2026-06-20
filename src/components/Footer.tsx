@@ -58,6 +58,13 @@ export default function Footer() {
                 height={60}
                 className="rounded-full ring-1 ring-blue-accent/40 shadow-md shadow-blue-500/10"
               />
+              <Image
+                src="/Service-Disabled Veteran-Owned-Certified.jpg"
+                alt="SBA Service-Disabled Veteran-Owned Certified"
+                width={50}
+                height={65}
+                className="object-contain ring-1 ring-blue-accent/40 shadow-md shadow-blue-500/10"
+              />
             </div>
             {/* Cert chips */}
             <div className="flex flex-wrap gap-2 mt-4">
