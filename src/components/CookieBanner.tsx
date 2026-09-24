@@ -16,15 +16,14 @@ export default function CookieBanner() {
     }
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem('gc_cookie_consent', 'accepted');
+  // Tell Analytics (Consent Mode) about the choice without a reload.
+  const choose = (value: 'accepted' | 'declined') => {
+    localStorage.setItem('gc_cookie_consent', value);
+    window.dispatchEvent(new CustomEvent('gc-cookie-consent', { detail: value }));
     setVisible(false);
   };
-
-  const handleDecline = () => {
-    localStorage.setItem('gc_cookie_consent', 'declined');
-    setVisible(false);
-  };
+  const handleAccept = () => choose('accepted');
+  const handleDecline = () => choose('declined');
 
   if (!visible) return null;
 
