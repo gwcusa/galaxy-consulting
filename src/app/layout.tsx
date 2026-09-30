@@ -72,11 +72,11 @@ export const metadata: Metadata = {
     canonical: 'https://www.galaxyconsultingllc.com',
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
   },
 };
