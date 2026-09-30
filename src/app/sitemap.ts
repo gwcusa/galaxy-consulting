@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE,                          lastModified: new Date(), changeFrequency: 'monthly',  priority: 1.0 },
     { url: `${BASE}/cmmc`,               lastModified: new Date(), changeFrequency: 'weekly',   priority: 1.0 },
     { url: `${BASE}/cmmc/level-1`,       lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.9 },
+    { url: `${BASE}/cmmc/level-2`,       lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${BASE}/cmmc/services`,      lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${BASE}/cmmc/faq`,           lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${BASE}/cmmc/resources`,     lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.8 },

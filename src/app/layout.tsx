@@ -68,9 +68,6 @@ export const metadata: Metadata = {
       'Cyber-AB authorized CMMC RPO helping small DoD contractors achieve CMMC Level 1 certification.',
     images: ['/og-image.png'],
   },
-  alternates: {
-    canonical: 'https://www.galaxyconsultingllc.com',
-  },
   robots: {
     index: true,
     follow: true,
