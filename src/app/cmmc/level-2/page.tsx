@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Shield, CheckCircle2, ArrowRight, AlertCircle, Clock, FileText, Lock, Eye, Settings, RefreshCw } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/cmmc/level-2' },
   title: 'CMMC Level 2 — Advanced Cybersecurity for DoD Contractors Handling CUI',
   description: 'Learn about CMMC Level 2 certification: who needs it, the 110 NIST SP 800-171 practices across 14 domains, the C3PAO assessment process, and how Galaxy Consulting (CMMC RPO) helps you prepare.',
 };

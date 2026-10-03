@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Shield, ArrowRight, Search, Wrench, FileText, Users, CheckCircle2, ClipboardCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/cmmc/services' },
   title: 'CMMC Advisory Services — Gap Assessment, Remediation, Documentation & Staffing',
   description: 'Galaxy Consulting (CMMC RPO) offers CMMC Level 1 and Level 2 gap assessments, remediation support, SSP documentation, C3PAO preparation, and Registered Practitioner staffing for DoD contractors.',
 };

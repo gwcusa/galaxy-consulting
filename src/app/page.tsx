@@ -1,9 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
   Shield, Server, BarChart3, Code2, Building2, Award,
   ArrowRight, CheckCircle2, Star, Users, Clock, Briefcase,
 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 const stats = [
   { value: '75+',  label: 'Years Combined Experience' },

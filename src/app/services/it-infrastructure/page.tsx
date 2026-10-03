@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Server, Wifi, HardDrive, Headphones, Package, Monitor, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/it-infrastructure' },
   title: 'IT Infrastructure & Managed Services for DoD Contractors | Galaxy Consulting',
   description:
     'Galaxy Consulting delivers secure, CMMC-aligned IT infrastructure solutions — including hardware/software procurement, server deployment, network design, and 24/7 help desk support — for DoD contractors and federal government agencies.',

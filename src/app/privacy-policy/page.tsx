@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/privacy-policy' },
   title: 'Privacy Policy',
   description: 'Galaxy Consulting, LLC Privacy Policy — how we collect, use, and protect your information.',
 };

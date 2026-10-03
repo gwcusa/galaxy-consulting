@@ -3,6 +3,7 @@ import { MapPin, Phone, Mail, Globe, User, Clock, Building2 } from 'lucide-react
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/contact' },
   title: 'Contact Our CMMC RPO Team | Galaxy Consulting, LLC',
   description: 'Contact Galaxy Consulting — a Cyber-AB authorized CMMC RPO serving DoD contractors and federal agencies. Schedule a free CMMC readiness consultation, call 240-324-7888, or email info@galaxyconsultingllc.com. Located in Fort Washington, Maryland.',
 };

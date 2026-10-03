@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Shield, ArrowRight, HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/cmmc/faq' },
   title: 'CMMC FAQ — Level 1 & Level 2 Frequently Asked Questions for DoD Contractors',
   description: 'Answers to the most common CMMC Level 1 and Level 2 questions: who needs each level, the 17 and 110 practices, self-assessment vs C3PAO, CUI, SSP, POA&M, timelines, and more.',
 };

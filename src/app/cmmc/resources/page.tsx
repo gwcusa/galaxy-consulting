@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Shield, ArrowRight, ExternalLink, FileText, CheckCircle2, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/cmmc/resources' },
   title: 'CMMC Resources — Official DoD & Cyber-AB Links for DoD Contractors',
   description: 'Official CMMC resources for DoD contractors: Cyber-AB, DoD CMMC program site, NIST SP 800-171, DFARS 252.204-7012, FAR 52.204-21, SPRS guidance, and CMMC Level 1 and Level 2 reference checklists.',
 };

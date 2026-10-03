@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Award, Shield, Star, CheckCircle2, ArrowRight, GraduationCap, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/certifications' },
   title: 'CMMC RPO Certifications & Credentials | Galaxy Consulting',
   description: 'Galaxy Consulting holds Cyber-AB authorized CMMC RPO status, CMMC Level 1 and Level 2 certification, and SDVOSB and SDB designations — backed by 20+ professional certifications and strategic partnerships with Dell, HP, and Palo Alto Networks.',
 };

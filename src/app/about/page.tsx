@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Target, Eye, Heart, Medal, Users, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about' },
   title: 'About Galaxy Consulting — Cyber-AB Authorized CMMC RPO | Fort Washington, MD',
   description: 'Galaxy Consulting is a Cyber-AB authorized CMMC Registered Practitioner Organization (RPO) and Service-Disabled Veteran-Owned Small Business delivering IT infrastructure, cybersecurity, and CMMC compliance services to federal and state agencies from Fort Washington, Maryland.',
 };

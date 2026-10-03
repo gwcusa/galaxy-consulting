@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Shield, CheckCircle2, ArrowRight, AlertCircle, Clock, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/cmmc/level-1' },
   title: 'CMMC Level 1 — Foundational Cybersecurity for DoD Contractors',
   description: 'Learn about CMMC Level 1 certification: who needs it, the 17 required practices, the self-assessment process, and how Galaxy Consulting (CMMC RPO) helps you get compliant.',
 };

@@ -2,27 +2,47 @@ import type { MetadataRoute } from 'next';
 
 const BASE = 'https://www.galaxyconsultingllc.com';
 
+type Entry = {
+  path: string;
+  /**
+   * Date the page's CONTENT last changed (taken from `git log -1 --format=%cI -- <page file>`).
+   * Search engines stop trusting lastmod site-wide once it proves untrue, so never use the
+   * build time here. Update a page's date only when its visible content changes, not for
+   * metadata-only or code-only edits.
+   */
+  lastModified: string;
+  changeFrequency: NonNullable<MetadataRoute.Sitemap[number]['changeFrequency']>;
+  priority: number;
+};
+
+const PAGES: Entry[] = [
+  // Core pages
+  { path: '',                             lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 1.0 },
+  { path: '/cmmc',                        lastModified: '2026-06-20T14:06:09-04:00', changeFrequency: 'weekly',  priority: 1.0 },
+  { path: '/cmmc/level-1',                lastModified: '2026-05-25T10:10:24-04:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/level-2',                lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/services',               lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/faq',                    lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/resources',              lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.8 },
+  // Company pages
+  { path: '/about',                       lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/certifications',              lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/past-performance',            lastModified: '2026-06-10T19:22:54-04:00', changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/contact',                     lastModified: '2026-06-15T18:32:04-04:00', changeFrequency: 'yearly',  priority: 0.7 },
+  // Service pages
+  { path: '/services',                    lastModified: '2026-06-10T18:50:05-04:00', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/services/cybersecurity',      lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/services/it-infrastructure',  lastModified: '2026-06-10T18:50:05-04:00', changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/services/program-management', lastModified: '2026-06-10T18:50:05-04:00', changeFrequency: 'monthly', priority: 0.6 },
+  // Legal
+  { path: '/privacy-policy',              lastModified: '2026-05-25T10:05:51-04:00', changeFrequency: 'yearly',  priority: 0.3 },
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    // Core pages
-    { url: BASE,                          lastModified: new Date(), changeFrequency: 'monthly',  priority: 1.0 },
-    { url: `${BASE}/cmmc`,               lastModified: new Date(), changeFrequency: 'weekly',   priority: 1.0 },
-    { url: `${BASE}/cmmc/level-1`,       lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${BASE}/cmmc/level-2`,       lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${BASE}/cmmc/services`,      lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${BASE}/cmmc/faq`,           lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${BASE}/cmmc/resources`,     lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.8 },
-    // Company pages
-    { url: `${BASE}/about`,              lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${BASE}/certifications`,     lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${BASE}/past-performance`,   lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.6 },
-    { url: `${BASE}/contact`,            lastModified: new Date(), changeFrequency: 'yearly',   priority: 0.7 },
-    // Service pages
-    { url: `${BASE}/services`,           lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${BASE}/services/cybersecurity`,      lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/services/it-infrastructure`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE}/services/program-management`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    // Legal
-    { url: `${BASE}/privacy-policy`,             lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.3 },
-  ];
+  return PAGES.map(({ path, lastModified, changeFrequency, priority }) => ({
+    url: `${BASE}${path}`,
+    lastModified,
+    changeFrequency,
+    priority,
+  }));
 }

@@ -131,7 +131,8 @@ const organizationSchema = {
     { '@type': 'EducationalOccupationalCredential', name: 'Service-Disabled Veteran-Owned Small Business (SDVOSB)' },
     { '@type': 'EducationalOccupationalCredential', name: 'Small Disadvantaged Business (SDB)' },
   ],
-  sameAs: ['https://galaxy-consulting.vercel.app'],
+  // sameAs: add only verified official profiles (LinkedIn company page, SAM.gov, SBA VetCert,
+  // Cyber-AB Marketplace) once their URLs are confirmed. Never list a vercel.app copy here.
 };
 
 export default function RootLayout({
