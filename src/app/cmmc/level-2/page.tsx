@@ -264,7 +264,7 @@ export default function CMMCLevel2Page() {
                   CUI includes export-controlled technical data, defense technical information, personally identifiable information (PII), and other sensitive categories defined by the CUI Registry maintained by the National Archives and Records Administration (NARA).
                 </p>
                 <p>
-                  If your DoD contract includes a DFARS 252.204-7012 clause or references NIST SP 800-171 compliance, you almost certainly need CMMC Level 2. As the DoD phases CMMC into solicitations, non-compliant companies will be ineligible to bid.
+                  If your DoD contract includes a DFARS 252.204-7012 clause or references NIST SP 800-171 compliance, you almost certainly need CMMC Level 2. CMMC requirements in DoD contracts can make the required level a condition of award. Phase 2 (C3PAO Level 2 certification) is <a href="https://dodcio.defense.gov/CMMC/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">currently suspended</a>, so new requirements may only call for a Level 2 self-assessment, but DFARS 252.204-7012 and NIST SP 800-171 Rev 2 still apply. <Link href="/insights/cmmc-phase-2-suspension" className="text-violet-400 hover:underline">What the suspension means for you</Link>.
                 </p>
               </div>
               <div className="mt-6 space-y-2">

@@ -255,7 +255,7 @@ export default function CMMCPage() {
                   If your company handles <strong className="text-white">Controlled Unclassified Information (CUI)</strong> — any information provided by or generated for the government under a contract — you are required to meet <strong className="text-white">CMMC Level 2</strong>.
                 </p>
                 <p>
-                  CMMC is not optional. As the DoD phases CMMC into contract requirements, companies that cannot demonstrate compliance will be ineligible to bid on or perform DoD contracts.
+                  CMMC requirements in DoD solicitations and contracts can make the required CMMC level a condition of award. Phase 2 (third-party C3PAO Level 2 certification) is <a href="https://dodcio.defense.gov/CMMC/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">currently suspended</a>, but Level 1 and Level 2 self-assessments still apply, and so do DFARS 252.204-7012 and NIST SP 800-171. Read our explainer: <Link href="/insights/cmmc-phase-2-suspension" className="text-emerald-400 hover:underline">CMMC Phase 2 Is Suspended: What It Means for Small Defense Contractors</Link>.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">

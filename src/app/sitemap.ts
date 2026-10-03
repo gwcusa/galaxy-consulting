@@ -18,12 +18,15 @@ type Entry = {
 const PAGES: Entry[] = [
   // Core pages
   { path: '',                             lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 1.0 },
-  { path: '/cmmc',                        lastModified: '2026-06-20T14:06:09-04:00', changeFrequency: 'weekly',  priority: 1.0 },
+  { path: '/cmmc',                        lastModified: '2026-10-02T12:00:00-04:00', changeFrequency: 'weekly',  priority: 1.0 },
   { path: '/cmmc/level-1',                lastModified: '2026-05-25T10:10:24-04:00', changeFrequency: 'monthly', priority: 0.9 },
-  { path: '/cmmc/level-2',                lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/level-2',                lastModified: '2026-10-02T12:00:00-04:00', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/cmmc/services',               lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/cmmc/faq',                    lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.9 },
-  { path: '/cmmc/resources',              lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/cmmc/resources',              lastModified: '2026-10-02T12:00:00-04:00', changeFrequency: 'monthly', priority: 0.8 },
+  // Insights
+  { path: '/insights',                    lastModified: '2026-10-02T12:00:00-04:00', changeFrequency: 'weekly',  priority: 0.7 },
+  { path: '/insights/cmmc-phase-2-suspension', lastModified: '2026-10-02T12:00:00-04:00', changeFrequency: 'weekly', priority: 0.8 },
   // Company pages
   { path: '/about',                       lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/certifications',              lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.7 },

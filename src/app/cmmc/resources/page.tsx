@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Shield, ArrowRight, ExternalLink, FileText, CheckCircle2, BookOpen } from 'lucide-react';
+import { Shield, ArrowRight, ExternalLink, FileText, CheckCircle2, BookOpen, Newspaper } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/cmmc/resources' },
@@ -19,9 +19,9 @@ const officialLinks = [
     bg: 'bg-emerald-500/5',
   },
   {
-    name: 'DoD CMMC Program Office',
-    url: 'https://www.acq.osd.mil/cmmc/',
-    desc: 'The official DoD CMMC program website with the latest policy updates, DFARS clauses, model documentation, and implementation guidance for contractors.',
+    name: 'DoW CIO CMMC Program Page',
+    url: 'https://dodcio.defense.gov/CMMC/',
+    desc: 'The official Department of War (formerly DoD) CIO CMMC page with the latest policy memos, including the July 2026 Phase 2 suspension, model documentation, FAQs and implementation guidance for contractors.',
     badge: 'Official DoD Program',
     color: 'text-cyan-400',
     border: 'border-cyan-500/30',
@@ -123,6 +123,28 @@ export default function CMMCResourcesPage() {
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
             Official links, reference documents, and quick-reference checklists for CMMC Level 1 (17 practices) and Level 2 (110 practices across 14 domains). All content sourced from the Cyber-AB and DoD CMMC program office.
           </p>
+        </div>
+      </section>
+
+      {/* ── LATEST UPDATE ── */}
+      <section className="pt-16 bg-section-alt">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/insights/cmmc-phase-2-suspension"
+            className="group card-hover card-surface rounded-xl border border-amber-500/30 bg-amber-500/5 p-6 flex flex-col sm:flex-row sm:items-center gap-4"
+          >
+            <div className="p-3 rounded-xl bg-amber-500/10 flex-shrink-0 self-start">
+              <Newspaper size={20} className="text-amber-400" />
+            </div>
+            <div className="flex-1">
+              <p className="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-1" style={{ fontFamily:'var(--font-inter)' }}>Latest update · October 2, 2026</p>
+              <h2 className="text-lg font-bold text-white mb-1" style={{ fontFamily:'var(--font-barlow)' }}>CMMC Phase 2 Is Suspended: What It Means for Small Defense Contractors</h2>
+              <p className="text-sm text-silver/70" style={{ fontFamily:'var(--font-inter)' }}>What changed on July 13, 2026, who is affected at each level, and 5 steps to take now. Level 1 and Level 2 self-assessments still apply.</p>
+            </div>
+            <span className="text-sm text-amber-400 font-medium flex items-center gap-1 flex-shrink-0" style={{ fontFamily:'var(--font-inter)' }}>
+              Read <ArrowRight size={14} />
+            </span>
+          </Link>
         </div>
       </section>
 
