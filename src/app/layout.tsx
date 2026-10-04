@@ -99,8 +99,8 @@ const organizationSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 38.7434,
-    longitude: -76.9961,
+    latitude: 38.7727,
+    longitude: -77.0065,
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
