@@ -10,6 +10,7 @@ const cmmcLinks = [
   { href: '/cmmc/services', label: 'CMMC Services' },
   { href: '/cmmc/faq', label: 'CMMC FAQ' },
   { href: '/cmmc/resources', label: 'Resources' },
+  { href: '/insights', label: 'Insights & Updates' },
 ];
 
 const serviceLinks = [
