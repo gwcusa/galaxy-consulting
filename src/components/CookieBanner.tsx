@@ -17,6 +17,7 @@ export default function CookieBanner() {
   }, []);
 
   // Tell Analytics (Consent Mode) about the choice without a reload.
+  // Analytics is on by default; OK keeps it on, Decline turns it off.
   const choose = (value: 'accepted' | 'declined') => {
     localStorage.setItem('gc_cookie_consent', value);
     window.dispatchEvent(new CustomEvent('gc-cookie-consent', { detail: value }));
@@ -41,12 +42,11 @@ export default function CookieBanner() {
 
         {/* Text */}
         <p className="flex-1 text-sm text-silver/80 leading-relaxed" style={{ fontFamily: 'var(--font-inter)' }}>
-          We use cookies to improve your browsing experience and analyze site traffic. By clicking{' '}
-          <strong className="text-white">Accept</strong>, you consent to our use of cookies as described in our{' '}
+          We use analytics cookies to understand site use. You can decline without affecting your use of the site; see our{' '}
           <Link href="/privacy-policy" className="text-blue-bright hover:underline">
             Privacy Policy
           </Link>
-          . You may decline non-essential cookies without affecting your ability to use the site.
+          .
         </p>
 
         {/* Buttons */}
@@ -63,7 +63,7 @@ export default function CookieBanner() {
             className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-accent hover:bg-blue-bright text-navy rounded-lg text-sm font-semibold transition-colors"
             style={{ fontFamily: 'var(--font-inter)' }}
           >
-            <Check size={14} /> Accept
+            <Check size={14} /> OK
           </button>
         </div>
       </div>

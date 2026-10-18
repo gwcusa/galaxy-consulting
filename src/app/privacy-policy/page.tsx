@@ -82,7 +82,8 @@ export default function PrivacyPolicyPage() {
               <p>
                 We use cookies — small text files stored in your browser — to remember your preferences and improve site performance.
                 We also use session cookies to support basic site functionality. You can manage or disable cookies through your browser settings.
-                Declining cookies via our consent banner will limit non-essential tracking but will not prevent you from using the Site.
+                We use Google Analytics cookies by default to understand how the Site is used; advertising cookies are not enabled.
+                You can turn analytics off at any time by choosing &ldquo;Decline&rdquo; on our cookie banner, and we will remember that choice. Declining will not prevent you from using the Site.
               </p>
             </div>
 
