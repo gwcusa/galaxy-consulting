@@ -271,7 +271,7 @@ export default function CMMCResourcesPage() {
               <div>
                 <h3 className="text-white font-bold text-lg mb-2" style={{ fontFamily:'var(--font-barlow)' }}>Need Help Interpreting These Requirements?</h3>
                 <p className="text-sm text-silver/70 leading-relaxed mb-5" style={{ fontFamily:'var(--font-inter)' }}>
-                  Galaxy Consulting is a Cyber-AB authorized CMMC RPO with Registered Practitioners on staff. We translate official CMMC requirements into plain-English action steps tailored to your specific business environment. Contact us for a free initial consultation.
+                  Galaxy Consulting is a Cyber-AB authorized CMMC RPO with a Registered Practitioner (RP) on staff. We translate official CMMC requirements into plain-English action steps tailored to your specific business environment. Contact us for a free initial consultation.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Link href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-colors text-sm" style={{ fontFamily:'var(--font-inter)' }}>

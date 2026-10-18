@@ -40,13 +40,13 @@ const partners = [
 ];
 
 const whyUs = [
-  'Cyber-AB authorized CMMC RPO — CMMC Level 1 self-assessed & Level 2 certified ourselves',
+  'Cyber-AB authorized CMMC RPO — we completed our own CMMC Level 1 & Level 2 self-assessments',
   'Over 75 years of combined government & military IT experience',
   'Service-Disabled Veteran leadership — we understand your mission',
   'Proven track record with VA, DoD, and Maryland state agencies',
   'Authorized reseller for Dell, HP, Palo Alto Networks, and more',
   'NIST 800-53, CMMC & ISO-9000 compliance expertise',
-  '20+ industry-recognized team certifications — PMP, CISSP, CEH, RP & more',
+  '20+ industry-recognized team credentials — PMP, CISSP, CEH, Cyber-AB RP & more',
   'Flexible contracting through multiple set-aside vehicles (SDVOSB · SDB)',
 ];
 
@@ -111,7 +111,7 @@ export default function HomePage() {
                 Registered Provider Organization (RPO) that is focused on delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies and their industry partners — backed by 75+ years of combined military and technology expertise.
               </p>
               <p>
-                We deliver IT system design, implementation, integration services, and CMMC Level 1 and Level 2 compliance assistance to DoD contractors seeking CMMC compliance. We specialize in supporting CMMC services from gap analysis, self-assessments, security control compliance assistance, and support in preparing for official CMMC self-assessment or third-party compliance testing.
+                We deliver IT system design, implementation, integration services, and CMMC Level 1 and Level 2 compliance assistance to DoD contractors seeking CMMC compliance. We specialize in supporting CMMC services from gap analysis, self-assessments, security control compliance assistance, and support in preparing for official CMMC self-assessments and SPRS affirmations.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -159,8 +159,8 @@ export default function HomePage() {
                 className="rounded-full shadow-xl shadow-blue-500/20 ring-2 ring-blue-accent/30"
               />
               <div>
-                <div className="text-blue-bright font-bold text-sm tracking-wide" style={{ fontFamily:'var(--font-barlow)' }}>Registered Practitioner (RP)</div>
-                <div className="text-silver/50 text-xs mt-1" style={{ fontFamily:'var(--font-inter)' }}>Cyber-AB Certified · On-Staff CMMC Practitioners</div>
+                <div className="text-blue-bright font-bold text-sm tracking-wide" style={{ fontFamily:'var(--font-barlow)' }}>Registered Practitioner (RP), Cyber AB</div>
+                <div className="text-silver/50 text-xs mt-1" style={{ fontFamily:'var(--font-inter)' }}>On Staff · CMMC Level 1 &amp; Level 2 Self-Assessment Guidance</div>
               </div>
             </div>
           </div>

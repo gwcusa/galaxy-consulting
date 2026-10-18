@@ -89,7 +89,7 @@ const domains = [
 ];
 
 const selfAssessmentSteps = [
-  { step: '1', title: 'Conduct Internal Review', desc: 'Assess your organization against all 17 practices. Galaxy\'s RPs guide you through each one.' },
+  { step: '1', title: 'Conduct Internal Review', desc: 'Assess your organization against all 17 practices. Galaxy\'s Registered Practitioner (RP) guides you through each one.' },
   { step: '2', title: 'Calculate Your SPRS Score', desc: 'Document your compliance status. Each unmet practice reduces your score from the maximum of 110.' },
   { step: '3', title: 'Create a Plan of Action', desc: 'For any gaps, document a corrective action plan with target completion dates.' },
   { step: '4', title: 'Affirm and Submit to SPRS', desc: 'A senior company official affirms the assessment results and submits your score to the DoD\'s Supplier Performance Risk System (SPRS).' },
@@ -246,7 +246,7 @@ export default function CMMCLevel1Page() {
               <div>
                 <h4 className="text-white font-semibold text-sm mb-2" style={{ fontFamily:'var(--font-barlow)' }}>How Galaxy Consulting Helps</h4>
                 <p className="text-sm text-silver/70 leading-relaxed" style={{ fontFamily:'var(--font-inter)' }}>
-                  As your CMMC RPO, Galaxy Consulting guides you through every step of this process. Our Registered Practitioners conduct the gap assessment, help remediate deficiencies, draft your SSP and documentation, and prepare your team for the self-assessment and SPRS submission — so you can focus on running your business.
+                  As your CMMC RPO, Galaxy Consulting guides you through every step of this process. Our Registered Practitioner guides you through the gap assessment, helps remediate deficiencies, drafts your SSP and documentation, and prepares your team for the self-assessment and SPRS submission — so you can focus on running your business.
                 </p>
                 <Link href="/cmmc/services" className="mt-3 inline-flex items-center gap-1.5 text-sm text-emerald-400 hover:text-emerald-300 font-medium transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
                   See Our CMMC Services <ArrowRight size={14} />

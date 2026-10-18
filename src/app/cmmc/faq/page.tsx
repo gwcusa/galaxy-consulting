@@ -77,7 +77,7 @@ const faqs = [
     items: [
       {
         q: 'What is CMMC Level 2?',
-        a: 'CMMC Level 2 is the Advanced tier of the CMMC framework. It requires organizations to implement all 110 security practices from NIST SP 800-171 r2 across 14 domains to protect Controlled Unclassified Information (CUI). Unlike Level 1, Level 2 requires a formal third-party assessment conducted by a Cyber-AB accredited C3PAO (CMMC Third-Party Assessment Organization) — you cannot self-assess your way to Level 2 certification.',
+        a: 'CMMC Level 2 is the Advanced tier of the CMMC framework. It requires organizations to implement all 110 security practices from NIST SP 800-171 r2 across 14 domains to protect Controlled Unclassified Information (CUI). Unlike Level 1, Level 2 can require a formal third-party assessment conducted by a Cyber-AB accredited C3PAO (CMMC Third-Party Assessment Organization); other contracts call for a Level 2 self-assessment affirmed in SPRS.',
       },
       {
         q: 'What is Controlled Unclassified Information (CUI)?',
@@ -88,12 +88,12 @@ const faqs = [
         a: 'Any DoD contractor or subcontractor that receives, processes, stores, or transmits Controlled Unclassified Information (CUI) needs CMMC Level 2. This includes manufacturers producing defense-related components, engineering firms developing technical specifications, IT service providers processing CUI on behalf of prime contractors, and any company with a DFARS 252.204-7012 clause in their contract. Subcontractors are not exempt — if the prime flows CUI down to you, you need Level 2.',
       },
       {
-        q: 'What is a C3PAO and why is one required for Level 2?',
-        a: 'A C3PAO (CMMC Third-Party Assessment Organization) is a firm accredited by the Cyber-AB to conduct official CMMC Level 2 and Level 3 certification assessments. C3PAOs are independent from RPOs — they do not provide consulting services; they assess. Level 2 requires a C3PAO because the DoD determined that self-attestation is insufficient for protecting CUI. The C3PAO evaluates your environment, documentation, and implemented controls against all 110 NIST SP 800-171 r2 practices before issuing a certification recommendation.',
+        q: 'What is a C3PAO and when is one required for Level 2?',
+        a: 'A C3PAO (CMMC Third-Party Assessment Organization) is a firm accredited by the Cyber-AB to conduct official CMMC Level 2 and Level 3 certification assessments. C3PAOs are independent from RPOs — they do not provide consulting services; they assess. A C3PAO assessment is required when a contract specifies Level 2 (C3PAO), which the DoD uses where it has determined that self-attestation is insufficient for protecting the CUI involved. The C3PAO evaluates your environment, documentation, and implemented controls against all 110 NIST SP 800-171 r2 practices before issuing a certification recommendation.',
       },
       {
         q: 'Can I self-assess for CMMC Level 2?',
-        a: 'For most DoD programs, no. CMMC Level 2 requires a formal C3PAO assessment. The one exception is a narrow set of programs where the DoD has designated Level 2 as allowable via self-assessment — but these are uncommon and explicitly identified in the contract. If your contract requires CMMC Level 2, assume you need a C3PAO unless the contract language explicitly states otherwise. An RPO like Galaxy Consulting can help you interpret your contract requirements.',
+        a: 'Yes, when your contract calls for Level 2 (Self): you assess all 110 practices every three years, enter your score in SPRS, and a senior official affirms compliance every year. Contracts that specify Level 2 (C3PAO) require a formal third-party assessment instead, so check your contract language. An RPO like Galaxy Consulting can help you interpret your contract requirements.',
       },
       {
         q: 'How many practices does CMMC Level 2 require?',
@@ -193,10 +193,10 @@ const faqSchema = {
     { '@type': 'Question', name: 'How long does it take to achieve CMMC Level 1 compliance?', acceptedAnswer: { '@type': 'Answer', text: 'Organizations with basic security controls in place may achieve compliance in 4–8 weeks. Organizations starting from scratch may take 2–4 months. A gap assessment provides a precise timeline for your situation.' } },
     { '@type': 'Question', name: 'What is the SPRS score?', acceptedAnswer: { '@type': 'Answer', text: 'The Supplier Performance Risk System (SPRS) is where DoD contractors submit their CMMC self-assessment scores. The maximum score is 110. Each unimplemented practice reduces your score.' } },
     { '@type': 'Question', name: 'What documentation do I need for CMMC Level 1?', acceptedAnswer: { '@type': 'Answer', text: 'At minimum you need a System Security Plan (SSP), Acceptable Use Policy, Incident Response Plan, Media Sanitization Policy, and a Plan of Action & Milestones (POA&M) for any gaps.' } },
-    { '@type': 'Question', name: 'What is CMMC Level 2?', acceptedAnswer: { '@type': 'Answer', text: 'CMMC Level 2 is the Advanced tier requiring all 110 security practices from NIST SP 800-171 r2 across 14 domains to protect Controlled Unclassified Information (CUI). It requires a formal third-party assessment by a Cyber-AB accredited C3PAO.' } },
+    { '@type': 'Question', name: 'What is CMMC Level 2?', acceptedAnswer: { '@type': 'Answer', text: 'CMMC Level 2 is the Advanced tier requiring all 110 security practices from NIST SP 800-171 r2 across 14 domains to protect Controlled Unclassified Information (CUI). Depending on the contract, it is met through a self-assessment or a formal third-party assessment by a Cyber-AB accredited C3PAO.' } },
     { '@type': 'Question', name: 'What is Controlled Unclassified Information (CUI)?', acceptedAnswer: { '@type': 'Answer', text: 'CUI is information the U.S. Government creates or possesses that requires safeguarding under law or regulation — but is not classified. It includes export-controlled technical data, engineering drawings, defense acquisition information, and PII of DoD personnel.' } },
     { '@type': 'Question', name: 'Who needs CMMC Level 2?', acceptedAnswer: { '@type': 'Answer', text: 'Any DoD contractor or subcontractor that receives, processes, stores, or transmits Controlled Unclassified Information (CUI) needs CMMC Level 2. This includes companies with a DFARS 252.204-7012 clause in their contracts.' } },
-    { '@type': 'Question', name: 'What is a C3PAO?', acceptedAnswer: { '@type': 'Answer', text: 'A C3PAO (CMMC Third-Party Assessment Organization) is a firm accredited by the Cyber-AB to conduct official CMMC Level 2 and Level 3 certification assessments. Level 2 cannot be self-assessed — a C3PAO must evaluate your compliance.' } },
+    { '@type': 'Question', name: 'What is a C3PAO?', acceptedAnswer: { '@type': 'Answer', text: 'A C3PAO (CMMC Third-Party Assessment Organization) is a firm accredited by the Cyber-AB to conduct official CMMC Level 2 and Level 3 certification assessments. A C3PAO assessment is required when a contract specifies Level 2 (C3PAO); other contracts allow a Level 2 self-assessment.' } },
     { '@type': 'Question', name: 'How long does CMMC Level 2 certification take?', acceptedAnswer: { '@type': 'Answer', text: 'Organizations with strong baselines may be assessment-ready in 3–6 months. Those with significant gaps may require 9–18 months of remediation. A gap assessment provides a precise readiness timeline.' } },
     { '@type': 'Question', name: 'How long is CMMC Level 2 certification valid?', acceptedAnswer: { '@type': 'Answer', text: 'CMMC Level 2 certification is valid for three years, with annual affirmations required in years 2 and 3. A full C3PAO re-assessment is required at the end of each three-year cycle.' } },
   ],
@@ -266,7 +266,7 @@ export default function CMMCFAQPage() {
             <Shield size={28} className="text-emerald-400 mx-auto mb-4" />
             <h3 className="text-white font-bold text-xl mb-3" style={{ fontFamily:'var(--font-barlow)' }}>Still Have Questions?</h3>
             <p className="text-silver/70 text-sm mb-6 max-w-md mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
-              Our Registered Practitioners are ready to answer your specific CMMC questions. Contact Galaxy Consulting for a free initial consultation — no obligation.
+              Our Registered Practitioner (RP) is ready to answer your specific CMMC questions. Contact Galaxy Consulting for a free initial consultation — no obligation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-colors text-sm" style={{ fontFamily:'var(--font-inter)' }}>

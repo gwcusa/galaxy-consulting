@@ -4,8 +4,8 @@ import { Shield, CheckCircle2, ArrowRight, AlertCircle, Clock, FileText, Lock, E
 
 export const metadata: Metadata = {
   alternates: { canonical: '/cmmc/level-2' },
-  title: 'CMMC Level 2 Certification — 110 Practices, C3PAO Assessment & RPO Preparation',
-  description: 'CMMC Level 2 requires 110 NIST SP 800-171 r2 practices across 14 domains for DoD contractors handling CUI. Galaxy Consulting — a Cyber-AB authorized CMMC RPO — provides CMMC Level 2 gap assessments, remediation, SSP & POA&M documentation, and C3PAO assessment coordination.',
+  title: 'CMMC Level 2 — 110 Practices, Self-Assessment & RPO Preparation',
+  description: 'CMMC Level 2 requires 110 NIST SP 800-171 r2 practices across 14 domains for DoD contractors handling CUI. Galaxy Consulting — a Cyber-AB authorized CMMC RPO — provides CMMC Level 2 gap assessments, remediation, SSP & POA&M documentation, and self-assessment and SPRS support.',
 };
 
 const domains = [
@@ -211,7 +211,7 @@ const domains = [
 ];
 
 const assessmentSteps = [
-  { step: '1', title: 'Gap Assessment & Readiness Review', desc: 'Galaxy\'s RPs evaluate your environment against all 110 NIST SP 800-171 r2 practices, identify gaps, and deliver a prioritized remediation roadmap.' },
+  { step: '1', title: 'Gap Assessment & Readiness Review', desc: 'Galaxy\'s Registered Practitioner (RP) guides you through all 110 NIST SP 800-171 r2 practices to identify gaps, and we deliver a prioritized remediation roadmap.' },
   { step: '2', title: 'Remediation & Control Implementation', desc: 'Implement required technical and administrative controls to close gaps — from MFA and encryption to access control policies and incident response plans.' },
   { step: '3', title: 'Documentation — SSP & POA&M', desc: 'Develop your System Security Plan (SSP), Policies and Procedures, and a Plan of Action & Milestones (POA&M) for any residual gaps accepted by the DoD.' },
   { step: '4', title: 'SPRS Score Submission', desc: 'Contractors must calculate and submit NIST SP 800-171 self-assessment scores to the Supplier Performance Risk System (SPRS). Submissions made in support of acquisitions with high sensitivity and risk levels will require a follow-on C3PAO assessment.' },
@@ -237,14 +237,14 @@ export default function CMMCLevel2Page() {
             CMMC Level 2:<br />Advanced Cybersecurity
           </h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-            CMMC Level 2 applies to DoD contractors that handle Controlled Unclassified Information (CUI). It encompasses all 110 security practices of NIST SP 800-171 r2 across 14 domains — and requires a formal third-party assessment by a Cyber-AB accredited C3PAO.
+            CMMC Level 2 applies to DoD contractors that handle Controlled Unclassified Information (CUI). It encompasses all 110 security practices of NIST SP 800-171 r2 across 14 domains — and, depending on the contract, is met through a self-assessment or a formal third-party assessment.
           </p>
-          {/* Certified Banner */}
+          {/* Self-Assessment Banner */}
           <div className="mt-6 inline-flex items-start gap-3 px-5 py-3 rounded-xl border border-violet-500/30 bg-violet-500/8">
             <Lock size={16} className="text-violet-400 flex-shrink-0 mt-0.5" />
             <p className="text-sm text-silver/80" style={{ fontFamily:'var(--font-inter)' }}>
-              <span className="text-violet-400 font-semibold">Galaxy Consulting has achieved CMMC Level 2 certification.</span>{' '}
-              This accomplishment gives us direct, first-hand insight into exactly what your organization will face.
+              <span className="text-violet-400 font-semibold">Galaxy Consulting has completed its CMMC Level 2 self-assessment and affirmed it in SPRS.</span>{' '}
+              This accomplishment gives us direct, first-hand insight into the 110 practices your organization must meet.
             </p>
           </div>
         </div>
@@ -333,7 +333,7 @@ export default function CMMCLevel2Page() {
                 items: [
                   '110 security practices across 14 domains',
                   'Protects Controlled Unclassified Information (CUI)',
-                  'Formal C3PAO third-party assessment required',
+                  'Self-assessment or formal third-party assessment, per contract',
                   'Based on NIST SP 800-171 r2',
                   'Required for contractors that handle CUI',
                 ],
@@ -432,7 +432,7 @@ export default function CMMCLevel2Page() {
               <div>
                 <h4 className="text-white font-semibold text-sm mb-2" style={{ fontFamily:'var(--font-barlow)' }}>How Galaxy Consulting Helps</h4>
                 <p className="text-sm text-silver/70 leading-relaxed" style={{ fontFamily:'var(--font-inter)' }}>
-                  As a CMMC RPO that has undergone a CMMC Level 2 certification, Galaxy Consulting brings direct, current experience to your Level 2 journey. Our Registered Practitioners guide you through gap assessment, control implementation, SSP and POA&amp;M development, SPRS submission, and C3PAO assessment coordination — so you walk into your assessment fully prepared.
+                  As a CMMC RPO that has completed its own CMMC Level 2 self-assessment, Galaxy Consulting brings direct, current experience to your Level 2 journey. Our Registered Practitioner guides you through gap assessment, control implementation, SSP and POA&amp;M development, and your Level 2 self-assessment and SPRS submission — so you walk into your assessment fully prepared.
                 </p>
                 <Link href="/cmmc/services" className="mt-3 inline-flex items-center gap-1.5 text-sm text-violet-400 hover:text-violet-300 font-medium transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
                   See Our CMMC Services <ArrowRight size={14} />
@@ -492,7 +492,7 @@ export default function CMMCLevel2Page() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Start Your Level 2 Journey?</h2>
           <p className="text-silver/70 text-base mb-10 max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
-            Galaxy Consulting offers a free initial consultation to assess your current CMMC Level 2 posture, identify critical gaps, and give you a clear roadmap to C3PAO assessment.
+            Galaxy Consulting offers a free initial consultation to assess your current CMMC Level 2 posture, identify critical gaps, and give you a clear roadmap to your Level 2 self-assessment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="px-8 py-3.5 bg-violet-600 hover:bg-violet-500 text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5 shadow-lg shadow-violet-500/25" style={{ fontFamily:'var(--font-inter)' }}>

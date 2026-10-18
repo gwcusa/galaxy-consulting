@@ -5,7 +5,7 @@ import { Shield, ArrowRight, Search, Wrench, FileText, Users, CheckCircle2, Clip
 export const metadata: Metadata = {
   alternates: { canonical: '/cmmc/services' },
   title: 'CMMC Advisory Services — Gap Assessment, Remediation, SSP Documentation & RP Staffing',
-  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC RPO offering end-to-end CMMC compliance services: CMMC Level 1 & Level 2 gap assessments, remediation support, SSP & POA&M documentation, Registered Practitioner (RP) staffing, and C3PAO assessment coordination for DoD contractors.',
+  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC RPO offering end-to-end CMMC compliance services: CMMC Level 1 & Level 2 gap assessments, remediation support, SSP & POA&M documentation, Registered Practitioner (RP) guidance, and self-assessment and SPRS support for DoD contractors.',
 };
 
 const services = [
@@ -23,7 +23,7 @@ const services = [
       'Written gap report identifying every deficiency by domain',
       'Risk-prioritized remediation roadmap with clear action items',
       'SPRS score estimate based on current compliance status',
-      'Recommended path forward — Level 1 self-assessment or Level 2 C3PAO track',
+      'Recommended path forward — Level 1 or Level 2 self-assessment, based on your contracts',
     ],
     ideal: 'Companies that are new to CMMC or unsure which level applies to their contracts.',
   },
@@ -35,7 +35,7 @@ const services = [
     border: 'border-cyan-500/40',
     bg: 'bg-cyan-500/5',
     ring: 'bg-cyan-500/10',
-    desc: 'Once gaps are identified, we work alongside your team to implement the required security controls, configure tools, and verify that every practice is properly satisfied — whether preparing for a Level 1 self-assessment or a Level 2 C3PAO assessment.',
+    desc: 'Once gaps are identified, we work alongside your team to implement the required security controls, configure tools, and verify that every practice is properly satisfied — whether preparing for a Level 1 or a Level 2 self-assessment.',
     deliverables: [
       'Hands-on implementation support for technical and administrative controls',
       'Guidance on deploying required cybersecurity tools (antivirus, firewalls, MFA, encryption)',
@@ -53,7 +53,7 @@ const services = [
     border: 'border-violet-500/40',
     bg: 'bg-violet-500/5',
     ring: 'bg-violet-500/10',
-    desc: 'CMMC compliance is not just about having the right tools — you must document how your organization implements each security practice. Our team drafts all required documentation for both Level 1 self-assessments and Level 2 C3PAO assessments.',
+    desc: 'CMMC compliance is not just about having the right tools — you must document how your organization implements each security practice. Our team drafts all required documentation for both Level 1 and Level 2 self-assessments.',
     deliverables: [
       'System Security Plan (SSP) covering all applicable CMMC practices',
       'Acceptable Use Policy and supporting cybersecurity policies and procedures',
@@ -66,18 +66,18 @@ const services = [
   {
     icon: Users,
     title: 'RP Staffing',
-    tagline: 'Certified Expertise On Demand',
+    tagline: 'Registered Practitioner Guidance On Demand',
     accent: 'text-amber-400',
     border: 'border-amber-500/40',
     bg: 'bg-amber-500/5',
     ring: 'bg-amber-500/10',
-    desc: 'Access Galaxy Consulting\'s Cyber-AB Registered Practitioners (RPs) on a project or ongoing basis. Our RPs guide you through both Level 1 self-assessments and Level 2 C3PAO assessment preparation — embedded directly in your team.',
+    desc: 'Access Galaxy Consulting\'s Cyber-AB Registered Practitioner (RP) on a project or ongoing basis. Our RP guides you through Level 1 and Level 2 self-assessment preparation — embedded directly in your team.',
     deliverables: [
-      'Dedicated RP assigned to your CMMC engagement',
+      'Our RP assigned to your CMMC engagement',
       'On-call advisory support for CMMC questions and decisions',
       'Staff training on CMMC requirements and team responsibilities',
       'Level 1: Self-assessment preparation and SPRS submission walkthrough',
-      'Level 2: C3PAO coordination, evidence packaging, and assessment readiness support',
+      'Level 2: Self-assessment preparation, evidence packaging, and SPRS affirmation support',
     ],
     ideal: 'Companies that want expert CMMC support embedded in their team for Level 1 or Level 2 compliance.',
   },
@@ -86,10 +86,10 @@ const services = [
 const processSteps = [
   { number: '01', title: 'Discovery Call', desc: 'We learn about your business, contracts, and IT environment — free, no obligation.' },
   { number: '02', title: 'Scope & Level Determination', desc: 'We identify which CMMC level applies to your contracts, define your system boundary, and determine which data types (FCI vs. CUI) are in scope.' },
-  { number: '03', title: 'Gap Assessment', desc: 'Our RPs assess your environment against all applicable practices — 17 for Level 1, 110 for Level 2 — and deliver a prioritized written remediation report.' },
+  { number: '03', title: 'Gap Assessment', desc: 'Our RP guides you through all applicable practices — 17 for Level 1, 110 for Level 2 — to find gaps, and we deliver a prioritized written remediation report.' },
   { number: '04', title: 'Remediation', desc: 'We help you implement required controls and close every gap identified in the assessment, with hands-on technical and policy support.' },
-  { number: '05', title: 'Documentation', desc: 'We draft your SSP, policies, procedures, and POA&M — the written evidence required for both self-assessments and C3PAO assessments.' },
-  { number: '06', title: 'Assessment & Submission', desc: 'Level 1: We prepare you for self-assessment and SPRS submission. Level 2: We coordinate your C3PAO assessment and support you through to certification.' },
+  { number: '05', title: 'Documentation', desc: 'We draft your SSP, policies, procedures, and POA&M — the written evidence required for Level 1 and Level 2 self-assessments.' },
+  { number: '06', title: 'Assessment & Submission', desc: 'Level 1 and Level 2: We prepare you for your self-assessment, SPRS submission, and annual affirmation.' },
 ];
 
 export default function CMMCServicesPage() {
@@ -110,7 +110,7 @@ export default function CMMCServicesPage() {
             CMMC Advisory Services<br />for Organizations Seeking Certification
           </h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-            Galaxy Consulting provides end-to-end CMMC Level 1 and Level 2 preparation services — from your first gap assessment through remediation, documentation, and C3PAO assessment coordination. As a Cyber-AB authorized RPO, we guide you every step of the way.
+            Galaxy Consulting provides end-to-end CMMC Level 1 and Level 2 preparation services — from your first gap assessment through remediation, documentation, self-assessment, and SPRS submission. As a Cyber-AB authorized RPO, we guide you every step of the way.
           </p>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function CMMCServicesPage() {
               </div>
               <div className="space-y-4">
                 {[
-                  { n: '03', title: 'Gap Assessment',     desc: 'Our RPs assess your environment against all 17 Level 1 practices and deliver a written remediation report with your estimated SPRS score.' },
+                  { n: '03', title: 'Gap Assessment',     desc: 'Our RP guides you through all 17 Level 1 practices to find gaps, and we deliver a written remediation report with your estimated SPRS score.' },
                   { n: '04', title: 'Remediation',        desc: 'We help you implement required controls, deploy security tools, and close every gap before your self-assessment.' },
                   { n: '05', title: 'Documentation',      desc: 'We draft your SSP, policies, and POA&M covering all 17 practices.' },
                   { n: '06', title: 'Self-Assessment & SPRS Submission', desc: 'You complete the annual self-assessment, a senior official affirms the results, and your score is submitted to SPRS.' },
@@ -230,10 +230,10 @@ export default function CMMCServicesPage() {
               </div>
               <div className="space-y-4">
                 {[
-                  { n: '03', title: 'Gap Assessment',     desc: 'Our RPs assess your environment against all 110 NIST SP 800-171 r2 practices, calculate your SPRS score, and deliver a prioritized remediation roadmap.' },
+                  { n: '03', title: 'Gap Assessment',     desc: 'Our RP guides you through all 110 NIST SP 800-171 r2 practices to find gaps, and we calculate your SPRS score and deliver a prioritized remediation roadmap.' },
                   { n: '04', title: 'Remediation',        desc: 'We help you implement controls across all 14 domains, from MFA and encryption to incident response and risk assessments.' },
                   { n: '05', title: 'Documentation',      desc: 'We develop your SSP, all required policies and procedures, CUI boundary documentation, and your POA&M.' },
-                  { n: '06', title: 'C3PAO Assessment & Certification', desc: 'We coordinate with your selected C3PAO, package evidence, support the on-site assessment, and guide you through to eMASS certification entry.' },
+                  { n: '06', title: 'Self-Assessment & SPRS Affirmation', desc: 'We help you prepare for your Level 2 self-assessment, package evidence, and submit your score and affirmation in SPRS.' },
                 ].map((step) => (
                   <div key={step.n} className="flex items-start gap-4">
                     <div className="w-8 h-8 rounded-full bg-violet-500/10 border border-violet-500/30 flex items-center justify-center flex-shrink-0">

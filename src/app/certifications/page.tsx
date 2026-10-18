@@ -6,7 +6,7 @@ import { Award, Shield, Star, CheckCircle2, ArrowRight, GraduationCap, ExternalL
 export const metadata: Metadata = {
   alternates: { canonical: '/certifications' },
   title: 'CMMC RPO Certifications & Credentials | Galaxy Consulting',
-  description: 'Galaxy Consulting holds Cyber-AB authorized CMMC RPO status, a CMMC Level 1 self-assessment affirmed in SPRS, CMMC Level 2 certification, and SDVOSB and SDB designations — backed by 20+ professional certifications and strategic partnerships with Dell, HP, and Palo Alto Networks.',
+  description: 'Galaxy Consulting holds Cyber-AB authorized CMMC RPO status, CMMC Level 1 and Level 2 self-assessments affirmed in SPRS, and SDVOSB and SDB designations — backed by 20+ professional certifications and strategic partnerships with Dell, HP, and Palo Alto Networks.',
 };
 
 const certifications = [
@@ -14,7 +14,7 @@ const certifications = [
     abbr: 'CMMC RPO', full: 'Registered Provider Organization — Cyber-AB Authorized', icon: Shield,
     border: 'border-cyan-500/40', iconColor: 'text-cyan-400', iconBg: 'bg-cyan-500/10',
     desc: 'Galaxy Consulting is officially authorized by the Cyber-AB as a CMMC Registered Provider Organization (RPO), qualified to deliver non-certified advisory and consulting services to DoD contractors preparing for CMMC certification.',
-    benefits: ['Cyber-AB authorized CMMC advisory services','CMMC Level 1 & Level 2 compliance support','Gap assessments, remediation, and documentation','Staffed with Cyber-AB Registered Practitioners (RPs)'],
+    benefits: ['Cyber-AB authorized CMMC advisory services','CMMC Level 1 & Level 2 compliance support','Gap assessments, remediation, and documentation','A Cyber-AB Registered Practitioner (RP) on staff'],
   },
   {
     abbr: 'CMMC L1', full: 'CMMC Level 1 Self-Assessment — Foundational Cybersecurity', icon: Award,
@@ -23,10 +23,10 @@ const certifications = [
     benefits: ['All 17 CMMC Level 1 practices implemented','Federal Contract Information (FCI) protection','FAR 52.204-21 compliant','Self-assessed annually and affirmed in SPRS'],
   },
   {
-    abbr: 'CMMC L2', full: 'CMMC Level 2 Certified — Advanced Cybersecurity', icon: Award,
+    abbr: 'CMMC L2', full: 'CMMC Level 2 Self-Assessment — Advanced Cybersecurity', icon: Award,
     border: 'border-violet-500/40', iconColor: 'text-violet-400', iconBg: 'bg-violet-500/10',
-    desc: 'Galaxy Consulting has implemented NIST SP 800-171 r2 security practices and is registered with the US Department of War as a CMMC Level 2 certified firm. We employ CMMC Level 2 practices and procedures when handling and processing sensitive customer data. We will leverage our CMMC Level 2 policy and procedures development experience to assist clients with establishing system processing boundaries and operational policies & procedures that are required to achieve CMMC Level 2 compliance.',
-    benefits: ['All 110 NIST SP 800-171 r2 practices implemented','Controlled Unclassified Information (CUI) protection','DFARS 252.204-7012 compliant','Assessed and verified by a certified C3PAO'],
+    desc: 'Galaxy Consulting has completed its CMMC Level 2 self-assessment against the 110 NIST SP 800-171 r2 practices and affirmed it in SPRS. We employ CMMC Level 2 practices and procedures when handling and processing sensitive customer data. We will leverage our CMMC Level 2 policy and procedures development experience to assist clients with establishing system processing boundaries and operational policies & procedures that are required to achieve CMMC Level 2 compliance.',
+    benefits: ['All 110 NIST SP 800-171 r2 practices implemented','Controlled Unclassified Information (CUI) protection','DFARS 252.204-7012 compliant','Self-assessed and affirmed in SPRS'],
   },
   {
     abbr: 'SDVOSB', full: 'Service-Disabled Veteran-Owned Small Business', icon: Star,
@@ -53,7 +53,7 @@ const teamCertGroups = [
     category: 'Cybersecurity',
     accent: 'text-emerald-400', ring: 'bg-emerald-500/10', border: 'border-emerald-500/30',
     serviceHref: '/services/cybersecurity', serviceLabel: 'Cybersecurity Services',
-    certs: ['CMMC Registered Practitioner (RP) — Cyber-AB Certified','Certified Information Systems Security Professional (CISSP)','Certified CompTIA Security+ Professional','EC-Council Certified Ethical Hacker (CEH)','EC-Council Certified Network Defense Architect (CNDA)','Cisco Certified Information Security Specialist','Cisco IOS Security Specialist'],
+    certs: ['Registered Practitioner (RP), Cyber AB','Certified Information Systems Security Professional (CISSP)','Certified CompTIA Security+ Professional','EC-Council Certified Ethical Hacker (CEH)','EC-Council Certified Network Defense Architect (CNDA)','Cisco Certified Information Security Specialist','Cisco IOS Security Specialist'],
   },
   {
     category: 'Networking',
@@ -99,7 +99,7 @@ export default function CertificationsPage() {
           <p className="text-blue-bright text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Credentials &amp; Alliances</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Certifications &amp;<br />Strategic Partners</h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-            Galaxy Consulting is a Cyber-AB authorized CMMC RPO, CMMC Level 1 self-assessed and Level 2 Certified — backed by SDVOSB and SDB federal set-aside designations and an ecosystem of leading technology vendor partnerships.
+            Galaxy Consulting is a Cyber-AB authorized CMMC RPO that has completed CMMC Level 1 and Level 2 self-assessments — backed by SDVOSB and SDB federal set-aside designations and an ecosystem of leading technology vendor partnerships.
           </p>
         </div>
       </section>
@@ -165,7 +165,7 @@ export default function CertificationsPage() {
                 <ul className="space-y-2.5 flex-1">
                   {group.certs.map((cert) => (
                     <li key={cert} className="flex items-start gap-2.5 text-sm text-silver/80" style={{ fontFamily:'var(--font-inter)' }}>
-                      {cert.startsWith('CMMC Registered Practitioner') ? (
+                      {cert.startsWith('Registered Practitioner') ? (
                         <Image src="/RP.png" alt="Cyber-AB Registered Practitioner" width={18} height={18} className="flex-shrink-0 mt-0.5 rounded-sm" />
                       ) : (
                         <CheckCircle2 size={14} className="text-blue-accent flex-shrink-0 mt-0.5" />
