@@ -4,8 +4,8 @@ import { Shield, ArrowRight, Search, Wrench, FileText, Users, CheckCircle2, Clip
 
 export const metadata: Metadata = {
   alternates: { canonical: '/cmmc/services' },
-  title: 'CMMC Advisory Services — Gap Assessment, Remediation, Documentation & Staffing',
-  description: 'Galaxy Consulting (CMMC RPO) offers CMMC Level 1 and Level 2 gap assessments, remediation support, SSP documentation, C3PAO preparation, and Registered Practitioner staffing for DoD contractors.',
+  title: 'CMMC Advisory Services — Gap Assessment, Remediation, SSP Documentation & RP Staffing',
+  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC RPO offering end-to-end CMMC compliance services: CMMC Level 1 & Level 2 gap assessments, remediation support, SSP & POA&M documentation, Registered Practitioner (RP) staffing, and C3PAO assessment coordination for DoD contractors.',
 };
 
 const services = [

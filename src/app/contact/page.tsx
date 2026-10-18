@@ -4,8 +4,8 @@ import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/contact' },
-  title: 'Contact Our CMMC RPO Team | Galaxy Consulting, LLC',
-  description: 'Contact Galaxy Consulting — a Cyber-AB authorized CMMC RPO serving DoD contractors and federal agencies. Schedule a free CMMC readiness consultation, call 240-324-7888, or email info@galaxyconsultingllc.com. Located in Fort Washington, Maryland.',
+  title: 'Contact Our CMMC RPO Team — Free CMMC Readiness Consultation | Galaxy Consulting',
+  description: 'Contact Galaxy Consulting — a Cyber-AB authorized CMMC RPO — for a free CMMC readiness consultation. We help DoD contractors achieve CMMC Level 1 and Level 2 certification. Call 240-324-7888 or email info@galaxyconsultingllc.com. Fort Washington, Maryland. Serving clients nationwide.',
 };
 
 const contactDetails = [

@@ -4,8 +4,8 @@ import { Shield, CheckCircle2, ArrowRight, AlertCircle, Clock, FileText, Lock, E
 
 export const metadata: Metadata = {
   alternates: { canonical: '/cmmc/level-2' },
-  title: 'CMMC Level 2 — Advanced Cybersecurity for DoD Contractors Handling CUI',
-  description: 'Learn about CMMC Level 2 certification: who needs it, the 110 NIST SP 800-171 practices across 14 domains, the C3PAO assessment process, and how Galaxy Consulting (CMMC RPO) helps you prepare.',
+  title: 'CMMC Level 2 Certification — 110 Practices, C3PAO Assessment & RPO Preparation',
+  description: 'CMMC Level 2 requires 110 NIST SP 800-171 r2 practices across 14 domains for DoD contractors handling CUI. Galaxy Consulting — a Cyber-AB authorized CMMC RPO — provides CMMC Level 2 gap assessments, remediation, SSP & POA&M documentation, and C3PAO assessment coordination.',
 };
 
 const domains = [

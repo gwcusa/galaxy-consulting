@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: 'Galaxy Consulting, LLC — CMMC RPO | IT & Cybersecurity Services',
   },
   description:
-    'Galaxy Consulting is a Cyber-AB authorized CMMC RPO helping DoD contractors achieve CMMC Level 1 certification. SDVOSB · CMMC L1 Self-Assessed · L2 Certified · Fort Washington, MD.',
+    'Galaxy Consulting is a Cyber-AB authorized CMMC RPO and CMMC RP staffing provider helping DoD contractors achieve CMMC Level 1 and Level 2 certification. Gap assessments, remediation, SSP documentation, and C3PAO preparation. SDVOSB · Fort Washington, MD.',
   keywords: [
     'CMMC RPO',
     'CMMC Level 1',
@@ -74,6 +74,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
     },
   },
 };
@@ -117,10 +120,22 @@ const organizationSchema = {
   knowsAbout: [
     'CMMC Level 1 Compliance',
     'CMMC Level 2 Compliance',
+    'CMMC RPO Services',
+    'CMMC Registered Practitioner Staffing',
+    'CMMC Gap Assessment',
+    'CMMC Readiness Assessment',
+    'CMMC Advisory Services',
     'NIST SP 800-171',
     'NIST SP 800-53',
     'Cybersecurity Maturity Model Certification',
     'DoD Contractor Compliance',
+    'DFARS 252.204-7012',
+    'Federal Contract Information (FCI) Protection',
+    'Controlled Unclassified Information (CUI) Protection',
+    'System Security Plan (SSP) Development',
+    'C3PAO Assessment Preparation',
+    'SPRS Score Submission',
+    'Defense Industrial Base (DIB) Cybersecurity',
     'IT Infrastructure',
     'Federal Cybersecurity',
   ],
@@ -131,6 +146,18 @@ const organizationSchema = {
     { '@type': 'EducationalOccupationalCredential', name: 'Service-Disabled Veteran-Owned Small Business (SDVOSB)' },
     { '@type': 'EducationalOccupationalCredential', name: 'Small Disadvantaged Business (SDB)' },
   ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'CMMC Advisory & IT Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CMMC Level 1 Gap Assessment', description: 'Practice-by-practice evaluation against all 17 CMMC Level 1 requirements with SPRS score estimate and remediation roadmap.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CMMC Level 2 Gap Assessment', description: 'Comprehensive evaluation against all 110 NIST SP 800-171 r2 practices with prioritized remediation roadmap and SPRS score calculation.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CMMC Remediation & Preparation', description: 'Hands-on implementation support for security controls required under CMMC Level 1 and Level 2.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CMMC Documentation — SSP & POA&M', description: 'System Security Plan (SSP), Policies, Procedures, and Plan of Action & Milestones (POA&M) drafting for CMMC assessments.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CMMC RP Staffing', description: 'On-demand Cyber-AB Registered Practitioner (RP) staffing for CMMC Level 1 self-assessment and Level 2 C3PAO assessment preparation.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'C3PAO Assessment Coordination', description: 'End-to-end coordination with accredited C3PAOs for CMMC Level 2 certification assessments.' } },
+    ],
+  },
   // sameAs: add only verified official profiles (LinkedIn company page, SAM.gov, SBA VetCert,
   // Cyber-AB Marketplace) once their URLs are confirmed. Never list a vercel.app copy here.
 };

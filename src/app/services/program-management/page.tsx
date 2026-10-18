@@ -4,9 +4,8 @@ import { BarChart3, Map, Users, ClipboardCheck, TrendingUp, Layers, ArrowRight, 
 
 export const metadata: Metadata = {
   alternates: { canonical: '/services/program-management' },
-  title: 'Program & Project Management for Federal Agencies | Galaxy Consulting CMMC RPO',
-  description:
-    'Galaxy Consulting provides PMP-certified program and project management services — including IT roadmap development, team staffing, QA, and stakeholder coordination — for DoD contractors and federal agencies pursuing CMMC compliance.',
+  title: 'Program & Project Management for Federal Agencies & DoD Contractors | Galaxy Consulting',
+  description: 'Galaxy Consulting provides PMP-certified program and project management services for DoD contractors and federal agencies — including IT roadmap development, CMMC compliance program management, team staffing, QA, and stakeholder coordination. SDVOSB CMMC RPO.',
 };
 
 const offerings = [

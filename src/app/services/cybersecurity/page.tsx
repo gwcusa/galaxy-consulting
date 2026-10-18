@@ -4,9 +4,8 @@ import { Shield, Lock, FileText, Search, Network, AlertTriangle, ArrowRight, Che
 
 export const metadata: Metadata = {
   alternates: { canonical: '/services/cybersecurity' },
-  title: 'Cybersecurity & CMMC Compliance Services | Galaxy Consulting RPO',
-  description:
-    'Galaxy Consulting delivers CMMC Level 1 compliance support, NIST 800-53 security controls, ATO packages, SSP development, and cybersecurity architecture for DoD contractors and federal agencies. Cyber-AB authorized CMMC RPO.',
+  title: 'Cybersecurity & CMMC Compliance Services for DoD Contractors | Galaxy Consulting RPO',
+  description: 'Galaxy Consulting delivers CMMC Level 1 and Level 2 compliance support, NIST SP 800-53 security controls, ATO packages, SSP & POA&M development, penetration testing, and cybersecurity architecture for DoD contractors and federal agencies. Cyber-AB authorized CMMC RPO with on-staff Registered Practitioners (RPs).',
 };
 
 const cybersecurityServiceSchema = {

@@ -4,8 +4,8 @@ import { Shield, ArrowRight, HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/cmmc/faq' },
-  title: 'CMMC FAQ — Level 1 & Level 2 Frequently Asked Questions for DoD Contractors',
-  description: 'Answers to the most common CMMC Level 1 and Level 2 questions: who needs each level, the 17 and 110 practices, self-assessment vs C3PAO, CUI, SSP, POA&M, timelines, and more.',
+  title: 'CMMC FAQ — Level 1 & Level 2 Questions Answered by a Cyber-AB Authorized RPO',
+  description: 'Answers to the most common CMMC questions from DoD contractors: what is CMMC, who needs Level 1 vs Level 2, what is an RPO vs C3PAO, SPRS scores, SSP requirements, CUI, FCI, DFARS 252.204-7012, and more. From Galaxy Consulting — a Cyber-AB authorized CMMC RPO.',
 };
 
 const faqs = [

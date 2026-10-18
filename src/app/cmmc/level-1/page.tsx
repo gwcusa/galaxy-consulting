@@ -4,8 +4,8 @@ import { Shield, CheckCircle2, ArrowRight, AlertCircle, Clock, FileText } from '
 
 export const metadata: Metadata = {
   alternates: { canonical: '/cmmc/level-1' },
-  title: 'CMMC Level 1 — Foundational Cybersecurity for DoD Contractors',
-  description: 'Learn about CMMC Level 1 certification: who needs it, the 17 required practices, the self-assessment process, and how Galaxy Consulting (CMMC RPO) helps you get compliant.',
+  title: 'CMMC Level 1 Certification — 17 Practices, Self-Assessment & RPO Support',
+  description: 'CMMC Level 1 requires 17 foundational cybersecurity practices for all DoD contractors handling Federal Contract Information (FCI). Galaxy Consulting — a Cyber-AB authorized CMMC RPO — provides gap assessments, remediation, SSP documentation, and SPRS submission support.',
 };
 
 const domains = [
