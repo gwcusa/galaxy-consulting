@@ -3,9 +3,14 @@ import Link from 'next/link';
 import { Server, Wifi, HardDrive, Headphones, Package, Monitor, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'IT Infrastructure & Managed Services for DoD Contractors | Galaxy Consulting',
-  description:
-    'Galaxy Consulting delivers secure, CMMC-aligned IT infrastructure solutions — including hardware/software procurement, server deployment, network design, and 24/7 help desk support — for DoD contractors and federal government agencies.',
+  title: 'IT Infrastructure & Managed Services for DoD Contractors | Galaxy Consulting CMMC RPO',
+  description: 'Galaxy Consulting delivers secure, CMMC-aligned IT infrastructure solutions for DoD contractors — hardware/software procurement, server deployment, network design, and 24/7 help desk. Authorized Dell, HP, and Palo Alto Networks partner. Cyber-AB authorized CMMC RPO.',
+  keywords: [
+    'CMMC-aligned IT infrastructure', 'DoD contractor IT infrastructure', 'federal IT infrastructure',
+    'managed IT services DoD', 'CMMC compliant IT setup', 'Dell HP federal IT partner',
+    'Palo Alto Networks federal', 'secure IT infrastructure CMMC', 'NinjaOne RMM federal',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/services/it-infrastructure' },
 };
 
 const offerings = [

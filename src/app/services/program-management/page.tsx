@@ -3,9 +3,14 @@ import Link from 'next/link';
 import { BarChart3, Map, Users, ClipboardCheck, TrendingUp, Layers, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Program & Project Management for Federal Agencies | Galaxy Consulting CMMC RPO',
-  description:
-    'Galaxy Consulting provides PMP-certified program and project management services — including IT roadmap development, team staffing, QA, and stakeholder coordination — for DoD contractors and federal agencies pursuing CMMC compliance.',
+  title: 'Program & Project Management for Federal Agencies & DoD Contractors | Galaxy Consulting',
+  description: 'Galaxy Consulting provides PMP-certified program and project management services for DoD contractors and federal agencies — including IT roadmap development, CMMC compliance program management, team staffing, QA, and stakeholder coordination. SDVOSB CMMC RPO.',
+  keywords: [
+    'program management DoD', 'federal project management', 'CMMC program management',
+    'PMP certified DoD', 'IT program management federal', 'SDVOSB program management',
+    'defense contractor program management', 'CMMC compliance program',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/services/program-management' },
 };
 
 const offerings = [

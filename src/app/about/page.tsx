@@ -3,8 +3,15 @@ import Link from 'next/link';
 import { ArrowRight, Target, Eye, Heart, Medal, Users, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Galaxy Consulting — Cyber-AB Authorized CMMC RPO | Fort Washington, MD',
-  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC Registered Practitioner Organization (RPO) and Service-Disabled Veteran-Owned Small Business delivering IT infrastructure, cybersecurity, and CMMC compliance services to federal and state agencies from Fort Washington, Maryland.',
+  title: 'About Galaxy Consulting — Cyber-AB Authorized CMMC RPO | SDVOSB | Fort Washington, MD',
+  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC Registered Provider Organization (RPO) and SDVOSB led by a retired U.S. Army officer with 75+ years of combined military and government IT experience. We deliver CMMC Level 1 and Level 2 compliance services, IT infrastructure, and cybersecurity to DoD contractors and federal agencies from Fort Washington, Maryland.',
+  keywords: [
+    'Galaxy Consulting CMMC RPO', 'Cyber-AB authorized CMMC RPO Maryland', 'SDVOSB CMMC consulting',
+    'veteran owned CMMC RPO', 'CMMC compliance company Maryland', 'CMMC consulting firm Maryland',
+    'DoD cybersecurity company Maryland', 'federal IT contractor Maryland', 'Fort Washington Maryland cybersecurity',
+    'CMMC RPO Maryland Virginia DC', 'CMMC advisory company', 'defense contractor cybersecurity firm',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/about' },
 };
 
 const values = [

@@ -3,8 +3,15 @@ import Link from 'next/link';
 import { Server, Shield, BarChart3, Code2, Building2, Award, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'CMMC Compliance & IT Services | Galaxy Consulting RPO',
-  description: 'Galaxy Consulting — a Cyber-AB authorized CMMC RPO — offers CMMC Level 1 & Level 2 compliance support, IT infrastructure, cybersecurity, program management, software development, and federal compliance services for DoD contractors and government agencies.',
+  title: 'CMMC Compliance & IT Services for DoD Contractors | Galaxy Consulting RPO',
+  description: 'Galaxy Consulting — a Cyber-AB authorized CMMC RPO — delivers CMMC Level 1 & Level 2 compliance support, IT infrastructure, cybersecurity (NIST 800-53, ATO), program management, and federal compliance services to DoD contractors and government agencies. SDVOSB · Fort Washington, MD.',
+  keywords: [
+    'CMMC compliance services', 'CMMC RPO services', 'DoD contractor IT services',
+    'federal IT services', 'cybersecurity services DoD', 'NIST 800-53 compliance',
+    'ATO package development', 'IT infrastructure federal', 'program management DoD',
+    'SDVOSB IT services', 'government IT services Maryland', 'federal cybersecurity services',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/services' },
 };
 
 const featuredServices = [

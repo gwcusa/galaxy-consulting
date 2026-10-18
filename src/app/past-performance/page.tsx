@@ -3,8 +3,14 @@ import Link from 'next/link';
 import { Building2, Tag, ArrowRight, Briefcase } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Past Performance | CMMC RPO & Federal IT Contractor | Galaxy Consulting',
-  description: 'Galaxy Consulting past performance includes contracts with the Department of Veterans Affairs, US Marine Forces Pacific, Department of the Navy, and Maryland DOIT — a proven CMMC RPO and federal IT contractor with 75+ years of combined experience.',
+  title: 'Past Performance — CMMC RPO & Federal IT Contractor | Galaxy Consulting',
+  description: 'Galaxy Consulting past performance includes contracts with the VA, US Marine Forces Pacific (MARFORPAC), Department of the Navy, and Maryland agencies — a proven CMMC RPO and SDVOSB federal IT contractor with 75+ years of combined DoD and government experience.',
+  keywords: [
+    'CMMC RPO past performance', 'federal contractor past performance', 'DoD IT past performance',
+    'VA IT contractor', 'MARFORPAC contractor', 'Navy IT contractor', 'Maryland DOIT contractor',
+    'SDVOSB past performance', 'defense contractor portfolio', 'government IT experience',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/past-performance' },
 };
 
 const contracts = [

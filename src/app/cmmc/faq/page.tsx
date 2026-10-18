@@ -3,8 +3,17 @@ import Link from 'next/link';
 import { Shield, ArrowRight, HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'CMMC FAQ — Level 1 & Level 2 Frequently Asked Questions for DoD Contractors',
-  description: 'Answers to the most common CMMC Level 1 and Level 2 questions: who needs each level, the 17 and 110 practices, self-assessment vs C3PAO, CUI, SSP, POA&M, timelines, and more.',
+  title: 'CMMC FAQ — Level 1 & Level 2 Questions Answered by a Cyber-AB Authorized RPO',
+  description: 'Answers to the most common CMMC questions from DoD contractors: what is CMMC, who needs Level 1 vs Level 2, what is an RPO vs C3PAO, SPRS scores, SSP requirements, CUI, FCI, DFARS 252.204-7012, and more. From Galaxy Consulting — a Cyber-AB authorized CMMC RPO.',
+  keywords: [
+    'CMMC FAQ', 'CMMC questions', 'what is CMMC', 'CMMC Level 1 FAQ', 'CMMC Level 2 FAQ',
+    'what is CMMC RPO', 'RPO vs C3PAO', 'CMMC Registered Provider Organization',
+    'what is CMMC RP', 'Registered Practitioner', 'CMMC self-assessment', 'SPRS score explained',
+    'what is CUI', 'what is FCI', 'DFARS 252.204-7012', 'CMMC SSP', 'System Security Plan',
+    'POA&M CMMC', 'C3PAO assessment', 'CMMC timeline', 'how long does CMMC take',
+    'CMMC small business FAQ', 'DoD contractor CMMC help',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/cmmc/faq' },
 };
 
 const faqs = [

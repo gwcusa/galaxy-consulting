@@ -3,8 +3,17 @@ import Link from 'next/link';
 import { Shield, ArrowRight, Search, Wrench, FileText, Users, CheckCircle2, ClipboardCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'CMMC Advisory Services — Gap Assessment, Remediation, Documentation & Staffing',
-  description: 'Galaxy Consulting (CMMC RPO) offers CMMC Level 1 and Level 2 gap assessments, remediation support, SSP documentation, C3PAO preparation, and Registered Practitioner staffing for DoD contractors.',
+  title: 'CMMC Advisory Services — Gap Assessment, Remediation, SSP Documentation & RP Staffing',
+  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC RPO offering end-to-end CMMC compliance services: CMMC Level 1 & Level 2 gap assessments, remediation support, SSP & POA&M documentation, Registered Practitioner (RP) staffing, and C3PAO assessment coordination for DoD contractors.',
+  keywords: [
+    'CMMC advisory services', 'CMMC services', 'CMMC consulting services', 'CMMC RPO services',
+    'CMMC gap assessment service', 'CMMC Level 1 services', 'CMMC Level 2 services',
+    'CMMC remediation', 'CMMC documentation', 'SSP development service', 'POA&M development',
+    'CMMC RP staffing', 'Registered Practitioner staffing', 'CMMC RP on demand',
+    'C3PAO preparation service', 'CMMC assessment readiness', 'SPRS submission help',
+    'DoD contractor CMMC services', 'CMMC compliance consulting',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/cmmc/services' },
 };
 
 const services = [

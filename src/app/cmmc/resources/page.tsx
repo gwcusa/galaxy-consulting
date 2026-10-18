@@ -3,8 +3,15 @@ import Link from 'next/link';
 import { Shield, ArrowRight, ExternalLink, FileText, CheckCircle2, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'CMMC Resources — Official DoD & Cyber-AB Links for DoD Contractors',
-  description: 'Official CMMC resources for DoD contractors: Cyber-AB, DoD CMMC program site, NIST SP 800-171, DFARS 252.204-7012, FAR 52.204-21, SPRS guidance, and CMMC Level 1 and Level 2 reference checklists.',
+  title: 'CMMC Resources — Official DoD, Cyber-AB & NIST Links for DoD Contractors',
+  description: 'Official CMMC resources for DoD contractors and subcontractors: Cyber-AB CMMC marketplace, DoD CMMC program office, NIST SP 800-171 r2, DFARS 252.204-7012, FAR 52.204-21, SPRS system, and CMMC Level 1 and Level 2 reference guides. Curated by Galaxy Consulting — Cyber-AB authorized CMMC RPO.',
+  keywords: [
+    'CMMC resources', 'CMMC official resources', 'Cyber-AB resources', 'CMMC marketplace',
+    'NIST SP 800-171 download', 'DFARS 252.204-7012 reference', 'FAR 52.204-21',
+    'SPRS system guide', 'CMMC Level 1 checklist', 'CMMC Level 2 checklist',
+    'DoD CMMC program', 'CMMC reference guide', 'CUI registry NARA',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/cmmc/resources' },
 };
 
 const officialLinks = [

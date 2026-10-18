@@ -3,8 +3,16 @@ import Link from 'next/link';
 import { Shield, CheckCircle2, ArrowRight, AlertCircle, Clock, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'CMMC Level 1 — Foundational Cybersecurity for DoD Contractors',
-  description: 'Learn about CMMC Level 1 certification: who needs it, the 17 required practices, the self-assessment process, and how Galaxy Consulting (CMMC RPO) helps you get compliant.',
+  title: 'CMMC Level 1 Certification — 17 Practices, Self-Assessment & RPO Support',
+  description: 'CMMC Level 1 requires 17 foundational cybersecurity practices for all DoD contractors handling Federal Contract Information (FCI). Galaxy Consulting — a Cyber-AB authorized CMMC RPO — provides gap assessments, remediation, SSP documentation, and SPRS submission support.',
+  keywords: [
+    'CMMC Level 1', 'CMMC Level 1 certification', 'CMMC Level 1 compliance', 'CMMC Level 1 assessment',
+    'CMMC Level 1 self-assessment', '17 CMMC practices', 'CMMC foundational', 'FCI compliance',
+    'Federal Contract Information', 'FAR 52.204-21', 'SPRS score', 'SPRS submission',
+    'CMMC RPO Level 1', 'DoD contractor Level 1', 'CMMC gap assessment', 'System Security Plan Level 1',
+    'CMMC small business', 'DIB Level 1 compliance',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/cmmc/level-1' },
 };
 
 const domains = [

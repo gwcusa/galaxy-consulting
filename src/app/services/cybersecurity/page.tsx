@@ -3,9 +3,15 @@ import Link from 'next/link';
 import { Shield, Lock, FileText, Search, Network, AlertTriangle, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity & CMMC Compliance Services | Galaxy Consulting RPO',
-  description:
-    'Galaxy Consulting delivers CMMC Level 1 compliance support, NIST 800-53 security controls, ATO packages, SSP development, and cybersecurity architecture for DoD contractors and federal agencies. Cyber-AB authorized CMMC RPO.',
+  title: 'Cybersecurity & CMMC Compliance Services for DoD Contractors | Galaxy Consulting RPO',
+  description: 'Galaxy Consulting delivers CMMC Level 1 and Level 2 compliance support, NIST SP 800-53 security controls, ATO packages, SSP & POA&M development, penetration testing, and cybersecurity architecture for DoD contractors and federal agencies. Cyber-AB authorized CMMC RPO with on-staff Registered Practitioners (RPs).',
+  keywords: [
+    'CMMC cybersecurity services', 'CMMC Level 1 cybersecurity', 'CMMC Level 2 cybersecurity',
+    'NIST 800-53 compliance services', 'ATO package DoD', 'cybersecurity DoD contractor',
+    'penetration testing federal', 'SSP development CMMC', 'CMMC RPO cybersecurity',
+    'federal cybersecurity consulting', 'defense contractor cybersecurity', 'CMMC security controls',
+  ],
+  alternates: { canonical: 'https://www.galaxyconsultingllc.com/services/cybersecurity' },
 };
 
 const cybersecurityServiceSchema = {
