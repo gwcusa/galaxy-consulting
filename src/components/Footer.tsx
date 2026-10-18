@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Globe } from 'lucide-react';
 import Logo from './Logo';
+import CookiePreferencesLink from './CookiePreferencesLink';
 
 const cmmcLinks = [
   { href: '/cmmc', label: 'CMMC Overview' },
@@ -199,9 +200,12 @@ export default function Footer() {
         <div className="divider mt-10 mb-6" />
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-silver/50" style={{ fontFamily: 'var(--font-inter)' }}>
           <p>© {new Date().getFullYear()} Galaxy Consulting, LLC. All rights reserved.</p>
-          <Link href="/privacy-policy" className="hover:text-blue-bright transition-colors">
-            Privacy Policy
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="hover:text-blue-bright transition-colors">
+              Privacy Policy
+            </Link>
+            <CookiePreferencesLink />
+          </div>
         </div>
       </div>
     </footer>

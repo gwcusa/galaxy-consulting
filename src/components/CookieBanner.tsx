@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Cookie, X, Check } from 'lucide-react';
+import { COOKIE_PREFS_EVENT } from './CookiePreferencesLink';
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
@@ -14,6 +15,10 @@ export default function CookieBanner() {
     } catch {
       // localStorage unavailable (SSR or private mode edge case)
     }
+    // The footer's "Cookie preferences" link reopens the banner.
+    const reopen = () => setVisible(true);
+    window.addEventListener(COOKIE_PREFS_EVENT, reopen);
+    return () => window.removeEventListener(COOKIE_PREFS_EVENT, reopen);
   }, []);
 
   // Tell Analytics (Consent Mode) about the choice without a reload.

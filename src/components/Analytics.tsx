@@ -31,6 +31,28 @@ declare global {
 
 type GcWindow = Window & { __gcGaConfigured?: boolean; __gcAnalyticsDenied?: boolean };
 
+/**
+ * Expire the GA cookies (_ga, _ga_<stream>) on every domain gtag may have
+ * written them to: host-only, the exact host, and the root domain.
+ */
+function clearGaCookies() {
+  const host = window.location.hostname;
+  const parts = host.split('.');
+  const domains = new Set(['', host, '.' + host]);
+  if (parts.length > 2) {
+    const root = parts.slice(-2).join('.');
+    domains.add(root);
+    domains.add('.' + root);
+  }
+  for (const c of document.cookie.split(';')) {
+    const name = c.split('=')[0].trim();
+    if (!/^_ga($|_)/.test(name)) continue;
+    for (const d of domains) {
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + (d ? '; domain=' + d : '');
+    }
+  }
+}
+
 // Set once the re-grant page_view has been sent, so it can never repeat.
 let consentPageViewSent = false;
 
@@ -40,7 +62,9 @@ function applyConsent(value: string | null) {
   const granted = value !== 'declined';
   const wasDenied = w.__gcAnalyticsDenied === true;
   w.__gcAnalyticsDenied = !granted;
+  // Consent is updated first so no further hit can carry or rewrite a cookie.
   window.gtag('consent', 'update', { analytics_storage: granted ? 'granted' : 'denied' });
+  if (!granted) clearGaCookies();
 
   // Only when a stored decline is reversed: this page's page_view went out
   // while analytics_storage was denied, and gtag does not resend it when
