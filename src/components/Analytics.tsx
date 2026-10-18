@@ -29,10 +29,28 @@ declare global {
   }
 }
 
+// Set once the Accept-time page_view has been sent, so it can never repeat.
+let consentPageViewSent = false;
+
 function applyConsent(value: string | null) {
   if (typeof window.gtag !== 'function') return;
-  const granted = value === 'accepted' ? 'granted' : 'denied';
-  window.gtag('consent', 'update', { analytics_storage: granted });
+  const granted = value === 'accepted';
+  window.gtag('consent', 'update', { analytics_storage: granted ? 'granted' : 'denied' });
+
+  // The page_view sent by gtag('config') went out while analytics_storage was
+  // denied, and gtag does not resend it when consent changes. Without this, a
+  // visitor who accepts and then leaves without a second page is never counted.
+  // Only needed once config has run: if the visitor accepts before that,
+  // config's own page_view already goes out with consent granted. Later route
+  // changes are counted by GA4's history-change page_views, not by this.
+  const w = window as Window & { __gcGaConfigured?: boolean };
+  if (granted && w.__gcGaConfigured && !consentPageViewSent) {
+    consentPageViewSent = true;
+    window.gtag('event', 'page_view', {
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }
 }
 
 export default function Analytics() {
@@ -69,7 +87,7 @@ try{if(localStorage.getItem('${CONSENT_KEY}')==='accepted'){gtag('consent','upda
       </Script>
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
       <Script id="ga-init" strategy="afterInteractive">
-        {`gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});`}
+        {`gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});window.__gcGaConfigured=true;`}
       </Script>
     </>
   );
