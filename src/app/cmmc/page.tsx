@@ -31,7 +31,7 @@ const stats = [
   { value: '17',   label: 'Level 1 Security Practices' },
   { value: '110',  label: 'Level 2 Security Practices' },
   { value: 'RPO',  label: 'Cyber-AB Authorized' },
-  { value: 'L1+L2', label: 'Galaxy Certified' },
+  { value: 'L1+L2', label: 'L1 Self-Assessed · L2 Certified' },
 ];
 
 const services = [
@@ -98,7 +98,7 @@ const steps = [
 
 const whyGalaxy = [
   'Cyber-AB authorized CMMC RPO — officially listed in the CMMC marketplace',
-  'Galaxy is CMMC Level 1 and Level 2 certified ourselves — we have done exactly what we guide you through',
+  'Galaxy is CMMC Level 1 self-assessed and Level 2 certified ourselves — we have done exactly what we guide you through',
   'Registered Practitioners (RPs) on staff with hands-on compliance experience',
   'Veteran-led firm with 75+ years of DoD and government IT experience',
   'Plain-English guidance — we make CMMC understandable for small businesses',
@@ -147,12 +147,12 @@ export default function CMMCPage() {
                 </div>
               </div>
               {/* Cyber-AB sub-badge */}
-              <div className="flex items-center gap-2 mb-6">
+              <div className="flex flex-wrap items-center gap-2 mb-6">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-blue-accent/30 bg-blue-accent/10 text-blue-bright text-xs font-medium" style={{ fontFamily:'var(--font-inter)' }}>
                   <Award size={10} /> Cyber-AB Authorized
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-400 text-xs font-medium" style={{ fontFamily:'var(--font-inter)' }}>
-                  <Star size={10} /> CMMC L1 &amp; L2 Certified
+                  <Star size={10} /> CMMC L1 Self-Assessed · L2 Certified
                 </span>
               </div>
               <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight gradient-text mb-6" style={{ fontFamily:'var(--font-barlow)' }}>
@@ -190,7 +190,7 @@ export default function CMMCPage() {
                 <div className="space-y-2.5 mb-5">
                   {[
                     { label: 'CMMC RPO', sub: 'Cyber-AB Registered Provider Organization', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/30' },
-                    { label: 'CMMC L1',  sub: 'Level 1 Certified — 17 Practices',          color: 'text-cyan-400',    bg: 'bg-cyan-500/10',    border: 'border-cyan-500/30'    },
+                    { label: 'CMMC L1',  sub: 'Level 1 Self-Assessed — 17 Practices',      color: 'text-cyan-400',    bg: 'bg-cyan-500/10',    border: 'border-cyan-500/30'    },
                     { label: 'CMMC L2',  sub: 'Level 2 Certified — 110 Practices',          color: 'text-violet-400',  bg: 'bg-violet-500/10',  border: 'border-violet-500/30'  },
                     { label: 'RP Staff', sub: 'Registered Practitioners on our team',       color: 'text-amber-400',   bg: 'bg-amber-500/10',   border: 'border-amber-500/30'   },
                   ].map((c) => (
@@ -210,7 +210,7 @@ export default function CMMCPage() {
                   { value: '17',    label: 'Level 1 Practices' },
                   { value: '110',   label: 'Level 2 Practices' },
                   { value: 'RPO',   label: 'Cyber-AB Listed' },
-                  { value: 'L1+L2', label: 'L1 & L2 Certified' },
+                  { value: 'L1+L2', label: 'L1 Self-Assessed · L2 Certified' },
                 ].map((s) => (
                   <div key={s.label} className="card-surface rounded-xl p-4 text-center border border-emerald-500/20">
                     <div className="text-2xl font-bold text-emerald-400" style={{ fontFamily:'var(--font-barlow)' }}>{s.value}</div>
@@ -274,7 +274,7 @@ export default function CMMCPage() {
             {/* Level cards */}
             <div className="space-y-4">
               {[
-                { level: 'Level 1', label: 'Foundational', practices: '17 Practices', desc: 'Basic cyber hygiene to protect Federal Contract Information (FCI). Annual self-assessment required. Required for all DoD contractors handling FCI.', badge: 'Galaxy Certified', badgeColor: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', borderClass: 'border-emerald-500/40 bg-emerald-500/5', textColor: 'text-emerald-400', practiceColor: 'bg-emerald-500/10 text-emerald-400', href: '/cmmc/level-1' },
+                { level: 'Level 1', label: 'Foundational', practices: '17 Practices', desc: 'Basic cyber hygiene to protect Federal Contract Information (FCI). Annual self-assessment required. Required for all DoD contractors handling FCI.', badge: 'Galaxy Self-Assessed', badgeColor: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', borderClass: 'border-emerald-500/40 bg-emerald-500/5', textColor: 'text-emerald-400', practiceColor: 'bg-emerald-500/10 text-emerald-400', href: '/cmmc/level-1' },
                 { level: 'Level 2', label: 'Advanced',     practices: '110 Practices', desc: 'Advanced cybersecurity aligned with NIST SP 800-171 r2 to protect Controlled Unclassified Information (CUI). Third-party C3PAO assessment required.', badge: 'Galaxy Certified', badgeColor: 'bg-violet-500/20 text-violet-400 border-violet-500/30', borderClass: 'border-violet-500/40 bg-violet-500/5', textColor: 'text-violet-400', practiceColor: 'bg-violet-500/10 text-violet-400', href: '/cmmc/level-2' },
                 { level: 'Level 3', label: 'Expert',       practices: '110+ Practices', desc: 'Enhanced practices against advanced persistent threats (APTs). Reserved for the most critical DoD programs. Government-led DIBCAC assessment.', badge: null, badgeColor: '', borderClass: 'border-blue-accent/20', textColor: 'text-silver/50', practiceColor: 'bg-blue-accent/10 text-blue-bright', href: null },
               ].map((l) => (
@@ -430,7 +430,7 @@ export default function CMMCPage() {
               <div className="space-y-3 mb-6">
                 {[
                   { label: 'CMMC RPO', sub: 'Cyber-AB Registered Provider Organization', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/30' },
-                  { label: 'CMMC L1', sub: 'CMMC Level 1 Certified — 17 Practices', color: 'text-cyan-400', bg: 'bg-cyan-500/10', border: 'border-cyan-500/30' },
+                  { label: 'CMMC L1', sub: 'CMMC Level 1 Self-Assessed — 17 Practices', color: 'text-cyan-400', bg: 'bg-cyan-500/10', border: 'border-cyan-500/30' },
                   { label: 'CMMC L2', sub: 'Level 2 Certified — 110 Practices',        color: 'text-violet-400', bg: 'bg-violet-500/10', border: 'border-violet-500/30' },
                   { label: 'RP Staff', sub: 'Registered Practitioners on our team', color: 'text-amber-400', bg: 'bg-amber-500/10', border: 'border-amber-500/30' },
                 ].map((c) => (
@@ -442,7 +442,7 @@ export default function CMMCPage() {
               </div>
               <div className="divider mb-5" />
               <p className="text-xs text-silver/50 leading-relaxed" style={{ fontFamily:'var(--font-inter)' }}>
-                Galaxy Consulting is listed in the official Cyber-AB CMMC Marketplace. We hold CMMC Level 1 and Level 2 certifications ourselves — meaning we have done exactly what we are guiding you to do.
+                Galaxy Consulting is listed in the official Cyber-AB CMMC Marketplace. We have completed our own CMMC Level 1 self-assessment and hold CMMC Level 2 certification — meaning we have done exactly what we are guiding you to do.
               </p>
             </div>
           </div>

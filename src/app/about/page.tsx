@@ -5,7 +5,7 @@ import { ArrowRight, Target, Eye, Heart, Medal, Users, Star } from 'lucide-react
 export const metadata: Metadata = {
   alternates: { canonical: '/about' },
   title: 'About Galaxy Consulting — Cyber-AB Authorized CMMC RPO | Fort Washington, MD',
-  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC Registered Practitioner Organization (RPO) and Service-Disabled Veteran-Owned Small Business delivering IT infrastructure, cybersecurity, and CMMC compliance services to federal and state agencies from Fort Washington, Maryland.',
+  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC Registered Provider Organization (RPO) and Service-Disabled Veteran-Owned Small Business delivering IT infrastructure, cybersecurity, and CMMC compliance services to federal and state agencies from Fort Washington, Maryland.',
 };
 
 const values = [
@@ -20,7 +20,7 @@ const timeline = [
   { year: 'Early',   title: 'First Federal Contracts',                  desc: 'Began delivering IT solutions and administrative support services to the Department of Veterans Affairs.' },
   { year: 'Growth',  title: 'Maryland State Contract',                  desc: 'Awarded the Maryland DOIT Master H/W Contract, serving agencies statewide including the Department of Health and Executive Office of the Governor.' },
   { year: 'DoD',     title: 'Department of Defense Engagements',        desc: 'Delivered technology solutions to US Marine Forces Pacific (MARFORPAC) and Naval Surface Warfare Centers.' },
-  { year: 'Today',   title: 'CMMC RPO & Expanding',                     desc: 'Authorized by Cyber-AB as a CMMC Registered Practitioner Organization (RPO), delivering CMMC Level 1 & Level 2 compliance support to DoD contractors alongside IT infrastructure and cybersecurity services. Operating as a verified SDVOSB and SDB.' },
+  { year: 'Today',   title: 'CMMC RPO & Expanding',                     desc: 'Authorized by Cyber-AB as a CMMC Registered Provider Organization (RPO), delivering CMMC Level 1 & Level 2 compliance support to DoD contractors alongside IT infrastructure and cybersecurity services. Operating as a verified SDVOSB and SDB.' },
 ];
 
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
                   <em className="text-blue-bright font-medium">&ldquo;Our Mission Is Your Success.&rdquo;</em>
                 </p>
                 <p>
-                  As a <strong className="text-emerald-400">Cyber-AB authorized CMMC Registered Practitioner Organization (RPO)</strong>, we are qualified to deliver CMMC compliance advisory and preparation services to DoD contractors — from gap assessments and remediation to System Security Plans and self-assessment support.
+                  As a <strong className="text-emerald-400">Cyber-AB authorized CMMC Registered Provider Organization (RPO)</strong>, we are qualified to deliver CMMC compliance advisory and preparation services to DoD contractors — from gap assessments and remediation to System Security Plans and self-assessment support.
                 </p>
                 <p>
                   From complex IT infrastructure deployments to cybersecurity compliance and program management, we deliver solutions that are technically sound, cost-effective, and aligned with your mission.

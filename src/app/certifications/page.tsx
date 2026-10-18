@@ -6,7 +6,7 @@ import { Award, Shield, Star, CheckCircle2, ArrowRight, GraduationCap, ExternalL
 export const metadata: Metadata = {
   alternates: { canonical: '/certifications' },
   title: 'CMMC RPO Certifications & Credentials | Galaxy Consulting',
-  description: 'Galaxy Consulting holds Cyber-AB authorized CMMC RPO status, CMMC Level 1 and Level 2 certification, and SDVOSB and SDB designations — backed by 20+ professional certifications and strategic partnerships with Dell, HP, and Palo Alto Networks.',
+  description: 'Galaxy Consulting holds Cyber-AB authorized CMMC RPO status, a CMMC Level 1 self-assessment affirmed in SPRS, CMMC Level 2 certification, and SDVOSB and SDB designations — backed by 20+ professional certifications and strategic partnerships with Dell, HP, and Palo Alto Networks.',
 };
 
 const certifications = [
@@ -17,10 +17,10 @@ const certifications = [
     benefits: ['Cyber-AB authorized CMMC advisory services','CMMC Level 1 & Level 2 compliance support','Gap assessments, remediation, and documentation','Staffed with Cyber-AB Registered Practitioners (RPs)'],
   },
   {
-    abbr: 'CMMC L1', full: 'CMMC Level 1 Certified — Foundational Cybersecurity', icon: Award,
+    abbr: 'CMMC L1', full: 'CMMC Level 1 Self-Assessment — Foundational Cybersecurity', icon: Award,
     border: 'border-emerald-500/40', iconColor: 'text-emerald-400', iconBg: 'bg-emerald-500/10',
-    desc: 'Galaxy Consulting has achieved CMMC Level 1 certification, demonstrating full compliance with the 17 foundational cybersecurity practices required to protect Federal Contract Information (FCI).',
-    benefits: ['All 17 CMMC Level 1 practices implemented','Federal Contract Information (FCI) protection','FAR 52.204-21 compliant','Assessed and verified by a certified C3PAO'],
+    desc: 'Galaxy Consulting has completed its annual CMMC Level 1 self-assessment and affirmed in SPRS its full compliance with the 17 foundational cybersecurity practices required to protect Federal Contract Information (FCI).',
+    benefits: ['All 17 CMMC Level 1 practices implemented','Federal Contract Information (FCI) protection','FAR 52.204-21 compliant','Self-assessed annually and affirmed in SPRS'],
   },
   {
     abbr: 'CMMC L2', full: 'CMMC Level 2 Certified — Advanced Cybersecurity', icon: Award,
@@ -99,7 +99,7 @@ export default function CertificationsPage() {
           <p className="text-blue-bright text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Credentials &amp; Alliances</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Certifications &amp;<br />Strategic Partners</h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-            Galaxy Consulting is a Cyber-AB authorized CMMC RPO, CMMC Level 1 and Level 2 Certified — backed by SDVOSB and SDB federal set-aside designations and an ecosystem of leading technology vendor partnerships.
+            Galaxy Consulting is a Cyber-AB authorized CMMC RPO, CMMC Level 1 self-assessed and Level 2 Certified — backed by SDVOSB and SDB federal set-aside designations and an ecosystem of leading technology vendor partnerships.
           </p>
         </div>
       </section>

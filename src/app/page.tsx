@@ -40,7 +40,7 @@ const partners = [
 ];
 
 const whyUs = [
-  'Cyber-AB authorized CMMC RPO — CMMC Level 1 & Level 2 certified ourselves',
+  'Cyber-AB authorized CMMC RPO — CMMC Level 1 self-assessed & Level 2 certified ourselves',
   'Over 75 years of combined government & military IT experience',
   'Service-Disabled Veteran leadership — we understand your mission',
   'Proven track record with VA, DoD, and Maryland state agencies',
@@ -108,7 +108,7 @@ export default function HomePage() {
                     <br /><span className="font-semibold text-emerald-400">CMMC:</span> Cybersecurity Maturity Model Certification
                   </span>
                 </span>{' '}
-                Registered Practitioner Organization (RPO) that is focused on delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies and their industry partners — backed by 75+ years of combined military and technology expertise.
+                Registered Provider Organization (RPO) that is focused on delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies and their industry partners — backed by 75+ years of combined military and technology expertise.
               </p>
               <p>
                 We deliver IT system design, implementation, integration services, and CMMC Level 1 and Level 2 compliance assistance to DoD contractors seeking CMMC compliance. We specialize in supporting CMMC services from gap analysis, self-assessments, security control compliance assistance, and support in preparing for official CMMC self-assessment or third-party compliance testing.

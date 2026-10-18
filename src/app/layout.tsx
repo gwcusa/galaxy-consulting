@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: 'Galaxy Consulting, LLC — CMMC RPO | IT & Cybersecurity Services',
   },
   description:
-    'Galaxy Consulting is a Cyber-AB authorized CMMC RPO helping DoD contractors achieve CMMC Level 1 certification. SDVOSB · CMMC L1 & L2 Certified · Fort Washington, MD.',
+    'Galaxy Consulting is a Cyber-AB authorized CMMC RPO helping DoD contractors achieve CMMC Level 1 certification. SDVOSB · CMMC L1 Self-Assessed · L2 Certified · Fort Washington, MD.',
   keywords: [
     'CMMC RPO',
     'CMMC Level 1',
@@ -126,7 +126,7 @@ const organizationSchema = {
   ],
   hasCredential: [
     { '@type': 'EducationalOccupationalCredential', name: 'CMMC Registered Provider Organization (RPO) — Cyber-AB Authorized' },
-    { '@type': 'EducationalOccupationalCredential', name: 'CMMC Level 1 Certified' },
+    { '@type': 'EducationalOccupationalCredential', name: 'CMMC Level 1 Self-Assessment — affirmed in SPRS' },
     { '@type': 'EducationalOccupationalCredential', name: 'CMMC Level 2 Certified' },
     { '@type': 'EducationalOccupationalCredential', name: 'Service-Disabled Veteran-Owned Small Business (SDVOSB)' },
     { '@type': 'EducationalOccupationalCredential', name: 'Small Disadvantaged Business (SDB)' },
