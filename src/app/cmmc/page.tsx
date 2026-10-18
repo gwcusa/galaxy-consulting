@@ -312,7 +312,7 @@ export default function CMMCPage() {
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             {[
               { title: 'RPO (Galaxy Consulting)', role: 'Advisory & Preparation', desc: 'Helps you understand requirements, fix gaps, build documentation, and prepare for your assessment. Does NOT conduct the official certification assessment.', highlight: true },
-              { title: 'C3PAO', role: 'Third-Party Assessor', desc: 'An accredited organization that conducts the official CMMC Level 2 and Level 3 certification assessments. Independent from RPOs.', highlight: false },
+              { title: 'C3PAO', role: 'Third-Party Assessor', desc: 'An accredited organization that conducts the official CMMC Level 2 certification assessments. Independent from RPOs. Level 3 assessments are conducted by the Government (DCMA\'s DIBCAC), after a Level 2 C3PAO certification.', highlight: false },
               { title: 'OSC (You)', role: 'Organization Seeking Certification', desc: 'Your company — a DoD prime contractor or subcontractor that must achieve CMMC certification to be eligible for DoD contracts.', highlight: false },
             ].map((item) => (
               <div key={item.title} className={`rounded-xl p-6 border ${item.highlight ? 'bg-emerald-500/5 border-emerald-500/40' : 'card-surface border-blue-accent/20'}`}>
