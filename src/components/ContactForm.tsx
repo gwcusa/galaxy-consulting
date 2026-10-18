@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 interface Props {
   reasons: string[];
@@ -40,6 +41,8 @@ export default function ContactForm({ reasons, defaultTopic }: Props) {
         setStatus('error');
       } else {
         setStatus('success');
+        // Fired only after the API confirms the inquiry was sent.
+        trackEvent('generate_lead', { lead_type: 'contact_form', topic });
         setName(''); setOrg(''); setEmail(''); setPhone(''); setMessage('');
       }
     } catch {

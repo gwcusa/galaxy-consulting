@@ -2,6 +2,7 @@
 
 import Script from 'next/script';
 import { useEffect } from 'react';
+import { contactClickEvent, trackEvent } from '@/lib/analytics';
 
 /**
  * Google Analytics 4, gated by the cookie banner.
@@ -39,7 +40,22 @@ export default function Analytics() {
     if (!GA_ID) return;
     const onChoice = (e: Event) => applyConsent((e as CustomEvent<string>).detail ?? null);
     window.addEventListener(CONSENT_EVENT, onChoice);
-    return () => window.removeEventListener(CONSENT_EVENT, onChoice);
+
+    // One delegated listener reports phone_click / email_click for every
+    // tel:/mailto: link on the site (footer, contact page, privacy policy, and
+    // any added later) without wrapping each server-rendered anchor.
+    const onClick = (e: MouseEvent) => {
+      const link = e.target instanceof Element ? e.target.closest('a[href]') : null;
+      if (!link) return;
+      const ev = contactClickEvent(link.getAttribute('href') ?? '', window.location.pathname);
+      if (ev) trackEvent(ev.name, ev.params);
+    };
+    document.addEventListener('click', onClick, { capture: true });
+
+    return () => {
+      window.removeEventListener(CONSENT_EVENT, onChoice);
+      document.removeEventListener('click', onClick, { capture: true });
+    };
   }, []);
 
   if (!GA_ID) return null;
