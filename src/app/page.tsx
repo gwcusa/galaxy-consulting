@@ -7,6 +7,8 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  title: { absolute: "Galaxy Consulting | SDVOSB CMMC Readiness & Cybersecurity Services" },
+  description: "SDVOSB IT and cybersecurity consulting for federal and defense contractors, including CMMC readiness, gap assessments and compliance documentation support.",
   alternates: { canonical: '/' },
 };
 
