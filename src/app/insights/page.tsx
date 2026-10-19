@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    href: '/insights/nist-800-171-gap-assessment',
+    title: 'NIST 800-171 Gap Assessment: What It Covers and How to Prepare',
+    date: '2026-10-19',
+    dateLabel: 'October 19, 2026',
+    summary: 'What a NIST SP 800-171 gap assessment involves, what documents to gather and how the results feed your SSP, POA&M and SPRS score.',
+  },
+  {
     href: '/insights/cmmc-phase-2-suspension',
     title: 'CMMC Phase 2 Is Suspended: What It Means for Small Defense Contractors',
     date: '2026-10-02',
