@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    href: '/insights/nist-800-171-gap-assessment',
+    title: 'What Is a NIST 800-171 Gap Assessment? What You Get',
+    date: '2026-10-19',
+    dateLabel: 'October 19, 2026',
+    summary: 'What a NIST 800-171 gap assessment checks, the deliverables you should get from it, and how it sets up a CMMC Level 1 or Level 2 self-assessment.',
+  },
+  {
     href: '/insights/cmmc-phase-2-suspension',
     title: 'CMMC Phase 2 Is Suspended: What It Means for Small Defense Contractors',
     date: '2026-10-02',
