@@ -4,8 +4,8 @@ import { ArrowRight, Calendar, Newspaper } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/insights' },
-  title: 'Insights — CMMC News and Guidance for Defense Contractors',
-  description: 'Plain-language CMMC news and guidance from Galaxy Consulting, a Cyber-AB RPO and SDVOSB, for small defense contractors. Every update links to its official sources.',
+  title: { absolute: "CMMC News & Guidance for Defense Contractors | Galaxy Consulting" },
+  description: "Plain-language CMMC news for small defense contractors from Galaxy Consulting, a Cyber-AB RPO and SDVOSB. Every update links to its official sources.",
 };
 
 const articles = [
