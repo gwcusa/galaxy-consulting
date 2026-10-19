@@ -8,8 +8,8 @@ import {
 
 export const metadata: Metadata = {
   alternates: { canonical: '/cmmc' },
-  title: 'CMMC RPO — CMMC Level 1 & Level 2 Compliance Support for DoD Contractors',
-  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC RPO providing CMMC Level 1 and Level 2 compliance services for DoD contractors. CMMC gap assessments, remediation, SSP documentation, Registered Practitioner (RP) guidance, and SPRS self-assessment support. Serving the defense industrial base (DIB) nationwide.',
+  title: { absolute: "CMMC Compliance Support for DoD Contractors | Galaxy Consulting" },
+  description: "CMMC Level 1 and Level 2 readiness support for defense contractors: gap assessments, remediation planning and SSP documentation from an SDVOSB IT firm.",
 };
 
 const cmmcServiceSchema = {
