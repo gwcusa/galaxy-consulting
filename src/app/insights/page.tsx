@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    href: '/insights/what-is-a-cmmc-rpo',
+    title: 'What Is a CMMC Registered Provider Organization (RPO)?',
+    date: '2026-10-19',
+    dateLabel: 'October 19, 2026',
+    summary: 'A CMMC Registered Provider Organization (RPO) advises contractors on CMMC; it does not certify them. How RPOs, RPs, C3PAOs and DIBCAC differ.',
+  },
+  {
     href: '/insights/cmmc-phase-2-suspension',
     title: 'CMMC Phase 2 Is Suspended: What It Means for Small Defense Contractors',
     date: '2026-10-02',
