@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    href: '/insights/cmmc-sprs-annual-affirmation',
+    title: 'The CMMC Annual Affirmation in SPRS: Who Signs and When',
+    date: '2026-10-19',
+    dateLabel: 'October 19, 2026',
+    summary: 'Who affirms your CMMC self-assessment in SPRS and how often: Level 1 every year; Level 2 (Self) assesses every 3 years and affirms every year.',
+  },
+  {
     href: '/insights/nist-800-171-gap-assessment',
     title: 'What Is a NIST 800-171 Gap Assessment? What You Get',
     date: '2026-10-19',
