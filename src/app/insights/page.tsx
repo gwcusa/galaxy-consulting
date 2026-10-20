@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    href: '/insights/cmmc-in-solicitations',
+    title: 'CMMC in Solicitations: September 2026 SAM.gov Data',
+    date: '2026-10-20',
+    dateLabel: 'October 20, 2026',
+    summary: 'Review the September 2026 SAM.gov data for CMMC mentions in federal contract notices, including breakdown by DoD components, levels, and set-asides.',
+  },
+  {
     href: '/insights/cmmc-sprs-annual-affirmation',
     title: 'The CMMC Annual Affirmation in SPRS: Who Signs and When',
     date: '2026-10-19',

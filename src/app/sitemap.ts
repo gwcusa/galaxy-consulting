@@ -25,12 +25,13 @@ const PAGES: Entry[] = [
   { path: '/cmmc/faq',                    lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/cmmc/resources',              lastModified: '2026-10-02T12:00:00-04:00', changeFrequency: 'monthly', priority: 0.8 },
   // Insights
-  { path: '/insights',                    lastModified: '2026-10-19T12:00:00-04:00', changeFrequency: 'weekly',  priority: 0.7 },
+  { path: '/insights',                    lastModified: '2026-10-20T12:00:00-04:00', changeFrequency: 'weekly',  priority: 0.7 },
   { path: '/insights/cmmc-phase-2-suspension', lastModified: '2026-10-02T12:00:00-04:00', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/insights/cmmc-sprs-annual-affirmation', lastModified: '2026-10-19T12:00:00-04:00', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/insights/nist-800-171-gap-assessment', lastModified: '2026-10-19T12:00:00-04:00', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/insights/cmmc-level-2-self-assessment-guide', lastModified: '2026-10-19T12:00:00-04:00', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/insights/what-is-a-cmmc-rpo', lastModified: '2026-10-19T12:00:00-04:00', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/insights/cmmc-in-solicitations', lastModified: '2026-10-20T12:00:00-04:00', changeFrequency: 'monthly', priority: 0.8 },
   // Company pages
   { path: '/about',                       lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/certifications',              lastModified: '2026-06-15T18:21:23-04:00', changeFrequency: 'monthly', priority: 0.7 },
