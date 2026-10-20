@@ -4,8 +4,8 @@ import { ArrowRight, Calendar, Newspaper } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/insights' },
-  title: 'Insights — CMMC News and Guidance for Defense Contractors',
-  description: 'Plain-language CMMC news and guidance from Galaxy Consulting, a Cyber-AB RPO and SDVOSB, for small defense contractors. Every update links to its official sources.',
+  title: { absolute: "CMMC News & Guidance for Defense Contractors | Galaxy Consulting" },
+  description: "Plain-language CMMC news for small defense contractors from Galaxy Consulting, a Cyber-AB RPO and SDVOSB. Every update links to its official sources.",
 };
 
 const articles = [
@@ -15,6 +15,13 @@ const articles = [
     date: '2026-10-19',
     dateLabel: 'October 19, 2026',
     summary: 'How to do a CMMC Level 2 self-assessment while Phase 2 is suspended: confirm scope, document the SSP and POA&M, enter your score in SPRS and affirm yearly.',
+  },
+  {
+    href: '/insights/what-is-a-cmmc-rpo',
+    title: 'What Is a CMMC Registered Provider Organization (RPO)?',
+    date: '2026-10-19',
+    dateLabel: 'October 19, 2026',
+    summary: 'A CMMC Registered Provider Organization (RPO) advises contractors on CMMC; it does not certify them. How RPOs, RPs, C3PAOs and DIBCAC differ.',
   },
   {
     href: '/insights/cmmc-phase-2-suspension',
