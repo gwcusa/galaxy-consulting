@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    href: '/insights/cmmc-level-2-self-assessment-guide',
+    title: 'CMMC Level 2 Assessment Help: A Self-Assessment Guide',
+    date: '2026-10-19',
+    dateLabel: 'October 19, 2026',
+    summary: 'How to do a CMMC Level 2 self-assessment while Phase 2 is suspended: confirm scope, document the SSP and POA&M, enter your score in SPRS and affirm yearly.',
+  },
+  {
     href: '/insights/what-is-a-cmmc-rpo',
     title: 'What Is a CMMC Registered Provider Organization (RPO)?',
     date: '2026-10-19',
