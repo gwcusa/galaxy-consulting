@@ -4,9 +4,9 @@ import { Server, Wifi, HardDrive, Headphones, Package, Monitor, ArrowRight, Chec
 
 export const metadata: Metadata = {
   alternates: { canonical: '/services/it-infrastructure' },
-  title: 'IT Infrastructure & Managed Services for DoD Contractors | Galaxy Consulting',
+  title: { absolute: "IT Infrastructure for DoD Contractors | Galaxy Consulting" },
   description:
-    'Galaxy Consulting delivers secure, CMMC-aligned IT infrastructure solutions — including hardware/software procurement, server deployment, network design, and 24/7 help desk support — for DoD contractors and federal government agencies.',
+    "CMMC-aligned IT for DoD contractors and federal agencies: hardware and software procurement, server deployment, network design and a 24/7 help desk.",
 };
 
 const offerings = [
