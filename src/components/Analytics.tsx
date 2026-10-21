@@ -112,8 +112,8 @@ export default function Analytics() {
 var gcDenied=false;try{gcDenied=localStorage.getItem('${CONSENT_KEY}')==='declined';}catch(e){}window.__gcAnalyticsDenied=gcDenied;
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:gcDenied?'denied':'granted'});`}
       </Script>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-      <Script id="ga-init" strategy="afterInteractive">
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
+      <Script id="ga-init" strategy="lazyOnload">
         {`gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});window.__gcGaConfigured=true;`}
       </Script>
     </>
