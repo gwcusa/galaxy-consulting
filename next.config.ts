@@ -4,6 +4,33 @@ import type { NextConfig } from "next";
 const CANONICAL_ORIGIN = "https://www.galaxyconsultingllc.com";
 const CANONICAL_HOST = "www.galaxyconsultingllc.com";
 
+/** [old path, new path] for the previous WordPress site (2020-2026) and GoDaddy site (2014). */
+const LEGACY_REDIRECTS: [string, string][] = [
+  // WordPress pages
+  ["/about-us", "/about"],
+  ["/contact-us", "/contact"],
+  ["/careers", "/contact"],
+  ["/corporate-news", "/insights"],
+  ["/services/cyber-security", "/services/cybersecurity"],
+  ["/services/professional-services", "/services/program-management"],
+  ["/services/systems-engineering", "/services/it-infrastructure"],
+  ["/services/technical-support-services", "/services/it-infrastructure"],
+  // WordPress author and date archives
+  ["/author/:slug*", "/about"],
+  ["/:year(\\d{4})/:rest*", "/insights"],
+  // 2014 site (.html pages)
+  ["/home.html", "/"],
+  ["/about-us.html", "/about"],
+  ["/contact-us.html", "/contact"],
+  ["/careers.html", "/contact"],
+  ["/current-openings.html", "/contact"],
+  ["/services.html", "/services"],
+  ["/cyber-security.html", "/services/cybersecurity"],
+  ["/professional-services.html", "/services/program-management"],
+  ["/systems-engineering.html", "/services/it-infrastructure"],
+  ["/technical-support-services.html", "/services/it-infrastructure"],
+];
+
 const nextConfig: NextConfig = {
   async redirects() {
     return [
@@ -21,6 +48,10 @@ const nextConfig: NextConfig = {
         destination: '/services',
         permanent: true,
       },
+      // Legacy URLs from the WordPress site this domain served until ~May 2026 (confirmed in
+      // the Wayback Machine). Google results and external links still send visitors to them,
+      // and they rendered the 404 page. Trailing slashes are stripped by Next first.
+      ...LEGACY_REDIRECTS.map(([source, destination]) => ({ source, destination, permanent: true })),
     ];
   },
   async headers() {
