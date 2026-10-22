@@ -18,6 +18,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Legacy URL Redirects
+
+The site was rebuilt in 2026 to replace an older WordPress site. Old URLs (WordPress pages, `/author/*`, date archives, and the 2014 `*.html` pages) are sent to their nearest current page by permanent (308) redirects in `next.config.ts`. Unknown paths show the branded 404 page in `src/app/not-found.tsx`, which is `noindex`.
+
+When a route is renamed or removed, add a redirect for the old path to `next.config.ts`. Check Google Analytics (Pages and screens, filtered by page title) for any legacy paths still receiving traffic.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
