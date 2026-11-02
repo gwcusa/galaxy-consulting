@@ -162,14 +162,14 @@ export default function CMMCPage() {
                 CMMC Readiness<br />for Small DoD<br />Subcontractors
               </h1>
               <p className="text-lg sm:text-xl text-silver/80 leading-relaxed mb-10" style={{ fontFamily:'var(--font-inter)' }}>
-                Galaxy Consulting is a Cyber-AB authorized CMMC RPO helping DoD contractors achieve CMMC Level 1 and Level 2 compliance — from gap assessment and remediation through self-assessment, SPRS submission, and beyond.
+                Galaxy Consulting is a veteran-owned Cyber-AB authorized CMMC RPO that gets small DoD contractors ready for their CMMC Level 1 and Level 2 self-assessments — from gap assessment and remediation through the SSP, SPRS score and annual affirmation. On site in Maryland, DC and Northern Virginia; remote nationwide.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
-                  Get a Free Readiness Consultation <ArrowRight size={17} />
+                  Free 30-minute readiness call <ArrowRight size={17} />
                 </Link>
-                <Link href="/cmmc/level-1" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-emerald-500/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
-                  Explore CMMC Levels
+                <Link href="/cmmc/assessment-checklist" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-emerald-500/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
+                  CMMC assessment checklist
                 </Link>
               </div>
             </div>
@@ -363,6 +363,33 @@ export default function CMMCPage() {
             <Link href="/cmmc/services" className="inline-flex items-center gap-2 px-6 py-3 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all font-medium text-sm" style={{ fontFamily:'var(--font-inter)' }}>
               View Full Service Details <ArrowRight size={15} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── BUYER GUIDES ── */}
+      <section className="py-20 bg-section-alt">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Plan your assessment</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>CMMC Guides and Tools for Buyers</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { href: '/cmmc/level-2-assessment-cost', label: "Level 2 assessment cost", desc: "What small contractors pay for readiness, remediation and the assessment, as typical market ranges." },
+              { href: '/cmmc/c3pao-vs-rpo', label: "C3PAO vs RPO", desc: "Who runs the official assessment and who helps you prepare for it." },
+              { href: '/cmmc/assessment-checklist', label: "Assessment checklist", desc: "All 110 practices in 14 domains, with point values and the documents to gather." },
+              { href: '/cmmc/sprs-score', label: "SPRS score calculator", desc: "Mark each requirement met or not met and see your score from 110 to -203." },
+              { href: '/cmmc/dfars-7012-7019-7020-7021', label: "DFARS 7012, 7019, 7020 & 7021", desc: "What each clause in your contract asks of you, and what flows down to subs." },
+              { href: '/cmmc/maryland-dc-virginia', label: "Maryland, DC & Northern Virginia", desc: "On-site CMMC readiness across the National Capital Region, remote nationwide." },
+              { href: '/cmmc/nist-800-171-gap-assessment', label: "NIST 800-171 gap assessment", desc: "The service: scope, 2-3 week timeline, deliverables and next steps." },
+              { href: '/cmmc/construction-facilities-contractors', label: "Construction & facilities contractors", desc: "FCI vs CUI on a job site, Level 1 vs Level 2, flow-downs and first steps." },
+            ].map((g) => (
+              <Link key={g.href} href={g.href} className="group rounded-xl border border-blue-accent/20 bg-card-surface p-6 hover:border-emerald-500/40 transition-colors">
+                <h3 className="text-white font-bold mb-2 group-hover:text-emerald-300" style={{ fontFamily:'var(--font-barlow)' }}>{g.label}</h3>
+                <p className="text-sm text-silver/70" style={{ fontFamily:'var(--font-inter)' }}>{g.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
