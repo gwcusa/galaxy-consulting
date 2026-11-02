@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Shield, ArrowRight, Search, Wrench, FileText, Users, CheckCircle2, ClipboardCheck } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/cmmc/services' },
-  title: 'CMMC Advisory Services — Gap Assessment, Remediation, SSP Documentation & RP Staffing',
-  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC RPO offering end-to-end CMMC compliance services: CMMC Level 1 & Level 2 gap assessments, remediation support, SSP & POA&M documentation, Registered Practitioner (RP) guidance, and self-assessment and SPRS support for DoD contractors.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/cmmc/services",
+  title: "CMMC Gap Assessment, Remediation & SSP Services | RPO",
+  description: "CMMC readiness services for DoD subcontractors: gap assessment, remediation, SSP and POA&M, RP staffing and SPRS support. MD, DC, VA and remote.",
+});
 
 const services = [
   {
@@ -95,6 +97,7 @@ const processSteps = [
 export default function CMMCServicesPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/cmmc/services"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +110,7 @@ export default function CMMCServicesPage() {
             <Shield size={11} /> CMMC RPO Advisory Services
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>
-            CMMC Advisory Services<br />for Organizations Seeking Certification
+            CMMC Readiness Services<br />for DoD Subcontractors
           </h1>
           <p className="text-silver/70 text-base max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
             Galaxy Consulting provides end-to-end CMMC Level 1 and Level 2 preparation services — from your first gap assessment through remediation, documentation, self-assessment, and SPRS submission. As a Cyber-AB authorized RPO, we guide you every step of the way.
@@ -164,9 +167,9 @@ export default function CMMCServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Our Approach</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>From First Call to Certified</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>From First Call to Assessment-Ready</h2>
             <p className="mt-5 text-silver/70 text-sm max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
-              The path to CMMC certification depends on which level applies to your contracts. Both tracks start the same way — with a free discovery call.
+              The path to your CMMC assessment depends on which level applies to your contracts. Both tracks start the same way — with a free discovery call.
             </p>
           </div>
 
@@ -261,7 +264,7 @@ export default function CMMCServicesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Get Started?</h2>
           <p className="text-silver/70 text-base mb-10 max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
-            Contact Galaxy Consulting today. We will schedule a free discovery call, determine which CMMC level applies to your contracts, and give you a clear path to certification.
+            Contact Galaxy Consulting today. We will schedule a free discovery call, determine which CMMC level applies to your contracts, and give you a clear path to your self-assessment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="px-8 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>

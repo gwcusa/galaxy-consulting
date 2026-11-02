@@ -21,16 +21,17 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.galaxyconsultingllc.com'),
   title: {
-    template: '%s | Galaxy Consulting, LLC',
-    default: 'Galaxy Consulting, LLC — CMMC RPO | IT & Cybersecurity Services',
+    template: '%s | Galaxy Consulting',
+    default: 'CMMC Level 2 Readiness for DoD Subcontractors | Galaxy RPO',
   },
   description:
-    'Galaxy Consulting is a Cyber-AB authorized CMMC RPO with a Registered Practitioner (RP) on staff, helping DoD contractors prepare for CMMC Level 1 and Level 2 self-assessments. Gap assessments, remediation, SSP documentation, and SPRS submission support. SDVOSB · Fort Washington, MD.',
+    'CMMC Level 1 and Level 2 readiness for small DoD subcontractors: gap assessment, SSP, POA&M and SPRS support from a veteran-owned Cyber-AB RPO in Maryland.',
   keywords: [
     'CMMC RPO',
     'CMMC Level 1',
     'CMMC compliance',
-    'CMMC certification',
+    'CMMC readiness',
+    'CMMC Level 2 readiness',
     'CMMC gap assessment',
     'DoD contractor cybersecurity',
     'registered provider organization',
@@ -49,23 +50,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.galaxyconsultingllc.com',
     siteName: 'Galaxy Consulting, LLC',
-    title: 'Galaxy Consulting, LLC — CMMC RPO | IT & Cybersecurity Services',
+    title: 'CMMC Level 2 Readiness for DoD Subcontractors | Galaxy RPO',
     description:
-      'Galaxy Consulting is a Cyber-AB authorized CMMC RPO helping DoD contractors achieve CMMC Level 1 certification. SDVOSB · Fort Washington, MD.',
+      'Get ready for your CMMC Level 1 or Level 2 self-assessment with a veteran-owned Cyber-AB Registered Provider Organization in Fort Washington, MD.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Galaxy Consulting — CMMC RPO',
+        alt: 'Galaxy Consulting: CMMC readiness for DoD contractors',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Galaxy Consulting, LLC — CMMC RPO',
+    title: 'CMMC Level 2 Readiness for DoD Subcontractors | Galaxy RPO',
     description:
-      'Cyber-AB authorized CMMC RPO helping small DoD contractors achieve CMMC Level 1 certification.',
+      'Get ready for your CMMC Level 1 or Level 2 self-assessment with a veteran-owned Cyber-AB Registered Provider Organization in Fort Washington, MD.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -89,7 +90,7 @@ const organizationSchema = {
   logo: 'https://www.galaxyconsultingllc.com/og-image.png',
   image: 'https://www.galaxyconsultingllc.com/og-image.png',
   description:
-    'Cyber-AB authorized CMMC RPO and Service-Disabled Veteran-Owned IT firm providing CMMC Level 1 certification support, cybersecurity, IT infrastructure, and professional services to DoD contractors and government agencies.',
+    'Cyber-AB authorized CMMC RPO and Service-Disabled Veteran-Owned IT firm providing CMMC Level 1 and Level 2 readiness and self-assessment support, cybersecurity, IT infrastructure, and professional services to DoD contractors and government agencies.',
   telephone: '+1-240-324-7888',
   email: 'info@galaxyconsultingllc.com',
   address: {
@@ -115,7 +116,7 @@ const organizationSchema = {
     { '@type': 'Country', name: 'United States' },
     { '@type': 'State', name: 'Maryland' },
     { '@type': 'State', name: 'Virginia' },
-    { '@type': 'State', name: 'Washington DC' },
+    { '@type': 'AdministrativeArea', name: 'District of Columbia' },
   ],
   knowsAbout: [
     'CMMC Level 1 Compliance',

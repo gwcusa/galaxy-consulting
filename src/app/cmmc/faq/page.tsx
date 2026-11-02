@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Shield, ArrowRight, HelpCircle } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/cmmc/faq' },
-  title: 'CMMC FAQ — Level 1 & Level 2 Questions Answered by a Cyber-AB Authorized RPO',
-  description: 'Answers to the most common CMMC questions from DoD contractors: what is CMMC, who needs Level 1 vs Level 2, what is an RPO vs C3PAO, SPRS scores, SSP requirements, CUI, FCI, DFARS 252.204-7012, and more. From Galaxy Consulting — a Cyber-AB authorized CMMC RPO.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/cmmc/faq",
+  title: "CMMC FAQ: Levels, SPRS Scores, C3PAO vs RPO and Timelines",
+  description: "Plain answers to common CMMC questions: Level 1 vs Level 2, SPRS scores and affirmations, C3PAO vs RPO, costs, timelines, FCI, CUI and DFARS 7012.",
+});
 
 const faqs = [
   {
@@ -48,7 +50,7 @@ const faqs = [
         a: 'CMMC Level 1 is the foundational tier of the CMMC framework. It requires organizations to implement 17 basic cybersecurity practices derived from FAR 52.204-21. These practices cover six domains: Access Control, Identification and Authentication, Media Protection, Physical Protection, System and Communications Protection, and System and Information Integrity. Level 1 is required for any DoD contractor that handles Federal Contract Information (FCI).',
       },
       {
-        q: 'Who needs CMMC Level 1 certification?',
+        q: 'Who needs a CMMC Level 1 self-assessment?',
         a: 'Any company in the DoD supply chain that receives, processes, stores, or transmits Federal Contract Information (FCI) needs CMMC Level 1. This includes prime contractors, subcontractors, and IT service providers who handle FCI on behalf of a contractor. Even small businesses and sole proprietors are not exempt if they handle FCI under a DoD contract.',
       },
       {
@@ -61,7 +63,7 @@ const faqs = [
       },
       {
         q: 'How often does CMMC Level 1 need to be renewed?',
-        a: 'CMMC Level 1 certification is valid for three years. However, an annual affirmation is required — each year, a senior company official must affirm that the organization continues to meet all 17 Level 1 practices. If your environment changes significantly (new systems, new contracts, staff changes), you should review your compliance status and update your System Security Plan accordingly.',
+        a: 'CMMC Level 1 is a self-assessment, not a certification, and it does not last three years: you repeat the self-assessment every year and enter the results in SPRS, and each year a senior company official must affirm that the organization continues to meet all 17 Level 1 practices. If your environment changes significantly (new systems, new contracts, staff changes), you should review your compliance status and update your System Security Plan accordingly.',
       },
       {
         q: 'What is the SPRS score and how does it work?',
@@ -108,7 +110,7 @@ const faqs = [
         a: 'A POA&M documents security deficiencies that have not yet been fully remediated and the corrective actions planned to address them, including responsible parties and target completion dates. At Level 2, a limited number of POA&M items may be accepted by a C3PAO depending on severity — critical or high-severity practices must be remediated before certification can be issued. Galaxy Consulting helps you assess which gaps can be carried as POA&M items and which must be fixed first.',
       },
       {
-        q: 'How long does CMMC Level 2 certification take?',
+        q: 'How long does it take to get ready for CMMC Level 2?',
         a: 'Organizations with a strong baseline (existing NIST SP 800-171 compliance, a current SSP, and a low SPRS score gap) may be ready for a C3PAO assessment in 3–6 months. Organizations with significant gaps across the 110 practices may require 9–18 months of remediation before they are assessment-ready. Galaxy Consulting\'s Level 2 gap assessment will give you an honest readiness timeline based on your specific environment.',
       },
       {
@@ -133,7 +135,7 @@ const faqs = [
     items: [
       {
         q: 'What is a CMMC RPO (Registered Provider Organization)?',
-        a: 'A CMMC Registered Provider Organization (RPO) is a consulting firm officially authorized by the Cyber-AB to provide non-certified advisory and consulting services to organizations seeking CMMC certification. RPOs employ Registered Practitioners (RPs) who are trained and vetted to help DoD contractors understand CMMC requirements, identify gaps, implement controls, and prepare documentation. Galaxy Consulting is a Cyber-AB authorized CMMC RPO.',
+        a: 'A CMMC Registered Provider Organization (RPO) is a consulting firm officially authorized by the Cyber-AB to provide non-certified advisory and consulting services to organizations preparing for CMMC assessments. RPOs employ Registered Practitioners (RPs) who are trained and vetted to help DoD contractors understand CMMC requirements, identify gaps, implement controls, and prepare documentation. Galaxy Consulting is a Cyber-AB authorized CMMC RPO.',
       },
       {
         q: 'What is the difference between an RPO and a C3PAO?',
@@ -185,10 +187,10 @@ const faqSchema = {
   mainEntity: [
     { '@type': 'Question', name: 'What is CMMC?', acceptedAnswer: { '@type': 'Answer', text: 'The Cybersecurity Maturity Model Certification (CMMC) is a U.S. Department of Defense (DoD) program that requires all DoD contractors and subcontractors to verify their cybersecurity practices before contract award.' } },
     { '@type': 'Question', name: 'What is CMMC Level 1?', acceptedAnswer: { '@type': 'Answer', text: 'CMMC Level 1 is the foundational tier requiring 17 basic cybersecurity practices to protect Federal Contract Information (FCI). It applies to all DoD contractors handling FCI and requires an annual self-assessment.' } },
-    { '@type': 'Question', name: 'Who needs CMMC Level 1 certification?', acceptedAnswer: { '@type': 'Answer', text: 'Any company in the DoD supply chain that receives, processes, stores, or transmits Federal Contract Information (FCI) needs CMMC Level 1 — including prime contractors, subcontractors, and IT service providers.' } },
+    { '@type': 'Question', name: 'Who needs a CMMC Level 1 self-assessment?', acceptedAnswer: { '@type': 'Answer', text: 'Any company in the DoD supply chain that receives, processes, stores, or transmits Federal Contract Information (FCI) needs CMMC Level 1 — including prime contractors, subcontractors, and IT service providers.' } },
     { '@type': 'Question', name: 'What are the 17 CMMC Level 1 practices?', acceptedAnswer: { '@type': 'Answer', text: 'The 17 practices cover Access Control (4), Identification & Authentication (2), Media Protection (1), Physical Protection (4), System & Communications Protection (2), and System & Information Integrity (4).' } },
     { '@type': 'Question', name: 'Is CMMC Level 1 a self-assessment or a third-party audit?', acceptedAnswer: { '@type': 'Answer', text: 'CMMC Level 1 is a self-assessment. Your organization assesses itself against all 17 practices and a senior official affirms the results to the DoD SPRS system. No third-party C3PAO auditor is required.' } },
-    { '@type': 'Question', name: 'What is a CMMC RPO?', acceptedAnswer: { '@type': 'Answer', text: 'A CMMC Registered Provider Organization (RPO) is a consulting firm authorized by the Cyber-AB to provide non-certified advisory services to organizations seeking CMMC certification. Galaxy Consulting is a Cyber-AB authorized CMMC RPO.' } },
+    { '@type': 'Question', name: 'What is a CMMC RPO?', acceptedAnswer: { '@type': 'Answer', text: 'A CMMC Registered Provider Organization (RPO) is a consulting firm authorized by the Cyber-AB to provide non-certified advisory services to organizations preparing for CMMC assessments. Galaxy Consulting is a Cyber-AB authorized CMMC RPO.' } },
     { '@type': 'Question', name: 'What is the difference between an RPO and a C3PAO?', acceptedAnswer: { '@type': 'Answer', text: 'An RPO helps you prepare for CMMC certification through advisory services. A C3PAO conducts the official CMMC Level 2 certification assessments. Level 3 assessments are conducted by the Government (DCMA\'s DIBCAC), after a Level 2 C3PAO certification. For Level 1, you only need an RPO — no C3PAO required.' } },
     { '@type': 'Question', name: 'How long does it take to achieve CMMC Level 1 compliance?', acceptedAnswer: { '@type': 'Answer', text: 'Organizations with basic security controls in place may achieve compliance in 4–8 weeks. Organizations starting from scratch may take 2–4 months. A gap assessment provides a precise timeline for your situation.' } },
     { '@type': 'Question', name: 'What is the SPRS score?', acceptedAnswer: { '@type': 'Answer', text: 'The Supplier Performance Risk System (SPRS) is where DoD contractors submit their CMMC self-assessment scores. The maximum score is 110. Each unimplemented practice reduces your score.' } },
@@ -197,7 +199,7 @@ const faqSchema = {
     { '@type': 'Question', name: 'What is Controlled Unclassified Information (CUI)?', acceptedAnswer: { '@type': 'Answer', text: 'CUI is information the U.S. Government creates or possesses that requires safeguarding under law or regulation — but is not classified. It includes export-controlled technical data, engineering drawings, defense acquisition information, and PII of DoD personnel.' } },
     { '@type': 'Question', name: 'Who needs CMMC Level 2?', acceptedAnswer: { '@type': 'Answer', text: 'Any DoD contractor or subcontractor that receives, processes, stores, or transmits Controlled Unclassified Information (CUI) needs CMMC Level 2. This includes companies with a DFARS 252.204-7012 clause in their contracts.' } },
     { '@type': 'Question', name: 'What is a C3PAO?', acceptedAnswer: { '@type': 'Answer', text: 'A C3PAO (CMMC Third-Party Assessment Organization) is a firm accredited by the Cyber-AB to conduct official CMMC Level 2 certification assessments. Level 3 assessments are conducted by the Government (DCMA\'s DIBCAC), after a Level 2 C3PAO certification. A C3PAO assessment is required when a contract specifies Level 2 (C3PAO); other contracts allow a Level 2 self-assessment.' } },
-    { '@type': 'Question', name: 'How long does CMMC Level 2 certification take?', acceptedAnswer: { '@type': 'Answer', text: 'Organizations with strong baselines may be assessment-ready in 3–6 months. Those with significant gaps may require 9–18 months of remediation. A gap assessment provides a precise readiness timeline.' } },
+    { '@type': 'Question', name: 'How long does it take to get ready for CMMC Level 2?', acceptedAnswer: { '@type': 'Answer', text: 'Organizations with strong baselines may be assessment-ready in 3–6 months. Those with significant gaps may require 9–18 months of remediation. A gap assessment provides a precise readiness timeline.' } },
     { '@type': 'Question', name: 'How long is CMMC Level 2 certification valid?', acceptedAnswer: { '@type': 'Answer', text: 'CMMC Level 2 certification is valid for three years, with annual affirmations required in years 2 and 3. A full C3PAO re-assessment is required at the end of each three-year cycle.' } },
   ],
 };
@@ -205,6 +207,7 @@ const faqSchema = {
 export default function CMMCFAQPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/cmmc/faq"} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

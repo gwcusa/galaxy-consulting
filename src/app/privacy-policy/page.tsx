@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/privacy-policy' },
-  title: 'Privacy Policy',
-  description: 'Galaxy Consulting, LLC Privacy Policy — how we collect, use, and protect your information.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/privacy-policy",
+  title: "Privacy Policy | Galaxy Consulting, LLC",
+  description: "How Galaxy Consulting, LLC handles data from its website, contact form, analytics cookies and email: what is collected, why, and your choices.",
+});
 
 const EFFECTIVE_DATE = 'May 25, 2026';
 const COMPANY = 'Galaxy Consulting, LLC';
@@ -16,6 +18,7 @@ const PHONE   = '240-324-7888';
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/privacy-policy"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,6 +38,18 @@ export default function PrivacyPolicyPage() {
       <section className="py-16 bg-section-alt">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose-galaxy space-y-10 text-sm text-silver/80 leading-relaxed" style={{ fontFamily: 'var(--font-inter)' }}>
+
+            {/* Summary: unique to this page, so search engines do not treat it as a copy of the homepage */}
+            <div className="rounded-xl border border-blue-accent/25 bg-card-surface p-6">
+              <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: 'var(--font-barlow)' }}>Privacy at a glance</h2>
+              <ul className="list-disc pl-5 space-y-2 marker:text-blue-bright">
+                <li>This policy covers the Galaxy Consulting website only: pages you read, the contact form you send, and the analytics cookies the site sets.</li>
+                <li>The contact form collects what you type (such as your name, email, phone, company and message) so we can answer your CMMC or IT question. We do not sell, rent or trade it.</li>
+                <li>Google Analytics is on by default to count visits; advertising cookies are not used. Choose &ldquo;Decline&rdquo; on the cookie banner to turn analytics off.</li>
+                <li>Do not send Controlled Unclassified Information (CUI), Federal Contract Information or passwords through the contact form; we will set up a proper channel if a project needs one.</li>
+                <li>Questions or requests about your data: email {EMAIL} or call {PHONE}.</li>
+              </ul>
+            </div>
 
             {/* 1 */}
             <div>

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { Calendar, Newspaper } from 'lucide-react';
 
 const PATH = '/insights/cmmc-level-2-self-assessment-guide';
 const PAGE_URL = `https://www.galaxyconsultingllc.com${PATH}`;
-const TITLE = 'CMMC Level 2 Assessment Help: A Self-Assessment Guide';
+const TITLE = "CMMC Level 2 Self-Assessment Guide: Scope, SSP and SPRS";
 const HEADLINE = 'CMMC Level 2 Assessment Help: A Self-Assessment Guide';
 const DESCRIPTION =
   'How to do a CMMC Level 2 self-assessment while Phase 2 is suspended: confirm scope, document the SSP and POA&M, enter your score in SPRS and affirm yearly.';
@@ -13,20 +15,15 @@ const PUBLISHED = '2026-10-19';
 const MODIFIED = '2026-10-19';
 const UPDATED_LABEL = 'October 19, 2026';
 
-export const metadata: Metadata = {
-  title: { absolute: TITLE },
+export const metadata: Metadata = pageMeta({
+  path: PATH,
+  title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: PATH },
-  openGraph: {
-    type: 'article',
-    url: PAGE_URL,
-    title: TITLE,
-    description: DESCRIPTION,
-    publishedTime: PUBLISHED,
-    modifiedTime: MODIFIED,
-    authors: ['Galaxy Consulting, LLC'],
-  },
-};
+  type: 'article',
+  publishedTime: PUBLISHED,
+  modifiedTime: MODIFIED,
+  authors: ['Galaxy Consulting RP team'],
+});
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -35,7 +32,7 @@ const articleSchema = {
   description: DESCRIPTION,
   datePublished: PUBLISHED,
   dateModified: MODIFIED,
-  author: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' },
+  author: { '@type': 'Person', name: 'Galaxy Consulting RP team', jobTitle: 'Cyber-AB Registered Practitioner', worksFor: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' } },
   publisher: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
   url: PAGE_URL,
@@ -60,6 +57,7 @@ function H2({ children }: { children: ReactNode }) {
 export default function CmmcLevel2SelfAssessmentGuidePage() {
   return (
     <>
+      <BreadcrumbSchema path={PATH} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }}

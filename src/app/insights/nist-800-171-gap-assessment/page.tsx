@@ -1,32 +1,29 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { Calendar, Newspaper } from 'lucide-react';
+import { ArrowRight, Calendar, Newspaper } from 'lucide-react';
 
 const PATH = '/insights/nist-800-171-gap-assessment';
 const PAGE_URL = `https://www.galaxyconsultingllc.com${PATH}`;
-const TITLE = 'What Is a NIST 800-171 Gap Assessment? What You Get';
+const TITLE = "NIST 800-171 Gap Assessment: Timeline, Deliverables & FAQ";
 const HEADLINE = 'What Is a NIST 800-171 Gap Assessment? What You Get';
 const DESCRIPTION =
-  'What a NIST 800-171 gap assessment checks, the deliverables you should get from it, and how it sets up a CMMC Level 1 or Level 2 self-assessment.';
+  "What a NIST 800-171 gap assessment checks, how long it takes (typically 2-3 weeks), what you receive, and how it sets up a CMMC self-assessment.";
 const PUBLISHED = '2026-10-19';
-const MODIFIED = '2026-10-19';
-const UPDATED_LABEL = 'October 19, 2026';
+const MODIFIED = '2026-11-02';
+const UPDATED_LABEL = 'November 2, 2026';
 
-export const metadata: Metadata = {
-  title: { absolute: TITLE },
+export const metadata: Metadata = pageMeta({
+  path: PATH,
+  title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: PATH },
-  openGraph: {
-    type: 'article',
-    url: PAGE_URL,
-    title: TITLE,
-    description: DESCRIPTION,
-    publishedTime: PUBLISHED,
-    modifiedTime: MODIFIED,
-    authors: ['Galaxy Consulting, LLC'],
-  },
-};
+  type: 'article',
+  publishedTime: PUBLISHED,
+  modifiedTime: MODIFIED,
+  authors: ['Galaxy Consulting RP team'],
+});
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -35,10 +32,24 @@ const articleSchema = {
   description: DESCRIPTION,
   datePublished: PUBLISHED,
   dateModified: MODIFIED,
-  author: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' },
+  author: { '@type': 'Person', name: 'Galaxy Consulting RP team', jobTitle: 'Cyber-AB Registered Practitioner', worksFor: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' } },
   publisher: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
   url: PAGE_URL,
+};
+
+const FAQS = [
+  { q: 'How long does a NIST 800-171 gap assessment take?', a: 'Typically 2 to 3 weeks from kickoff to the readout of the written report. A small Level 1 scope can be quicker; a Level 2 scope with several locations, cloud services or an MSP takes longer. Most of the time goes to interviews and evidence review, so having your contracts, system list and existing documents ready shortens it.' },
+  { q: 'What do I get at the end of a gap assessment?', a: 'A review of every applicable practice against your environment, a written gap report that lists each deficiency by domain, a risk-prioritized remediation roadmap, an SPRS score estimate based on where you stand today, and a recommended path: a Level 1 or a Level 2 self-assessment.' },
+  { q: 'Is a gap assessment the same as a CMMC self-assessment?', a: 'No. A gap assessment comes first and finds what is missing so you can fix it. Your self-assessment is the scored review you complete, enter in SPRS and affirm once the gaps are closed or tracked in a POA&M.' },
+  { q: 'Does the SPRS estimate from a gap assessment go into SPRS?', a: 'No. It is a planning number that shows roughly where you stand before remediation. The score you enter in SPRS comes from your own self-assessment, supported by your SSP and evidence.' },
+  { q: 'Do I need a gap assessment while CMMC Phase 2 is suspended?', a: 'If your contracts carry DFARS 252.204-7012 or reference NIST SP 800-171, yes: that obligation did not pause, and new requirements may still call for Level 1 (Self) or Level 2 (Self). A gap assessment is the quickest way to learn how close you are.' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 
 function In({ href, children }: { href: string; children: ReactNode }) {
@@ -60,9 +71,14 @@ function H2({ children }: { children: ReactNode }) {
 export default function Nist800171GapAssessmentPage() {
   return (
     <>
+      <BreadcrumbSchema path={PATH} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }}
       />
 
       {/* ── HEADER ── */}
@@ -109,6 +125,14 @@ export default function Nist800171GapAssessmentPage() {
             <li><strong className="text-white">Level 2:</strong>{" the "}<In href="/cmmc/level-2">110 Level 2 practices</In>, which rest on NIST SP 800-171 Rev 2.</li>
           </ul>
           <p>For each practice, the question is simple: is it in place and working in your environment today? At Galaxy, a Registered Practitioner guides you through all applicable practices to find the gaps, and each deficiency is written down by domain. Expect questions about how things really work day to day, not only about what a policy says. The goal is an accurate picture, so it pays to answer plainly, even when the answer is no.</p>
+          <H2>How long it takes</H2>
+          <p>{"A NIST 800-171 gap assessment typically takes 2 to 3 weeks from kickoff to the readout. At Galaxy it runs in three steps:"}</p>
+          <ol className="space-y-4 list-decimal pl-5 marker:text-emerald-400 marker:font-semibold">
+            <li><strong className="text-white">Kickoff and scoping (first days):</strong>{" confirm the CMMC level your contracts call for, draw the system boundary and decide whether FCI or CUI is in scope."}</li>
+            <li><strong className="text-white">Interviews and evidence review (most of the time):</strong>{" the Registered Practitioner walks through each applicable practice with your team and looks at how things really work."}</li>
+            <li><strong className="text-white">Report and readout (last days):</strong>{" you receive the written gap report, the remediation roadmap and the SPRS estimate, and we walk through them with you."}</li>
+          </ol>
+          <p>A Level 1 scope with one office is usually at the short end; a Level 2 scope with several sites, cloud services or an outside IT provider is at the long end.</p>
           <H2>What you should receive</H2>
           <p>{"Galaxy's gap assessment ends with five deliverables, and they make a useful checklist when you compare providers:"}</p>
           <ul className="space-y-4 list-disc pl-5 marker:text-emerald-400">
@@ -140,8 +164,22 @@ export default function Nist800171GapAssessmentPage() {
           <p>{"For Level 2, the SSP describes your system boundaries and operating environments, names the people responsible for security, and explains how you implement each of the 110 practices. The POA&M documents the deficiencies that are not yet fully remediated and the planned corrective actions, with responsible parties and target completion dates."}</p>
           <p>{"Work through the roadmap in its risk order, and update the POA&M as each gap closes. That way your documents always match where you really are."}</p>
           <p>Last comes your own Level 1 or Level 2 self-assessment. By then, the SPRS estimate from your gap report should have given way to a score your documents can support.</p>
-          <H2>Next step</H2>
-          <p>{"To see exactly what is included, read about Galaxy's "}<In href="/cmmc/services">CMMC Gap Assessment</In>{". Galaxy starts with a free, no-obligation discovery call, so you can talk through your contracts and scope first, and the checklist under How to prepare is a good list to bring. To book one, "}<In href="/contact">contact Galaxy Consulting</In>.</p>
+          <H2>Frequently asked questions</H2>
+          <div className="space-y-6">
+            {FAQS.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-lg font-bold text-white mb-2" style={{ fontFamily: 'var(--font-barlow)' }}>{f.q}</h3>
+                <p>{f.a}</p>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-7 !mt-14">
+            <h2 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: 'var(--font-barlow)' }}>Book a scoping call</h2>
+            <p className="mb-5">{"A free 30-minute call with Galaxy's Registered Practitioner: we look at your contract clauses, agree the scope and level, and tell you what the gap assessment will cover. Bring the checklist under How to prepare. See what is included in "}<In href="/cmmc/services">{"Galaxy's CMMC services"}</In>.</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg transition-colors">
+              Book a scoping call <ArrowRight size={16} />
+            </Link>
+          </div>
         </article>
       </section>
     </>

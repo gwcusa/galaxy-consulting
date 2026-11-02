@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -6,11 +8,11 @@ import {
   FileText, Wrench, Search, ClipboardCheck,
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/cmmc' },
-  title: 'CMMC RPO — CMMC Level 1 & Level 2 Compliance Support for DoD Contractors',
-  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC RPO providing CMMC Level 1 and Level 2 compliance services for DoD contractors. CMMC gap assessments, remediation, SSP documentation, Registered Practitioner (RP) guidance, and SPRS self-assessment support. Serving the defense industrial base (DIB) nationwide.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/cmmc",
+  title: "CMMC Readiness & Gap Assessment for DoD Contractors | RPO",
+  description: "CMMC Level 1 and Level 2 readiness for small DoD contractors in Maryland, DC and Virginia: scoping, gap assessment, SSP, POA&M and SPRS help.",
+});
 
 const cmmcServiceSchema = {
   '@context': 'https://schema.org',
@@ -108,6 +110,7 @@ const whyGalaxy = [
 export default function CMMCPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/cmmc"} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cmmcServiceSchema) }}
@@ -156,7 +159,7 @@ export default function CMMCPage() {
                 </span>
               </div>
               <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight gradient-text mb-6" style={{ fontFamily:'var(--font-barlow)' }}>
-                Your CMMC<br />Certification<br />Starts Here
+                CMMC Readiness<br />for Small DoD<br />Subcontractors
               </h1>
               <p className="text-lg sm:text-xl text-silver/80 leading-relaxed mb-10" style={{ fontFamily:'var(--font-inter)' }}>
                 Galaxy Consulting is a Cyber-AB authorized CMMC RPO helping DoD contractors achieve CMMC Level 1 and Level 2 compliance — from gap assessment and remediation through self-assessment, SPRS submission, and beyond.
@@ -313,7 +316,7 @@ export default function CMMCPage() {
             {[
               { title: 'RPO (Galaxy Consulting)', role: 'Advisory & Preparation', desc: 'Helps you understand requirements, fix gaps, build documentation, and prepare for your assessment. Does NOT conduct the official certification assessment.', highlight: true },
               { title: 'C3PAO', role: 'Third-Party Assessor', desc: 'An accredited organization that conducts the official CMMC Level 2 certification assessments. Independent from RPOs. Level 3 assessments are conducted by the Government (DCMA\'s DIBCAC), after a Level 2 C3PAO certification.', highlight: false },
-              { title: 'OSC (You)', role: 'Organization Seeking Certification', desc: 'Your company — a DoD prime contractor or subcontractor that must achieve CMMC certification to be eligible for DoD contracts.', highlight: false },
+              { title: 'OSC (You)', role: 'Organization Seeking Assessment', desc: 'Your company — a DoD prime contractor or subcontractor that must meet the CMMC level its contracts require, usually through a self-assessment affirmed in SPRS.', highlight: false },
             ].map((item) => (
               <div key={item.title} className={`rounded-xl p-6 border ${item.highlight ? 'bg-emerald-500/5 border-emerald-500/40' : 'card-surface border-blue-accent/20'}`}>
                 <div className={`text-xs font-bold uppercase tracking-wider mb-1 ${item.highlight ? 'text-emerald-400' : 'text-blue-bright'}`} style={{ fontFamily:'var(--font-inter)' }}>{item.role}</div>
@@ -369,7 +372,7 @@ export default function CMMCPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>The Journey</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>How We Get You Certified</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>How We Get You Assessment-Ready</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, i) => (
@@ -457,7 +460,7 @@ export default function CMMCPage() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Become CMMC Level 1 Compliant?</h2>
           <p className="text-silver/70 text-base mb-10 max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
-            Contact Galaxy Consulting today for a free initial consultation. We will assess your current posture and give you a plain-English roadmap to certification.
+            Contact Galaxy Consulting today for a free initial consultation. We will assess your current posture and give you a plain-English roadmap to your self-assessment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="px-8 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 duration-200 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>

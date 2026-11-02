@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Shield, CheckCircle2, ArrowRight, AlertCircle, Clock, FileText } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/cmmc/level-1' },
-  title: 'CMMC Level 1 Certification — 17 Practices, Self-Assessment & RPO Support',
-  description: 'CMMC Level 1 requires 17 foundational cybersecurity practices for all DoD contractors handling Federal Contract Information (FCI). Galaxy Consulting — a Cyber-AB authorized CMMC RPO — provides gap assessments, remediation, SSP documentation, and SPRS submission support.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/cmmc/level-1",
+  title: "CMMC Level 1 Self-Assessment: 17 Practices Checklist + Help",
+  description: "The 17 CMMC Level 1 practices for FCI, how the yearly self-assessment and SPRS affirmation work, and gap assessment help from a Cyber-AB RPO.",
+});
 
 const domains = [
   {
@@ -99,6 +101,7 @@ const selfAssessmentSteps = [
 export default function CMMCLevel1Page() {
   return (
     <>
+      <BreadcrumbSchema path={"/cmmc/level-1"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,7 +160,7 @@ export default function CMMCLevel1Page() {
               {[
                 { icon: Shield,       label: '17 Practices',         desc: 'Based on the 15 requirements in FAR 52.204-21 plus two additional access control practices.', color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
                 { icon: FileText,     label: 'Annual Self-Assessment', desc: 'Companies self-assess and affirm their score annually — no third-party auditor required for Level 1.', color: 'text-cyan-400', bg: 'bg-cyan-500/10' },
-                { icon: Clock,        label: '3-Year Validity',       desc: 'CMMC Level 1 certification is valid for 3 years, with annual affirmations required in years 2 and 3.', color: 'text-violet-400', bg: 'bg-violet-500/10' },
+                { icon: Clock,        label: 'Every Year',            desc: 'CMMC Level 1 is a self-assessment, not a certification. You repeat it and a senior official affirms it in SPRS every year.', color: 'text-violet-400', bg: 'bg-violet-500/10' },
                 { icon: AlertCircle,  label: 'Contract Requirement',  desc: 'Contracts with the CMMC DFARS clause require compliance before award — non-compliant companies cannot bid.', color: 'text-amber-400', bg: 'bg-amber-500/10' },
               ].map((f) => (
                 <div key={f.label} className="card-surface rounded-xl p-4 border border-blue-accent/20 flex items-start gap-4">
@@ -262,7 +265,7 @@ export default function CMMCLevel1Page() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5" style={{ fontFamily:'var(--font-barlow)' }}>Not Sure Where to Start?</h2>
           <p className="text-silver/70 text-base mb-10 max-w-xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
-            Galaxy Consulting offers a free initial consultation to help you understand your current CMMC Level 1 posture and what it will take to get certified.
+            Galaxy Consulting offers a free initial consultation to help you understand your current CMMC Level 1 posture and what it will take to complete and affirm your self-assessment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="px-8 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>

@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Server, Shield, BarChart3, Code2, Building2, Award, ArrowRight } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/services' },
-  title: 'CMMC Compliance & IT Services | Galaxy Consulting RPO',
-  description: 'Galaxy Consulting — a Cyber-AB authorized CMMC RPO — offers CMMC Level 1 & Level 2 compliance support, IT infrastructure, cybersecurity, program management, software development, and federal compliance services for DoD contractors and government agencies.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/services",
+  title: "IT, Cybersecurity & CMMC Readiness Services | Galaxy",
+  description: "IT infrastructure, cybersecurity, program management and CMMC readiness for DoD contractors and federal agencies from an SDVOSB in Fort Washington, MD.",
+});
 
 const featuredServices = [
   {
@@ -30,12 +32,13 @@ const featuredServices = [
 const additionalServices = [
   { icon: Code2,     title: 'Custom Software Development', accent: 'text-amber-400', desc: 'Tailored software solutions to modernize government operations. Includes relational database development (Microsoft Access, SQL), IT quote tracking systems, and process automation.' },
   { icon: Building2, title: 'Facility Management Support',  accent: 'text-rose-400',  desc: 'Comprehensive facility operations including procurement coordination, SLA monitoring, access control, credential monitoring, and routine maintenance services.' },
-  { icon: Award,     title: 'Federal Compliance & QA',      accent: 'text-teal-400',  desc: 'ISO-9000 quality assurance, identity management, contract acquisition management, and requirements tracking to ensure federal standards compliance.' },
+  { icon: Award,     title: 'Federal Compliance & QA',      accent: 'text-teal-400',  desc: 'ISO-9000 quality assurance, identity management, contract acquisition management, and requirements tracking against federal standards.' },
 ];
 
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/services"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { ArrowRight, Target, Eye, Heart, Medal, Users, Star } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/about' },
-  title: 'About Galaxy Consulting — Cyber-AB Authorized CMMC RPO | SDVOSB | Fort Washington, MD',
-  description: 'Galaxy Consulting is a Cyber-AB authorized CMMC Registered Provider Organization (RPO) and SDVOSB led by a retired U.S. Army officer, with a management team bringing 75+ years of combined government, military, and commercial experience. We deliver CMMC Level 1 and Level 2 compliance services, IT infrastructure, and cybersecurity to DoD contractors and federal agencies from Fort Washington, Maryland.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/about",
+  title: "About Galaxy Consulting: Veteran-Owned CMMC RPO, Maryland",
+  description: "Galaxy Consulting is an SDVOSB in Fort Washington, MD, led by a retired U.S. Army officer: CMMC readiness, cybersecurity and IT for DoD contractors.",
+});
 
 const values = [
   { icon: Target, title: 'Mission-Focused',    desc: "Every engagement begins with one question: how do we best serve the mission? Our team aligns technical solutions to your agency's operational goals." },
@@ -28,6 +30,7 @@ const timeline = [
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/about"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

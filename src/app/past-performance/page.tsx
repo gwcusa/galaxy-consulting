@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Building2, Tag, ArrowRight, Briefcase } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/past-performance' },
-  title: 'Past Performance | CMMC RPO & Federal IT Contractor | Galaxy Consulting',
-  description: 'Galaxy Consulting past performance includes contracts with the Department of Veterans Affairs, US Marine Forces Pacific, Department of the Navy, and Maryland DOIT — a proven CMMC RPO and federal IT contractor with 75+ years of combined experience.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/past-performance",
+  title: "Federal IT & Cybersecurity Past Performance | Galaxy",
+  description: "Galaxy Consulting past performance for the Department of Veterans Affairs, U.S. Marine Forces Pacific, the Department of the Navy and Maryland DoIT.",
+});
 
 const contracts = [
   {
@@ -57,6 +59,7 @@ const agencies = [
 export default function PastPerformancePage() {
   return (
     <>
+      <BreadcrumbSchema path={"/past-performance"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Shield, Lock, FileText, Search, Network, AlertTriangle, ArrowRight, CheckCircle2 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/services/cybersecurity' },
-  title: 'Cybersecurity & CMMC Compliance Services for DoD Contractors | Galaxy Consulting RPO',
-  description: 'Galaxy Consulting delivers CMMC Level 1 and Level 2 compliance support, NIST SP 800-53 security controls, ATO packages, SSP & POA&M development, penetration testing, and cybersecurity architecture for DoD contractors and federal agencies. Cyber-AB authorized CMMC RPO with an on-staff Registered Practitioner (RP).',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/services/cybersecurity",
+  title: "Cybersecurity & CMMC Readiness for DoD Contractors | RPO",
+  description: "NIST SP 800-171 and 800-53 controls, SSP and POA&M, ATO packages and CMMC Level 1 and Level 2 readiness for DoD contractors and federal agencies.",
+});
 
 const cybersecurityServiceSchema = {
   '@context': 'https://schema.org',
@@ -110,6 +112,7 @@ const frameworks = [
 export default function CybersecurityPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/services/cybersecurity"} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cybersecurityServiceSchema) }}

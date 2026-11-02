@@ -1,18 +1,20 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Shield, ArrowRight, ExternalLink, FileText, CheckCircle2, BookOpen, Newspaper } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/cmmc/resources' },
-  title: 'CMMC Resources — Official DoD & Cyber-AB Links for DoD Contractors',
-  description: 'Official CMMC resources for DoD contractors: Cyber-AB, DoD CMMC program site, NIST SP 800-171, DFARS 252.204-7012, FAR 52.204-21, SPRS guidance, and CMMC Level 1 and Level 2 reference checklists.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/cmmc/resources",
+  title: "Official CMMC Resources: DoD, Cyber AB, NIST & DFARS Links",
+  description: "Official CMMC links for DoD contractors: the DoW CIO CMMC page, the Cyber AB, NIST SP 800-171, DFARS 252.204-7012, FAR 52.204-21 and SPRS guidance.",
+});
 
 const officialLinks = [
   {
     name: 'Cyber-AB (CMMC Accreditation Body)',
     url: 'https://cyberab.org',
-    desc: 'The official Cyber-AB website — the DoD-authorized accreditation body that manages the CMMC ecosystem, RPO/C3PAO listings, and practitioner certifications.',
+    desc: 'The official Cyber-AB website — the DoD-authorized accreditation body for the CMMC ecosystem, with the Marketplace listings of RPOs, C3PAOs and practitioners.',
     badge: 'Official Accreditation Body',
     color: 'text-emerald-400',
     border: 'border-emerald-500/30',
@@ -106,6 +108,7 @@ const domainColors: Record<string, string> = {
 export default function CMMCResourcesPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/cmmc/resources"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

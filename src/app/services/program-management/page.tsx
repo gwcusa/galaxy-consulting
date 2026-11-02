@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { BarChart3, Map, Users, ClipboardCheck, TrendingUp, Layers, ArrowRight, CheckCircle2 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/services/program-management' },
-  title: 'Program & Project Management for Federal Agencies & DoD Contractors | Galaxy Consulting',
-  description: 'Galaxy Consulting provides PMP-certified program and project management services for DoD contractors and federal agencies — including IT roadmap development, CMMC compliance program management, team staffing, QA, and stakeholder coordination. SDVOSB CMMC RPO.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/services/program-management",
+  title: "Federal Program & Project Management | Galaxy Consulting",
+  description: "Program and project management for federal agencies and DoD contractors: IT roadmaps, CMMC compliance programs, team staffing, QA and reporting.",
+});
 
 const offerings = [
   {
@@ -114,6 +116,7 @@ const approach = [
 export default function ProgramManagementPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/services/program-management"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
