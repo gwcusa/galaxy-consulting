@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { ArrowRight, Calendar, Newspaper } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/insights' },
-  title: { absolute: "CMMC News & Guidance for Defense Contractors | Galaxy Consulting" },
+export const metadata: Metadata = pageMeta({
+  path: "/insights",
+  title: "CMMC News & Guidance for Defense Contractors | Galaxy",
   description: "Plain-language CMMC news for small defense contractors from Galaxy Consulting, a Cyber-AB RPO and SDVOSB. Every update links to its official sources.",
-};
+});
 
 const articles = [
   {
@@ -56,6 +58,7 @@ const articles = [
 export default function InsightsPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/insights"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

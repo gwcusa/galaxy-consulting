@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import { company } from '@/lib/site';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -6,9 +8,11 @@ import {
   ArrowRight, CheckCircle2, Star, Users, Clock, Briefcase,
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/' },
-};
+export const metadata: Metadata = pageMeta({
+  path: "/",
+  title: "CMMC Level 2 Readiness for DoD Subcontractors | Galaxy RPO",
+  description: "Get ready for a CMMC Level 1 or Level 2 self-assessment: gap assessment, SSP, POA&M and SPRS help for DoD subcontractors in MD, DC and VA. SDVOSB RPO.",
+});
 
 const stats = [
   { value: '75+',  label: 'Years Combined Experience' },
@@ -18,7 +22,7 @@ const stats = [
 ];
 
 const services = [
-  { icon: Shield,    title: 'CMMC Level 1 Compliance', desc: 'Cyber-AB authorized RPO helping DoD contractors achieve CMMC Level 1 certification — gap assessments, remediation, documentation, and staffing.', href: '/cmmc', accent: 'text-emerald-400', ring: 'bg-emerald-400/10', highlight: true },
+  { icon: Shield,    title: 'CMMC Readiness', desc: 'Cyber-AB authorized RPO preparing DoD contractors for CMMC Level 1 and Level 2 self-assessments — gap assessments, remediation, documentation, and staffing.', href: '/cmmc', accent: 'text-emerald-400', ring: 'bg-emerald-400/10', highlight: true },
   { icon: Server,    title: 'IT Infrastructure',        desc: 'End-to-end hardware/software sales, installation, integration, and 24/7 help desk services.', href: '/services/it-infrastructure',  accent: 'text-blue-bright',   ring: 'bg-blue-bright/10' },
   { icon: Shield,    title: 'Cybersecurity',             desc: 'NIST 800-53 compliance, ATO packages, penetration testing, and security architecture design.',  href: '/services/cybersecurity',      accent: 'text-cyan-400',      ring: 'bg-cyan-400/10' },
   { icon: BarChart3, title: 'Program Management',        desc: 'Strategic IT roadmaps, project planning, QA monitoring, and stakeholder coordination.',           href: '/services/program-management', accent: 'text-purple-400',    ring: 'bg-purple-400/10' },
@@ -95,33 +99,41 @@ export default function HomePage() {
                 <Star size={11} /> Service-Disabled Veteran-Owned Business
               </div>
             </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight gradient-text mb-6" style={{ fontFamily:'var(--font-barlow)' }}>
-              Our Mission<br />Is Your Success
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight gradient-text mb-6" style={{ fontFamily:'var(--font-barlow)' }}>
+              CMMC Level 2 readiness for small DoD subcontractors, by a veteran-owned Cyber-AB RPO
             </h1>
             <div className="text-lg sm:text-xl text-silver/80 max-w-2xl leading-relaxed mb-10 space-y-4" style={{ fontFamily:'var(--font-inter)' }}>
               <p>
                 Galaxy Consulting is a{' '}
                 <span className="relative group cursor-help">
-                  <span className="underline decoration-dotted decoration-emerald-500/60 underline-offset-2">Cyber-AB authorized CMMC</span>
+                  <span className="underline decoration-dotted decoration-emerald-500/60 underline-offset-2">Cyber-AB</span>
                   <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-72 rounded-lg bg-navy-mid border border-emerald-500/30 px-3 py-2 text-xs text-silver/90 leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 shadow-lg" style={{ fontFamily:'var(--font-inter)', fontSize:'0.72rem' }}>
-                    <span className="font-semibold text-emerald-400">Cyber-AB:</span> Cybersecurity Maturity Model Certification Accreditation Body
+                    <span className="font-semibold text-emerald-400">Cyber-AB:</span> the accreditation body of the CMMC ecosystem
                     <br /><span className="font-semibold text-emerald-400">CMMC:</span> Cybersecurity Maturity Model Certification
                   </span>
                 </span>{' '}
-                Registered Provider Organization (RPO) that is focused on delivering mission-critical IT infrastructure, cybersecurity, and professional services to federal and state government agencies and their industry partners — backed by 75+ years of combined military and technology expertise.
+                Registered Provider Organization (RPO) with a Registered Practitioner on staff. We get small defense contractors ready for their CMMC Level 1 and Level 2 self-assessments: gap assessment, remediation, SSP and POA&amp;M, and your SPRS score and affirmation.
               </p>
               <p>
-                We deliver IT system design, implementation, integration services, and CMMC Level 1 and Level 2 compliance assistance to DoD contractors seeking CMMC compliance. We specialize in supporting CMMC services from gap analysis, self-assessments, security control compliance assistance, and support in preparing for official CMMC self-assessments and SPRS affirmations.
+                Service-disabled veteran-owned, based in Fort Washington, Maryland. On site across Maryland, DC and Northern Virginia, and remote nationwide.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Link href="/cmmc" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
-                CMMC Certification Support <ArrowRight size={17} />
+              <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
+                Free 30-minute readiness call <ArrowRight size={17} />
               </Link>
-              <Link href="/services" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-blue-accent/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
-                IT Technical Services
+              <Link href="/cmmc/level-2" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-blue-accent/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
+                See the 110 Level 2 practices
               </Link>
             </div>
+            {(company.cage || company.uei || company.naics.length > 0) && (
+              <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-2 text-xs text-silver/60" style={{ fontFamily:'var(--font-inter)' }}>
+                {company.cage && <div><dt className="inline font-semibold text-silver/80">CAGE </dt><dd className="inline">{company.cage}</dd></div>}
+                {company.uei && <div><dt className="inline font-semibold text-silver/80">UEI </dt><dd className="inline">{company.uei}</dd></div>}
+                {company.naics.length > 0 && <div><dt className="inline font-semibold text-silver/80">NAICS </dt><dd className="inline">{company.naics.map((n) => n.code).join(' · ')}</dd></div>}
+                <div><dt className="inline font-semibold text-silver/80">Set-asides </dt><dd className="inline">SDVOSB · SDB</dd></div>
+              </dl>
+            )}
           </div>
         </div>
       </section>
@@ -231,7 +243,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors" style={{ fontFamily:'var(--font-barlow)' }}>CMMC Level 1 Compliance</h3>
                 <p className="text-silver/70 text-sm leading-relaxed max-w-2xl" style={{ fontFamily:'var(--font-inter)' }}>
-                  Cyber-AB authorized RPO helping DoD contractors achieve CMMC Level 1 certification — gap assessments, remediation, documentation, and RP staffing.
+                  Cyber-AB authorized RPO preparing DoD contractors for CMMC Level 1 and Level 2 self-assessments — gap assessments, remediation, documentation, and RP staffing.
                 </p>
               </div>
               <div className="flex items-center gap-4 flex-shrink-0">
@@ -271,7 +283,7 @@ export default function HomePage() {
       <section className="py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>Federal Certifications</h2>
+            <h2 className="text-3xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>Federal Credentials</h2>
             <p className="mt-5 text-silver/60 text-sm max-w-lg mx-auto" style={{ fontFamily:'var(--font-inter)' }}>Strategically positioned for government set-aside opportunities</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">

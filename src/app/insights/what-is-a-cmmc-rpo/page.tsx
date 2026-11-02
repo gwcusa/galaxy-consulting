@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { Calendar, Newspaper } from 'lucide-react';
@@ -13,20 +15,15 @@ const PUBLISHED = '2026-10-19';
 const MODIFIED = '2026-10-19';
 const UPDATED_LABEL = 'October 19, 2026';
 
-export const metadata: Metadata = {
-  title: { absolute: TITLE },
+export const metadata: Metadata = pageMeta({
+  path: PATH,
+  title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: PATH },
-  openGraph: {
-    type: 'article',
-    url: PAGE_URL,
-    title: TITLE,
-    description: DESCRIPTION,
-    publishedTime: PUBLISHED,
-    modifiedTime: MODIFIED,
-    authors: ['Galaxy Consulting, LLC'],
-  },
-};
+  type: 'article',
+  publishedTime: PUBLISHED,
+  modifiedTime: MODIFIED,
+  authors: ['Galaxy Consulting RP team'],
+});
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -35,7 +32,7 @@ const articleSchema = {
   description: DESCRIPTION,
   datePublished: PUBLISHED,
   dateModified: MODIFIED,
-  author: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' },
+  author: { '@type': 'Person', name: 'Galaxy Consulting RP team', jobTitle: 'Cyber-AB Registered Practitioner', worksFor: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' } },
   publisher: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
   url: PAGE_URL,
@@ -60,6 +57,7 @@ function H2({ children }: { children: ReactNode }) {
 export default function WhatIsACmmcRpoPage() {
   return (
     <>
+      <BreadcrumbSchema path={PATH} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }}

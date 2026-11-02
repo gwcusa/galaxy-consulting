@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import { MapPin, Phone, Mail, Globe, User, Clock, Building2 } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/contact' },
-  title: 'Contact Our CMMC RPO Team — Free CMMC Readiness Consultation | Galaxy Consulting',
-  description: 'Contact Galaxy Consulting — a Cyber-AB authorized CMMC RPO — for a free CMMC readiness consultation. We help DoD contractors prepare for CMMC Level 1 and Level 2 self-assessments. Call 240-324-7888 or email info@galaxyconsultingllc.com. Fort Washington, Maryland. Serving clients nationwide.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/contact",
+  title: "Free 30-Minute CMMC Readiness Call | Galaxy Consulting RPO",
+  description: "Book a free 30-minute CMMC readiness call with a Cyber-AB Registered Practitioner. Fort Washington, MD; serving MD, DC, Northern Virginia and remote.",
+});
 
 const contactDetails = [
   { icon: User,    label: 'Primary Contact', value: 'Charles Cooks — President & CEO', sub: null,                                  href: null },
@@ -32,6 +34,7 @@ const reasons = [
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/contact"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

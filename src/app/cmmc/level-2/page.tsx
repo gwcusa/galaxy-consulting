@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Shield, CheckCircle2, ArrowRight, AlertCircle, Clock, FileText, Lock, Eye, Settings, RefreshCw } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/cmmc/level-2' },
-  title: 'CMMC Level 2 — 110 Practices, Self-Assessment & RPO Preparation',
-  description: 'CMMC Level 2 requires 110 NIST SP 800-171 r2 practices across 14 domains for DoD contractors handling CUI. Galaxy Consulting — a Cyber-AB authorized CMMC RPO — provides CMMC Level 2 gap assessments, remediation, SSP & POA&M documentation, and self-assessment and SPRS support.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/cmmc/level-2",
+  title: "CMMC Level 2 Readiness: 110 Practices, SSP & SPRS | RPO",
+  description: "Prepare for CMMC Level 2 if you handle CUI: the 110 NIST SP 800-171 practices, gap assessment, SSP and POA&M, and self-assessment support in MD and DC.",
+});
 
 const domains = [
   {
@@ -222,6 +224,7 @@ const assessmentSteps = [
 export default function CMMCLevel2Page() {
   return (
     <>
+      <BreadcrumbSchema path={"/cmmc/level-2"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

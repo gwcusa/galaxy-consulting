@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { ArrowRight, Calendar, Newspaper, Shield } from 'lucide-react';
@@ -8,35 +10,20 @@ const PAGE_URL = `https://www.galaxyconsultingllc.com${PATH}`;
 const TITLE = 'CMMC Phase 2 Suspended: What Contractors Should Do Now';
 const HEADLINE = 'CMMC Phase 2 Is Suspended: What It Means for Small Defense Contractors';
 const DESCRIPTION =
-  'DoD suspended CMMC Phase 2 on July 13, 2026. What changed, who is affected at each level, and 5 steps small defense contractors can take now.';
+  "The DoW suspended CMMC Phase 2 on July 13, 2026. What changed, who is affected at each level, and 5 steps small defense contractors can take now.";
 const PUBLISHED = '2026-10-02';
 const MODIFIED = '2026-10-02';
 const UPDATED_LABEL = 'October 2, 2026';
 
-export const metadata: Metadata = {
-  title: { absolute: TITLE },
+export const metadata: Metadata = pageMeta({
+  path: PATH,
+  title: TITLE,
   description: DESCRIPTION,
-  keywords: [
-    'CMMC Phase 2 suspended',
-    'CMMC Phase 2 suspension',
-    'CMMC Reform Task Force',
-    'CMMC Level 2 self-assessment',
-    'C3PAO',
-    'NIST SP 800-171',
-    'DFARS 252.204-7012',
-    'SPRS',
-  ],
-  alternates: { canonical: PATH },
-  openGraph: {
-    type: 'article',
-    url: PAGE_URL,
-    title: TITLE,
-    description: DESCRIPTION,
-    publishedTime: PUBLISHED,
-    modifiedTime: MODIFIED,
-    authors: ['Galaxy Consulting LLC'],
-  },
-};
+  type: 'article',
+  publishedTime: PUBLISHED,
+  modifiedTime: MODIFIED,
+  authors: ['Galaxy Consulting RP team'],
+});
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -45,7 +32,7 @@ const articleSchema = {
   description: DESCRIPTION,
   datePublished: PUBLISHED,
   dateModified: MODIFIED,
-  author: { '@type': 'Organization', name: 'Galaxy Consulting LLC', url: 'https://www.galaxyconsultingllc.com' },
+  author: { '@type': 'Person', name: 'Galaxy Consulting RP team', jobTitle: 'Cyber-AB Registered Practitioner', worksFor: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' } },
   publisher: { '@type': 'Organization', name: 'Galaxy Consulting LLC', url: 'https://www.galaxyconsultingllc.com' },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
   url: PAGE_URL,
@@ -110,6 +97,7 @@ const sources: { label: ReactNode; urls: string[] }[] = [
 export default function CMMCPhase2SuspensionPage() {
   return (
     <>
+      <BreadcrumbSchema path={PATH} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }}

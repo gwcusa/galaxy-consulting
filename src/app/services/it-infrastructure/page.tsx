@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Server, Wifi, HardDrive, Headphones, Package, Monitor, ArrowRight, CheckCircle2 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/services/it-infrastructure' },
-  title: { absolute: "IT Infrastructure for DoD Contractors | Galaxy Consulting" },
-  description:
-    "CMMC-aligned IT for DoD contractors and federal agencies: hardware and software procurement, server deployment, network design and a 24/7 help desk.",
-};
+export const metadata: Metadata = pageMeta({
+  path: "/services/it-infrastructure",
+  title: "IT Infrastructure for DoD Contractors | Galaxy Consulting",
+  description: "CMMC-aligned IT for DoD contractors and federal agencies: hardware and software procurement, server deployment, network design and a 24/7 help desk.",
+});
 
 const offerings = [
   {
@@ -31,7 +32,7 @@ const offerings = [
   {
     icon: HardDrive,
     title: 'Cloud & Storage Solutions',
-    desc: 'Flexible storage strategies encompassing cloud, on-premise, and hybrid deployments to ensure data availability, security, and compliance.',
+    desc: 'Flexible storage strategies encompassing cloud, on-premise, and hybrid deployments built for data availability, security, and compliance.',
     items: ['Cloud migration planning', 'Hybrid cloud architectures', 'On-premise NAS/SAN systems', 'Data backup solutions', 'Storage capacity planning'],
   },
   {
@@ -60,6 +61,7 @@ const vendors = [
 export default function ITInfrastructurePage() {
   return (
     <>
+      <BreadcrumbSchema path={"/services/it-infrastructure"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

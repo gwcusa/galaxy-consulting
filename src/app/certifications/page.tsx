@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Award, Shield, Star, CheckCircle2, ArrowRight, GraduationCap, ExternalLink } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/certifications' },
-  title: 'CMMC RPO Certifications & Credentials | Galaxy Consulting',
-  description: 'Galaxy Consulting holds Cyber-AB authorized CMMC RPO status, CMMC Level 1 and Level 2 self-assessments affirmed in SPRS, and SDVOSB and SDB designations — backed by 20+ professional certifications and strategic partnerships with Dell, HP, and Palo Alto Networks.',
-};
+export const metadata: Metadata = pageMeta({
+  path: "/certifications",
+  title: "Galaxy Consulting Credentials: Cyber-AB RPO, SDVOSB, SDB",
+  description: "Galaxy Consulting credentials: Cyber-AB Registered Provider Organization, CMMC Level 1 and Level 2 self-assessments affirmed in SPRS, SDVOSB and SDB.",
+});
 
 const certifications = [
   {
@@ -93,6 +95,7 @@ const partners = [
 export default function CertificationsPage() {
   return (
     <>
+      <BreadcrumbSchema path={"/certifications"} />
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,7 +206,7 @@ export default function CertificationsPage() {
       {/* ── CTA ── */}
       <section className="py-16 bg-galaxy">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Get CMMC Certified?</h2>
+          <h2 className="text-2xl font-bold text-white mb-4" style={{ fontFamily:'var(--font-barlow)' }}>Ready to Prepare for Your CMMC Assessment?</h2>
           <p className="text-silver/70 text-sm mb-8" style={{ fontFamily:'var(--font-inter)' }}>As a Cyber-AB authorized CMMC RPO, Galaxy Consulting guides DoD contractors through every step of the CMMC Level 1 certification process.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-accent hover:bg-blue-bright text-navy font-semibold rounded-lg transition-all hover:-translate-y-0.5" style={{ fontFamily:'var(--font-inter)' }}>
             Start a Conversation <ArrowRight size={16} />
