@@ -24,6 +24,15 @@ const PAGES: Entry[] = [
   { path: '/cmmc/services',               lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/cmmc/faq',                    lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/cmmc/resources',              lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.8 },
+  // CMMC buyer pages
+  { path: '/cmmc/level-2-assessment-cost', lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/c3pao-vs-rpo', lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/assessment-checklist', lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/sprs-score', lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/dfars-7012-7019-7020-7021', lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/maryland-dc-virginia', lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/nist-800-171-gap-assessment', lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/cmmc/construction-facilities-contractors', lastModified: '2026-11-02T12:00:00-05:00', changeFrequency: 'monthly', priority: 0.9 },
   // Insights
   { path: '/insights',                    lastModified: '2026-10-20T12:00:00-04:00', changeFrequency: 'weekly',  priority: 0.7 },
   { path: '/insights/cmmc-phase-2-suspension', lastModified: '2026-10-02T12:00:00-04:00', changeFrequency: 'weekly', priority: 0.8 },

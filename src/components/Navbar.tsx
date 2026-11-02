@@ -17,6 +17,11 @@ const cmmcLinks = [
   { href: '/cmmc/level-1', label: 'CMMC Level 1' },
   { href: '/cmmc/level-2', label: 'CMMC Level 2' },
   { href: '/cmmc/services', label: 'CMMC Services' },
+  { href: '/cmmc/nist-800-171-gap-assessment', label: 'Gap Assessment' },
+  { href: '/cmmc/assessment-checklist', label: 'Assessment Checklist' },
+  { href: '/cmmc/sprs-score', label: 'SPRS Score Calculator' },
+  { href: '/cmmc/level-2-assessment-cost', label: 'Level 2 Cost' },
+  { href: '/cmmc/c3pao-vs-rpo', label: 'C3PAO vs RPO' },
   { href: '/cmmc/faq', label: 'CMMC FAQ' },
   { href: '/cmmc/resources', label: 'Resources' },
 ];

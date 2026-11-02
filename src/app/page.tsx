@@ -122,8 +122,8 @@ export default function HomePage() {
               <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
                 Free 30-minute readiness call <ArrowRight size={17} />
               </Link>
-              <Link href="/cmmc/level-2" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-blue-accent/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
-                See the 110 Level 2 practices
+              <Link href="/cmmc/assessment-checklist" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-blue-accent/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
+                CMMC assessment checklist
               </Link>
             </div>
             {(company.cage || company.uei || company.naics.length > 0) && (

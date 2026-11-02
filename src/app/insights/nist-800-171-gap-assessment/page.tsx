@@ -175,7 +175,7 @@ export default function Nist800171GapAssessmentPage() {
           </div>
           <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-7 !mt-14">
             <h2 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: 'var(--font-barlow)' }}>Book a scoping call</h2>
-            <p className="mb-5">{"A free 30-minute call with Galaxy's Registered Practitioner: we look at your contract clauses, agree the scope and level, and tell you what the gap assessment will cover. Bring the checklist under How to prepare. See what is included in "}<In href="/cmmc/services">{"Galaxy's CMMC services"}</In>.</p>
+            <p className="mb-5">{"A free 30-minute call with Galaxy's Registered Practitioner: we look at your contract clauses, agree the scope and level, and tell you what the gap assessment will cover. Bring the checklist under How to prepare. See what is included in "}<In href="/cmmc/nist-800-171-gap-assessment">{"Galaxy's NIST 800-171 gap assessment service"}</In>{", or score yourself first with the "}<In href="/cmmc/sprs-score">SPRS score calculator</In>.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg transition-colors">
               Book a scoping call <ArrowRight size={16} />
             </Link>
