@@ -20,7 +20,8 @@ const contactDetails = [
 ];
 
 const reasons = [
-  'CMMC Level 1 readiness assessment or gap analysis',
+  'Free 30-minute CMMC readiness call',
+  'CMMC readiness or gap assessment (Level 1 or Level 2)',
   'CMMC documentation, policies, and system security plans',
   'Request a capabilities briefing or statement of qualifications',
   'Inquire about IT hardware procurement and pricing',

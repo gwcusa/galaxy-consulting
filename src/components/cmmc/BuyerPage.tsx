@@ -86,7 +86,7 @@ export function ReadinessCta({ heading = 'Talk it through with a Registered Prac
         {text ?? 'Galaxy Consulting is a veteran-owned Cyber-AB Registered Provider Organization (RPO) in Fort Washington, Maryland. A free 30-minute readiness call covers your contract clauses, your likely CMMC level and what to fix first. No obligation.'}
       </p>
       <div className="flex flex-wrap gap-3">
-        <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg transition-colors">
+        <Link href="/cmmc/services#book" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg transition-colors">
           Free 30-minute readiness call <ArrowRight size={16} />
         </Link>
         <Link href="/cmmc/assessment-checklist" className="inline-flex items-center gap-2 px-6 py-3 border border-silver/30 text-silver hover:text-white hover:border-silver/60 rounded-lg transition-colors">
