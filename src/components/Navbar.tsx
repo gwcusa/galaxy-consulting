@@ -13,10 +13,10 @@ const servicesLinks = [
 ];
 
 const cmmcLinks = [
+  { href: '/cmmc/services', label: 'CMMC Services' },
   { href: '/cmmc', label: 'CMMC Overview' },
   { href: '/cmmc/level-1', label: 'CMMC Level 1' },
   { href: '/cmmc/level-2', label: 'CMMC Level 2' },
-  { href: '/cmmc/services', label: 'CMMC Services' },
   { href: '/cmmc/nist-800-171-gap-assessment', label: 'Gap Assessment' },
   { href: '/cmmc/assessment-checklist', label: 'Assessment Checklist' },
   { href: '/cmmc/sprs-score', label: 'SPRS Score Calculator' },
@@ -27,7 +27,6 @@ const cmmcLinks = [
 ];
 
 const navLinks = [
-  { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/cmmc', label: 'CMMC', children: cmmcLinks },
   { href: '/services', label: 'Services', children: servicesLinks },
@@ -136,11 +135,12 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link
-              href="/contact"
-              className="px-5 py-2 bg-blue-accent hover:bg-blue-bright text-navy text-sm font-semibold rounded-lg transition-colors duration-200"
+              href="/cmmc/services#book"
+              className="px-5 py-2 whitespace-nowrap bg-emerald-500 hover:bg-emerald-400 text-navy text-sm font-semibold rounded-lg transition-colors duration-200"
               style={{ fontFamily: 'var(--font-inter)' }}
             >
-              Contact Us
+              <span className="xl:hidden">Book a call</span>
+              <span className="hidden xl:inline">Book a readiness call</span>
             </Link>
           </div>
 
@@ -210,11 +210,11 @@ export default function Navbar() {
                 )
               )}
               <Link
-                href="/contact"
-                className="mt-3 px-4 py-2.5 bg-blue-accent text-white text-sm font-semibold rounded-lg text-center"
+                href="/cmmc/services#book"
+                className="mt-3 px-4 py-2.5 bg-emerald-500 text-navy text-sm font-semibold rounded-lg text-center"
                 style={{ fontFamily: 'var(--font-inter)' }}
               >
-                Contact Us
+                Book a readiness call
               </Link>
             </div>
           </div>

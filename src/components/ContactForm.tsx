@@ -7,11 +7,14 @@ import { trackEvent } from '@/lib/analytics';
 interface Props {
   reasons: string[];
   defaultTopic?: string;
+  heading?: string;
+  submitLabel?: string;
+  messagePlaceholder?: string;
 }
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
-export default function ContactForm({ reasons, defaultTopic }: Props) {
+export default function ContactForm({ reasons, defaultTopic, heading = 'How Can We Help?', submitLabel = 'Send Inquiry', messagePlaceholder = 'Tell us about your needs or ask a question...' }: Props) {
   const firstCmmc = reasons.find((r) => r.toLowerCase().includes('cmmc')) ?? reasons[0];
   const [topic,   setTopic]   = useState(defaultTopic ?? firstCmmc);
   const [name,    setName]    = useState('');
@@ -75,7 +78,7 @@ export default function ContactForm({ reasons, defaultTopic }: Props) {
   return (
     <form onSubmit={handleSubmit} className="bg-card-alt rounded-xl p-7 border border-blue-accent/20 mt-6">
       <h3 className="text-white font-bold text-base mb-5" style={{ fontFamily: 'var(--font-barlow)' }}>
-        How Can We Help?
+        {heading}
       </h3>
 
       <div className="space-y-4">
@@ -167,7 +170,7 @@ export default function ContactForm({ reasons, defaultTopic }: Props) {
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Tell us about your needs or ask a question..."
+            placeholder={messagePlaceholder}
             rows={4}
             required
             className="w-full bg-navy border border-blue-accent/30 text-silver text-sm rounded-lg px-3 py-2.5 placeholder-silver/30 focus:outline-none focus:border-blue-accent transition-colors resize-none"
@@ -193,7 +196,7 @@ export default function ContactForm({ reasons, defaultTopic }: Props) {
           {status === 'sending' ? (
             <><Loader2 size={15} className="animate-spin" /> Sending…</>
           ) : (
-            <><Send size={15} /> Send Inquiry</>
+            <><Send size={15} /> {submitLabel}</>
           )}
         </button>
 

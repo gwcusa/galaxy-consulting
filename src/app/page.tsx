@@ -119,8 +119,11 @@ export default function HomePage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
-                Free 30-minute readiness call <ArrowRight size={17} />
+              <Link href="/cmmc/services#book" className="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-navy font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-emerald-500/25" style={{ fontFamily:'var(--font-inter)' }}>
+                Book a free 30-minute readiness call <ArrowRight size={17} />
+              </Link>
+              <Link href="/cmmc/services" className="inline-flex items-center gap-2 px-7 py-3.5 border border-emerald-500/40 text-emerald-300 hover:text-white hover:border-emerald-400 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
+                CMMC services and packages
               </Link>
               <Link href="/cmmc/assessment-checklist" className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver/20 text-silver hover:text-white hover:border-blue-accent/50 rounded-lg transition-all duration-200" style={{ fontFamily:'var(--font-inter)' }}>
                 CMMC assessment checklist
