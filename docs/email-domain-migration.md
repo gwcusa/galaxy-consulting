@@ -139,10 +139,27 @@ Run one more incremental pass right before the MX cutover.
 6. After 2026-11-03: confirm Cloudflare is the registrar; respond to any Cloudflare
    registrant-verification email (15-day deadline); then cancel HostGator hosting.
 
+- **2026-11-04 18:06 — Google human reply on case 77239317** (Elanagendran, Account
+  Recovery team) to galaxyconsultingllc@gmail.com. Apologises that the automated system
+  sent the *wrong* knowledge test earlier; asks for a new one: super-admin email, super-admin
+  full name, super-admin last login date, recovery email of the domain, Workspace account
+  creation date, org name as shown in Admin console, full name of one other user, one group
+  email, one secondary domain, one alias domain. Also flags a **data mismatch** between the
+  primary admin on file and the name given on the form ("Galaxy Smith") and asks: relationship
+  to the domain, full first/last name, exact access error, and to CC the primary admin's
+  secondary email. Says do NOT remove the `77239317` CNAME until recovery completes.
+  **Owner replied 2026-11-04 evening** (CC cooksc55@gmail.com) as Abdul Mirza, IT
+  Administrator: answered the new test (ccooks@ / Charles Cooks / 03/06/2024 /
+  cooksc55@gmail.com / creation date unknown, est. 2023-early 2024 / Galaxy Consulting LLC /
+  no other users, groups, secondary or alias domains) and explained the recovery-code issue.
+  Awaiting Google's next step.
+
 ## Open items
 
 - [ ] Verification code from cooksc55@gmail.com (check Spam/Promotions).
-- [ ] Google Toolbox case 77239317 reply at galaxyconsultingllc@gmail.com (24-48 h from 2026-11-04).
+- [x] Google Toolbox case 77239317 reply at galaxyconsultingllc@gmail.com (received 2026-11-04 18:06; new knowledge test).
+- [x] Owner: answered the second knowledge test + identity questions on case 77239317 (sent 2026-11-04, CC cooksc55@gmail.com).
+- [ ] Google's decision on case 77239317 at galaxyconsultingllc@gmail.com.
 - [x] HostGator cPanel: domain re-added as alias 2026-11-04; Email Routing Local.
 - [ ] Owner: resend the Gmail test to agmirza@ / ccooks@ and confirm delivery (forwarders added 2026-11-04).
 - [ ] Charles: change the ccooks@ mailbox password (rogue forwarder removed).
