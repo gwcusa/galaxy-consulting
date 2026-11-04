@@ -93,6 +93,10 @@ Run one more incremental pass right before the MX cutover.
   Google, request **submitted**. Google says automated review within 24-48 h, then an
   email with next steps to galaxyconsultingllc@gmail.com. The CNAME can be removed
   once the account is recovered.
+- Google replied the same day with a KNOWLEDGE TEST. Answers were taken from the local
+  ccooks@ backup and sent by the owner: tenant is **Cloud Identity Free**, Customer ID
+  **02muc46p**, 1 user, last sign-in 03/06/2024, recovery email cooksc55@gmail.com,
+  no billing (all payment questions N/A). Awaiting Google's decision.
 
 ## Remaining plan
 
