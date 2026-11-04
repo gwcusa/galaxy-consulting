@@ -97,6 +97,19 @@ Run one more incremental pass right before the MX cutover.
   ccooks@ backup and sent by the owner: tenant is **Cloud Identity Free**, Customer ID
   **02muc46p**, 1 user, last sign-in 03/06/2024, recovery email cooksc55@gmail.com,
   no billing (all payment questions N/A). Awaiting Google's decision.
+- **Root cause found in HostGator cPanel** (owner logged in, Claude drove the tab): when the
+  registration transferred out, HostGator removed galaxyconsultingllc.com from the cPanel
+  account and made `jja.znt.temporary.site` the main domain. All 15 mailboxes and their
+  mail are intact, now named `user@jja.znt.temporary.site` (ccooks 2.66 GB, info 333 MB,
+  bd 144 MB ...). Exim rejected RCPT for the domain as "not local".
+- **Interim fix applied**: added galaxyconsultingllc.com back via Domains > Create A New
+  Domain with "Share document root" (alias of the main domain). Email Routing for it
+  auto-detects **Local Mail Exchanger**. Inbound should deliver to the existing mailboxes
+  again. Mailbox *login names* may still be `user@jja.znt.temporary.site`; the proper fix
+  is HostGator support changing the account's primary domain back to
+  galaxyconsultingllc.com (customer-portal chat; owner to request).
+- Owner decision: keep HostGator mail until Google Workspace can be purchased; Zoho /
+  Cloudflare Email Routing stopgaps not used.
 
 ## Remaining plan
 
@@ -117,7 +130,9 @@ Run one more incremental pass right before the MX cutover.
 
 - [ ] Verification code from cooksc55@gmail.com (check Spam/Promotions).
 - [ ] Google Toolbox case 77239317 reply at galaxyconsultingllc@gmail.com (24-48 h from 2026-11-04).
-- [ ] HostGator cPanel access to restore inbound mail meanwhile (Domains list / Email Routing = Local).
+- [x] HostGator cPanel: domain re-added as alias 2026-11-04; Email Routing Local.
+- [ ] Owner: send a test mail to ccooks@ and confirm delivery; confirm mail-app logins still work.
+- [ ] Owner: ask HostGator support (portal chat) to set the primary domain back to galaxyconsultingllc.com.
 - [ ] Domain transfer completion on 2026-11-03.
 - [ ] Cloudflare registrant-verification email to galaxyconsultingllc@gmail.com.
 - [ ] Confirm with the owner before the MX cutover and before cancelling HostGator.
