@@ -18,6 +18,7 @@ Status as of **2026-10-31** — see "Open items" at the bottom.
 | Registrant contact (Cloudflare transfer) | Abdul Mirza / Galaxy Consulting LLC / galaxyconsultingllc@gmail.com |
 | Google Workspace admin contact (planned) | Abdul Mirza, recovery galaxyconsultingllc@gmail.com |
 | Google support case | 77069573 |
+| Google Admin Toolbox recovery case | 77239317 (filed 2026-11-04) |
 
 ## Decisions
 
@@ -79,6 +80,20 @@ Location: `C:\Users\agmir\GalaxyMailBackup\` (outside the repo; never commit).
 
 Run one more incremental pass right before the MX cutover.
 
+### 2026-11-04
+- Mail to the domain started bouncing (Microsoft NDR "remote server is misconfigured")
+  right after the registrar transfer. DNS at Cloudflare is intact (MX/SPF/mail A unchanged)
+  and `mail.galaxyconsultingllc.com` (198.57.244.174 = gator3027) answers SMTP, accepts
+  MAIL FROM and offers TLS; rejection must be at RCPT inside HostGator (domain likely
+  dropped from cPanel / Email Routing flipped to Remote after the transfer). HostGator
+  login not yet available; no verification code received at cooksc55@gmail.com.
+- Owner chose the Admin Toolbox recovery form. Filed as ccooks@ / "I forgot my password" /
+  contact galaxyconsultingllc@gmail.com -> case **77239317**. Google asks for a CNAME
+  `77239317` -> `google.com` in the zone; added in Cloudflare (DNS only), verified by
+  Google, request **submitted**. Google says automated review within 24-48 h, then an
+  email with next steps to galaxyconsultingllc@gmail.com. The CNAME can be removed
+  once the account is recovered.
+
 ## Remaining plan
 
 1. Enter the Google verification code, set a new password for ccooks@, sign in to
@@ -97,6 +112,8 @@ Run one more incremental pass right before the MX cutover.
 ## Open items
 
 - [ ] Verification code from cooksc55@gmail.com (check Spam/Promotions).
+- [ ] Google Toolbox case 77239317 reply at galaxyconsultingllc@gmail.com (24-48 h from 2026-11-04).
+- [ ] HostGator cPanel access to restore inbound mail meanwhile (Domains list / Email Routing = Local).
 - [ ] Domain transfer completion on 2026-11-03.
 - [ ] Cloudflare registrant-verification email to galaxyconsultingllc@gmail.com.
 - [ ] Confirm with the owner before the MX cutover and before cancelling HostGator.
