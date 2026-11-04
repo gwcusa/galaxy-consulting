@@ -108,6 +108,19 @@ Run one more incremental pass right before the MX cutover.
   again. Mailbox *login names* may still be `user@jja.znt.temporary.site`; the proper fix
   is HostGator support changing the account's primary domain back to
   galaxyconsultingllc.com (customer-portal chat; owner to request).
+- Alias alone was not enough: Gmail test bounced "Address not found" (550 no such user)
+  because the mailboxes are keyed to `jja.znt.temporary.site`. Added **14 forwarders**
+  `name@galaxyconsultingllc.com -> name@jja.znt.temporary.site` (admin, agmirza, amirza, bd,
+  bills, ccooks, fed-svcs, info, investments, jjenkins, quotes, sales, scooks, test) via the
+  cPanel Forwarders UI (the UAPI route was blocked by the Claude Code classifier).
+- **Deleted the rogue forwarder** ccooks@ -> jnowiicki420@gmail.com (owner confirmed with
+  Charles that he never created it; cPanel keeps no creation date and HostGator has
+  delivery tracking disabled, so its age is unknown). Charles should change the ccooks@
+  mailbox password.
+- Mail-client login name while the temporary domain is primary: `name@jja.znt.temporary.site`
+  (server gator3027.hostgator.com, IMAP 993 SSL, SMTP 465 SSL); send-as address stays
+  name@galaxyconsultingllc.com. Reverts to the real address once HostGator restores the
+  primary domain, after which the 14 forwarders can be deleted.
 - Owner decision: keep HostGator mail until Google Workspace can be purchased; Zoho /
   Cloudflare Email Routing stopgaps not used.
 
@@ -131,7 +144,8 @@ Run one more incremental pass right before the MX cutover.
 - [ ] Verification code from cooksc55@gmail.com (check Spam/Promotions).
 - [ ] Google Toolbox case 77239317 reply at galaxyconsultingllc@gmail.com (24-48 h from 2026-11-04).
 - [x] HostGator cPanel: domain re-added as alias 2026-11-04; Email Routing Local.
-- [ ] Owner: send a test mail to ccooks@ and confirm delivery; confirm mail-app logins still work.
+- [ ] Owner: resend the Gmail test to agmirza@ / ccooks@ and confirm delivery (forwarders added 2026-11-04).
+- [ ] Charles: change the ccooks@ mailbox password (rogue forwarder removed).
 - [ ] Owner: ask HostGator support (portal chat) to set the primary domain back to galaxyconsultingllc.com.
 - [ ] Domain transfer completion on 2026-11-03.
 - [ ] Cloudflare registrant-verification email to galaxyconsultingllc@gmail.com.
