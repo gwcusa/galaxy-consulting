@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { pageMeta } from '@/lib/seo';
+import { markets } from '@/lib/cmmc-locations';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -434,6 +435,26 @@ export default function CMMCPage() {
               <Link key={g.href} href={g.href} className="group rounded-xl border border-blue-accent/20 bg-card-surface p-6 hover:border-emerald-500/40 transition-colors">
                 <h3 className="text-white font-bold mb-2 group-hover:text-emerald-300" style={{ fontFamily:'var(--font-barlow)' }}>{g.label}</h3>
                 <p className="text-sm text-silver/70" style={{ fontFamily:'var(--font-inter)' }}>{g.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MARKETS WE SERVE ── */}
+      <section className="py-20 bg-section-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3" style={{ fontFamily:'var(--font-inter)' }}>Remote nationwide · on site by arrangement</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading section-heading-center" style={{ fontFamily:'var(--font-barlow)' }}>Markets We Serve</h2>
+            <p className="text-silver/70 mt-5 max-w-3xl mx-auto" style={{ fontFamily:'var(--font-inter)' }}>
+              We work from our base in Fort Washington, Maryland. Our home market is Maryland, DC and Northern Virginia; we support defense contractors everywhere else remotely, with on-site time by arrangement. <Link href="/cmmc/locations" className="text-emerald-400 hover:underline">See all markets</Link>.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {markets.map((m) => (
+              <Link key={m.slug} href={`/cmmc/locations/${m.slug}`} className="px-4 py-2 rounded-full border border-blue-accent/25 bg-card-surface text-sm text-silver hover:text-white hover:border-emerald-500/40 transition-colors" style={{ fontFamily:'var(--font-inter)' }}>
+                {m.name}
               </Link>
             ))}
           </div>
