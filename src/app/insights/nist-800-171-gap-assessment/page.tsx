@@ -7,13 +7,13 @@ import { ArrowRight, Calendar, Newspaper } from 'lucide-react';
 
 const PATH = '/insights/nist-800-171-gap-assessment';
 const PAGE_URL = `https://www.galaxyconsultingllc.com${PATH}`;
-const TITLE = "NIST 800-171 Gap Assessment: Timeline, Deliverables & FAQ";
+const TITLE = "NIST 800-171 Gap Assessment: Timeline & Deliverables | CMMC";
 const HEADLINE = 'What Is a NIST 800-171 Gap Assessment? What You Get';
 const DESCRIPTION =
-  "What a NIST 800-171 gap assessment checks, how long it takes (typically 2-3 weeks), what you receive, and how it sets up a CMMC self-assessment.";
+  "A NIST 800-171 gap assessment checks each practice in 2-3 weeks and ends in a gap report and roadmap. CMMC gap assessment help from an SDVOSB in MD-DC-VA.";
 const PUBLISHED = '2026-10-19';
-const MODIFIED = '2026-11-02';
-const UPDATED_LABEL = 'November 2, 2026';
+const MODIFIED = '2026-11-04';
+const UPDATED_LABEL = 'November 4, 2026';
 
 export const metadata: Metadata = pageMeta({
   path: PATH,
@@ -40,6 +40,7 @@ const articleSchema = {
 
 const FAQS = [
   { q: 'How long does a NIST 800-171 gap assessment take?', a: 'Typically 2 to 3 weeks from kickoff to the readout of the written report. A small Level 1 scope can be quicker; a Level 2 scope with several locations, cloud services or an MSP takes longer. Most of the time goes to interviews and evidence review, so having your contracts, system list and existing documents ready shortens it.' },
+  { q: 'What do CMMC gap assessment services include?', a: 'Scoping first: the CMMC level your contracts call for, your system boundary and whether FCI or CUI is in scope. Then interviews and evidence review for each applicable practice, and a readout of the written gap report, the risk-prioritized remediation roadmap and an SPRS score estimate.' },
   { q: 'What do I get at the end of a gap assessment?', a: 'A review of every applicable practice against your environment, a written gap report that lists each deficiency by domain, a risk-prioritized remediation roadmap, an SPRS score estimate based on where you stand today, and a recommended path: a Level 1 or a Level 2 self-assessment.' },
   { q: 'Is a gap assessment the same as a CMMC self-assessment?', a: 'No. A gap assessment comes first and finds what is missing so you can fix it. Your self-assessment is the scored review you complete, enter in SPRS and affirm once the gaps are closed or tracked in a POA&M.' },
   { q: 'Does the SPRS estimate from a gap assessment go into SPRS?', a: 'No. It is a planning number that shows roughly where you stand before remediation. The score you enter in SPRS comes from your own self-assessment, supported by your SSP and evidence.' },
@@ -105,7 +106,7 @@ export default function Nist800171GapAssessmentPage() {
       {/* ── ARTICLE ── */}
       <section className="py-16 bg-section-alt">
         <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-base text-silver/80 leading-relaxed space-y-5" style={{ fontFamily: 'var(--font-inter)' }}>
-          <p>A NIST 800-171 gap assessment compares your current security with the practices your contracts call for, one practice at a time, and writes down every gap. For CMMC, it gives you a practice-by-practice picture of where you stand for Level 1 (17 practices) or Level 2 (110 practices). What you get at the end is a written report and a plan for what to fix first.</p>
+          <p>A NIST 800-171 gap assessment compares your current security with the practices your contracts call for, one practice at a time, and writes down every gap. For CMMC, it gives you a practice-by-practice picture of where you stand for Level 1 (17 practices) or Level 2 (110 practices). It typically takes 2 to 3 weeks, and what you get at the end is a written report and a plan for what to fix first.</p>
           <H2>Why NIST SP 800-171 still matters during the suspension</H2>
           <p>NIST SP 800-171 Rev 2 is the security standard that underpins CMMC Level 2. A DoD contract that includes DFARS 252.204-7012, or that references NIST SP 800-171 compliance, almost certainly means you need CMMC Level 2.</p>
           <p>{"The Phase 2 suspension did not change that. Both DFARS 252.204-7012 and NIST SP 800-171 Rev 2 remain in effect, and government-led assessments can still happen. While the suspension lasts, a new requirement may call for Level 1 (Self) or Level 2 (Self) only. The standard is still there to meet, and a gap assessment is how you find out how close you are. For the background, read "}<In href="/insights/cmmc-phase-2-suspension">CMMC Phase 2 Is Suspended</In>.</p>
@@ -175,7 +176,7 @@ export default function Nist800171GapAssessmentPage() {
           </div>
           <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-7 !mt-14">
             <h2 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: 'var(--font-barlow)' }}>Book a scoping call</h2>
-            <p className="mb-5">{"A free 30-minute call with Galaxy's Registered Practitioner: we look at your contract clauses, agree the scope and level, and tell you what the gap assessment will cover. Bring the checklist under How to prepare. See what is included in "}<In href="/cmmc/nist-800-171-gap-assessment">{"Galaxy's NIST 800-171 gap assessment service"}</In>{", or score yourself first with the "}<In href="/cmmc/sprs-score">SPRS score calculator</In>.</p>
+            <p className="mb-5">{"Galaxy Consulting is a service-disabled veteran-owned small business (SDVOSB) based in Fort Washington, Maryland, working on site across Maryland, DC and Northern Virginia and remotely nationwide. A free 30-minute call with Galaxy's Registered Practitioner: we look at your contract clauses, agree the scope and level, and tell you what the gap assessment will cover. Bring the checklist under How to prepare. See what is included in "}<In href="/cmmc/nist-800-171-gap-assessment">{"Galaxy's NIST 800-171 gap assessment service"}</In>{" and the other "}<In href="/cmmc/services">CMMC gap assessment services</In>{", or score yourself first with the "}<In href="/cmmc/sprs-score">SPRS score calculator</In>.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg transition-colors">
               Book a scoping call <ArrowRight size={16} />
             </Link>
