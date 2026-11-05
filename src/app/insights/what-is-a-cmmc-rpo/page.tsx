@@ -7,13 +7,13 @@ import { Calendar, Newspaper } from 'lucide-react';
 
 const PATH = '/insights/what-is-a-cmmc-rpo';
 const PAGE_URL = `https://www.galaxyconsultingllc.com${PATH}`;
-const TITLE = 'What Is a CMMC Registered Provider Organization (RPO)?';
+const TITLE = 'CMMC Registered Provider Organization (RPO) vs RP and C3PAO';
 const HEADLINE = 'What Is a CMMC Registered Provider Organization (RPO)?';
 const DESCRIPTION =
-  'A CMMC Registered Provider Organization (RPO) advises contractors on CMMC; it does not certify them. How RPOs, RPs, C3PAOs and DIBCAC differ.';
+  'A CMMC Registered Provider Organization (RPO) advises on CMMC but never certifies. RPO vs Registered Practitioner vs C3PAO, from an SDVOSB in MD, DC & VA.';
 const PUBLISHED = '2026-10-19';
-const MODIFIED = '2026-10-19';
-const UPDATED_LABEL = 'October 19, 2026';
+const MODIFIED = '2026-11-04';
+const UPDATED_LABEL = 'November 4, 2026';
 
 export const metadata: Metadata = pageMeta({
   path: PATH,
@@ -36,6 +36,19 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'Galaxy Consulting, LLC', url: 'https://www.galaxyconsultingllc.com' },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
   url: PAGE_URL,
+};
+
+const FAQS = [
+  { q: 'What is a CMMC Registered Provider Organization (RPO)?', a: 'A CMMC Registered Provider Organization (RPO) is a consulting firm that the Cyber AB has authorized to give advisory and preparation services to companies getting ready for CMMC. It helps you understand the requirements, fix gaps, build your documentation and prepare for your assessment. It does not conduct the official assessment, and it does not certify anyone.' },
+  { q: 'Is an RPO the same as a C3PAO?', a: 'No. An RPO helps you prepare and does not assess you. A C3PAO (CMMC Third-Party Assessment Organization) is a firm accredited by the Cyber AB to conduct official third-party CMMC assessments. C3PAOs are independent from RPOs and do not provide consulting services, so the firm that helps you prepare is not the firm that assesses you.' },
+  { q: 'What is a CMMC Registered Practitioner (RP)?', a: 'A Registered Practitioner (RP) is a person employed by an RPO, trained and vetted to help DoD contractors understand CMMC requirements, identify gaps, implement controls and prepare documentation. An RP advises and never certifies.' },
+  { q: 'Do you need an RPO for a CMMC Level 1 self-assessment?', a: 'Not always. Level 1 is a self-assessment you can conduct yourself, so technically you do not need an RPO for it. Whether outside help makes sense depends on whether your team knows the requirements, has time to check every requirement and gather proof, and can write clear documentation. Either way, the self-assessment belongs to your company.' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 
 function In({ href, children }: { href: string; children: ReactNode }) {
@@ -62,6 +75,10 @@ export default function WhatIsACmmcRpoPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }}
+      />
 
       {/* ── HEADER ── */}
       <section className="bg-galaxy py-20">
@@ -87,7 +104,7 @@ export default function WhatIsACmmcRpoPage() {
       {/* ── ARTICLE ── */}
       <section className="py-16 bg-section-alt">
         <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-base text-silver/80 leading-relaxed space-y-5" style={{ fontFamily: 'var(--font-inter)' }}>
-          <p>A CMMC Registered Provider Organization (RPO) is a consulting firm that the Cyber AB has authorized to give advisory and preparation services to companies getting ready for CMMC. An RPO helps you understand the requirements, fix gaps, build your documentation and prepare for your assessment. It does not conduct the official assessment, and it does not certify anyone.</p>
+          <p>A CMMC Registered Provider Organization (RPO) is a consulting firm that the Cyber AB has authorized to give advisory and preparation services to companies getting ready for CMMC. An RPO helps you understand the requirements, fix gaps, build your documentation and prepare for your assessment. It does not conduct the official assessment, and it does not certify anyone; official third-party assessments are the job of a C3PAO. The people who do the advisory work are its Registered Practitioners (RPs).</p>
           <H2>Who does what: RPO, RP, C3PAO and DIBCAC</H2>
           <p>CMMC comes with a lot of short names, and they are easy to mix up. Here is who does what:</p>
           <ul className="space-y-4 list-disc pl-5 marker:text-emerald-400">
@@ -140,8 +157,8 @@ export default function WhatIsACmmcRpoPage() {
           </ul>
           <p>Clear, direct answers are a good sign. Be careful with anyone who talks more about results than about the work.</p>
           <H2>How Galaxy can help</H2>
-          <p>{"Galaxy Consulting is a service-disabled veteran-owned small business. Its CMMC work is advisory and self-assessment preparation: it helps you get ready, and it does not assess you. Through Galaxy's RP Staffing service, you can access its Cyber-AB Registered Practitioner on a project or ongoing basis, for Level 1 and Level 2 self-assessment preparation. Galaxy offers fixed-scope engagement pricing."}</p>
-          <p>{"Read about Galaxy's "}<In href="/cmmc/services">CMMC advisory services</In>{" to see what each service includes, and browse the "}<In href="/cmmc/faq">CMMC FAQ</In>{" for common questions. When you are ready to talk it through, "}<In href="/contact">contact Galaxy Consulting</In>. The initial consultation is free.</p>
+          <p>{"Galaxy Consulting is a service-disabled veteran-owned small business (SDVOSB) based in Fort Washington, Maryland, working on site across Maryland, DC and Northern Virginia and remotely nationwide. Its CMMC work is advisory and self-assessment preparation: it helps you get ready, and it does not assess you. Through Galaxy's RP Staffing service, you can access its Cyber-AB Registered Practitioner on a project or ongoing basis, for Level 1 and Level 2 self-assessment preparation. Galaxy offers fixed-scope engagement pricing."}</p>
+          <p>{"Read about Galaxy's "}<In href="/cmmc/services">CMMC consulting services</In>{" to see what each service includes, and browse the "}<In href="/cmmc/faq">CMMC FAQ</In>{" for common questions. When you are ready to talk it through, "}<In href="/contact">contact Galaxy Consulting</In>. The initial consultation is free.</p>
         </article>
       </section>
     </>

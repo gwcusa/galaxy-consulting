@@ -13,8 +13,8 @@ const PATH = '/cmmc/services';
 
 export const metadata: Metadata = pageMeta({
   path: PATH,
-  title: 'CMMC Services: Readiness, Gap Assessment, SSP | RPO',
-  description: 'CMMC readiness packages for DoD contractors: readiness and gap assessments, SSP and POA&M, remediation, mock assessment prep. Free 30-minute call.',
+  title: 'CMMC Level 1 & 2 Consulting Services | SDVOSB RPO, MD-DC-VA',
+  description: 'CMMC Level 1 and Level 2 consulting from an SDVOSB Cyber-AB RPO: gap assessments, SSP, POA&M, remediation and assessment prep in MD, DC and VA. Free call.',
 });
 
 /** Topic preselected in the booking form; also listed on /contact. */
@@ -136,6 +136,14 @@ const c3paoPhases = [
 
 const faqs = [
   {
+    q: 'What does CMMC Level 1 consulting include?',
+    a: 'Scoping where your Federal Contract Information (FCI) lives, a gap assessment against the 17 Level 1 practices with an estimated SPRS score, help closing each gap, and preparation for your annual Level 1 self-assessment and SPRS affirmation. Level 2 work covers the 110 NIST SP 800-171 Rev 2 requirements and adds a System Security Plan (SSP) and POA&M.',
+  },
+  {
+    q: 'Where does Galaxy Consulting work?',
+    a: 'Galaxy Consulting is veteran-owned and based in Fort Washington, Maryland. It works on site across Maryland, DC and Northern Virginia and remotely for contractors anywhere in the United States.',
+  },
+  {
     q: 'Can Galaxy Consulting issue our CMMC certification?',
     a: 'No. Galaxy is a Cyber AB Registered Provider Organization (RPO). RPOs advise and prepare; they do not assess or certify. A CMMC certification assessment is performed only by an authorized C3PAO, and the C3PAO that assesses you cannot be the firm that consulted for you.',
   },
@@ -211,8 +219,11 @@ export default function CMMCServicesPage() {
             <Shield size={11} /> CMMC Services · Cyber-AB RPO · SDVOSB
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5 max-w-4xl" style={font.barlow}>
-            CMMC services for defense contractors preparing for assessment
+            CMMC Level 1 and Level 2 consulting services for defense contractors
           </h1>
+          <p className="text-silver/80 text-lg max-w-3xl mb-4" style={font.inter}>
+            {"CMMC Level 1 consulting covers scoping where your Federal Contract Information (FCI) lives, a gap assessment against the 17 Level 1 practices, help closing each gap, and preparation for your annual self-assessment and SPRS affirmation. Level 2 work covers the 110 NIST SP 800-171 Rev 2 requirements and adds a System Security Plan (SSP) and POA&M."}
+          </p>
           <p className="text-silver/80 text-lg max-w-3xl mb-8" style={font.inter}>
             Six packages, from a first readiness check to ongoing compliance. A Cyber-AB Registered Practitioner leads every engagement.
             Veteran-owned, based in Fort Washington, Maryland; on site across Maryland, DC and Northern Virginia, remote nationwide.

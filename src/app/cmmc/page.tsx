@@ -10,9 +10,34 @@ import {
 
 export const metadata: Metadata = pageMeta({
   path: "/cmmc",
-  title: "CMMC Readiness & Gap Assessment for DoD Contractors | RPO",
-  description: "CMMC Level 1 and Level 2 readiness for small DoD contractors in Maryland, DC and Virginia: scoping, gap assessment, SSP, POA&M and SPRS help.",
+  title: "CMMC Registered Provider Organization (RPO) in MD, DC & VA",
+  description: "Galaxy is a Cyber-AB CMMC Registered Provider Organization (RPO) and SDVOSB: Level 1 & 2 gap assessments, SSP and SPRS help in MD, DC & Northern Virginia.",
 });
+
+const cmmcFaqs = [
+  {
+    q: 'What is a CMMC Registered Provider Organization (RPO)?',
+    a: 'A CMMC Registered Provider Organization (RPO) is a consulting firm officially authorized by the Cyber AB to provide advisory and preparation services to organizations seeking CMMC certification. It helps you understand requirements, fix gaps, build documentation and prepare for your assessment. It does not conduct the official certification assessment. Galaxy Consulting is a Cyber-AB authorized CMMC RPO.',
+  },
+  {
+    q: 'Is an RPO the same as a C3PAO?',
+    a: 'No. An RPO advises and prepares you. A C3PAO is an accredited organization that conducts the official CMMC Level 2 certification assessments, and it is independent from RPOs. Level 3 assessments are conducted by the Government (DCMA\'s DIBCAC), after a Level 2 C3PAO certification.',
+  },
+  {
+    q: 'What is a CMMC Registered Practitioner (RP)?',
+    a: 'A Registered Practitioner (RP) is a Cyber AB-registered professional who guides your team through CMMC preparation. Galaxy Consulting has a Registered Practitioner on staff to guide your CMMC Level 1 and Level 2 self-assessment preparation.',
+  },
+  {
+    q: 'What does CMMC Level 1 support from an RPO include?',
+    a: 'A gap assessment against all 17 CMMC Level 1 practices, help implementing the controls and policies that close each gap, documentation including your System Security Plan (SSP), and preparation for the annual Level 1 self-assessment and affirmed score in the Supplier Performance Risk System (SPRS).',
+  },
+];
+
+const cmmcFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: cmmcFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
 
 const cmmcServiceSchema = {
   '@context': 'https://schema.org',
@@ -115,6 +140,10 @@ export default function CMMCPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cmmcServiceSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cmmcFaqSchema).replace(/</g, '\\u003c') }}
+      />
       {/* ── HERO ── */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-galaxy">
         <div className="absolute inset-0 hero-dots pointer-events-none select-none opacity-60" />
@@ -159,8 +188,11 @@ export default function CMMCPage() {
                 </span>
               </div>
               <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight gradient-text mb-6" style={{ fontFamily:'var(--font-barlow)' }}>
-                CMMC Readiness<br />for Small DoD<br />Subcontractors
+                CMMC Registered<br />Provider Organization<br />for Small DoD Contractors
               </h1>
+              <p className="text-lg sm:text-xl text-silver/80 leading-relaxed mb-4" style={{ fontFamily:'var(--font-inter)' }}>
+                A CMMC Registered Provider Organization (RPO) is a consulting firm authorized by the Cyber AB to help DoD contractors prepare for CMMC: it advises and prepares, and it does not conduct the official certification assessment.
+              </p>
               <p className="text-lg sm:text-xl text-silver/80 leading-relaxed mb-10" style={{ fontFamily:'var(--font-inter)' }}>
                 Galaxy Consulting is a veteran-owned Cyber-AB authorized CMMC RPO that gets small DoD contractors ready for their CMMC Level 1 and Level 2 self-assessments — from gap assessment and remediation through the SSP, SPRS score and annual affirmation. On site in Maryland, DC and Northern Virginia; remote nationwide.
               </p>
@@ -311,6 +343,9 @@ export default function CMMCPage() {
             <p className="text-silver/70 text-sm leading-relaxed" style={{ fontFamily:'var(--font-inter)' }}>
               A <strong className="text-white">Registered Provider Organization (RPO)</strong> is a consulting firm officially authorized by the Cyber AB — the DoD&apos;s CMMC accreditation body — to provide advisory and preparation services to organizations seeking CMMC certification.
             </p>
+            <p className="text-silver/70 text-sm leading-relaxed mt-4" style={{ fontFamily:'var(--font-inter)' }}>
+              Read the full guide: <Link href="/insights/what-is-a-cmmc-rpo" className="text-emerald-400 hover:underline">What is a CMMC Registered Provider Organization (RPO)?</Link> Starting with NIST SP 800-171? See <Link href="/insights/nist-800-171-gap-assessment" className="text-emerald-400 hover:underline">what a NIST 800-171 gap assessment includes</Link>.
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             {[
@@ -329,6 +364,17 @@ export default function CMMCPage() {
                 )}
               </div>
             ))}
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-white font-bold text-xl mb-5 text-center" style={{ fontFamily:'var(--font-barlow)' }}>CMMC RPO questions</h3>
+            <div className="grid md:grid-cols-2 gap-5">
+              {cmmcFaqs.map((f) => (
+                <div key={f.q} className="card-surface rounded-xl border border-blue-accent/20 p-6">
+                  <h4 className="text-white font-semibold text-base mb-2" style={{ fontFamily:'var(--font-barlow)' }}>{f.q}</h4>
+                  <p className="text-sm text-silver/70 leading-relaxed" style={{ fontFamily:'var(--font-inter)' }}>{f.a}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
