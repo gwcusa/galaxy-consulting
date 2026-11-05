@@ -12,6 +12,13 @@ export const metadata: Metadata = pageMeta({
 
 const articles = [
   {
+    href: "/insights/cmmc-status",
+    title: "CMMC in November 2026: Where Phase 2 Stands and What Primes Are Asking For",
+    date: "2026-11-05",
+    dateLabel: "November 5, 2026",
+    summary: "CMMC Phase 2 is still suspended in November 2026, with no restart date. What still applies under Phase 1 and what a prime can check.",
+  },
+  {
     href: '/insights/cmmc-in-solicitations',
     title: 'CMMC in Solicitations: September 2026 SAM.gov Data',
     date: '2026-10-20',
