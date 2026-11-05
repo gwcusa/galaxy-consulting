@@ -68,6 +68,7 @@ export default function Page() {
         { href: '/cmmc/level-2', label: 'CMMC Level 2 requirements' },
         { href: '/cmmc/construction-facilities-contractors', label: 'CMMC for construction and facilities contractors' },
         { href: '/insights/cmmc-phase-2-suspension', label: 'What the Phase 2 suspension means' },
+        { href: '/cmmc/locations', label: 'All CMMC markets we serve' },
       ]}
     >
       <H2>Why CMMC matters so much in this region</H2>

@@ -34,6 +34,7 @@ export const CRUMB_NAMES: Record<string, string> = {
   '/cmmc/maryland-dc-virginia': 'Maryland, DC & Virginia',
   '/cmmc/nist-800-171-gap-assessment': 'NIST 800-171 Gap Assessment',
   '/cmmc/construction-facilities-contractors': 'Construction & Facilities',
+  '/cmmc/locations': 'Markets We Serve',
   '/insights': 'Insights',
   '/insights/cmmc-phase-2-suspension': 'CMMC Phase 2 Suspension',
   '/insights/cmmc-sprs-annual-affirmation': 'SPRS Annual Affirmation',
