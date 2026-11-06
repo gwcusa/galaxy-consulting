@@ -9,6 +9,11 @@ import {
   Info, Phone, Users, Building2, FileWarning, CalendarClock,
 } from 'lucide-react';
 
+export const metadata = {
+  title: { absolute: "CMMC Level 1 & 2 Consulting Services | SDVOSB, MD-DC-VA" },
+};
+
+
 const PATH = '/cmmc/services';
 
 export const metadata: Metadata = pageMeta({
