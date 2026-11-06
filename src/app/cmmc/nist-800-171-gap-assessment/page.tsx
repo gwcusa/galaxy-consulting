@@ -3,6 +3,11 @@ import { pageMeta } from '@/lib/seo';
 import BuyerPage, { In, H2, H3, UL, OL, Note, Table, ReadinessCta, type Faq } from '@/components/cmmc/BuyerPage';
 import { SITE_URL } from '@/lib/site';
 
+export const metadata = {
+  title: { absolute: "NIST 800-171 Gap Assessment Service for DoD Contractors" },
+};
+
+
 const PATH = '/cmmc/nist-800-171-gap-assessment';
 const TITLE = "NIST 800-171 Gap Assessment Service, MD & DC | RPO";
 const DESCRIPTION = 'A NIST 800-171 and CMMC gap assessment led by a Registered Practitioner: gap report by domain, remediation roadmap and SPRS score estimate in 2–3 weeks.';
