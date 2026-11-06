@@ -9,6 +9,11 @@ import {
   FileText, Wrench, Search, ClipboardCheck,
 } from 'lucide-react';
 
+export const metadata = {
+  title: { absolute: "CMMC Readiness Consulting for DoD Contractors | MD, DC, VA" },
+};
+
+
 export const metadata: Metadata = pageMeta({
   path: "/cmmc",
   title: "CMMC Registered Provider Organization (RPO) in MD, DC & VA",
