@@ -4,6 +4,11 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import Link from 'next/link';
 import { Shield, CheckCircle2, ArrowRight, AlertCircle, Clock, FileText, Lock, Eye, Settings, RefreshCw } from 'lucide-react';
 
+export const metadata = {
+  title: { absolute: "CMMC Level 2 Readiness: 110 Practices, SSP & SPRS Help" },
+};
+
+
 export const metadata: Metadata = pageMeta({
   path: "/cmmc/level-2",
   title: "CMMC Level 2 Readiness: 110 Practices, SSP & SPRS | RPO",
